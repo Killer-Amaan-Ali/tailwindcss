@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
+}
+.headerUl > li.active {
+  @apply text-orange;
+}
+.headerUl > li {
+  @apply text-[15px] transition ease-in-out duration-[.5s] mx-[15px] capitalize text-white hover:text-orange;
+}
+.headerUl > li:first-child {
+  @apply ml-[0];
+}
+.headerUl > li:last-child {
+  @apply mr-[0];
+}
+.headerUl .group > a > span {
+  width: 10px;
+}
+.headerUl .group > a > span img {
+  -webkit-filter: brightness(6) contrast(3);
+          filter: brightness(6) contrast(3);
+  @apply mx-[4px] w-full;
+}

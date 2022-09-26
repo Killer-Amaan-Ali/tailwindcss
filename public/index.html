@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<title>Document</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+		</style>
+	</head>
+
+	<body class="bg-blue-700 bg-[url('/bg-img.png')] bg-cover bg-no-repeat">
+		<!-- HEADER START -->
+		<header class="py-[20px] absolute w-full">
+			<section class="container">
+				<div class="flex justify-between items-center">
+					<a>
+						<h1
+							class="text-white text-[28px] font-[600] font-Poppins tracking-[2px]"
+						>
+							Baker
+						</h1>
+					</a>
+					<ul class="flex items-center headerUl">
+						<li class="active"><a href="javascript:;">home</a></li>
+						<li class=""><a href="javascript:;">about</a></li>
+						<li class=""><a href="javascript:;">services</a></li>
+						<li class=""><a href="javascript:;">portfolio</a></li>
+						<li class=""><a href="javascript:;">team</a></li>
+						<li class=""><a href="javascript:;">pricing</a></li>
+						<li class="group">
+							<a href="javascript:;" class="flex items-center relative">
+								drop down
+								<span class="flex items-center">
+									<img src="../arrow-down.png" alt="down-arrow" />
+								</span>
+							</a>
+							<div class="hidden absolute group-hover:flex">
+								<ul>
+									<li><a href="#1">Link1</a></li>
+									<li><a href="#2">Link2</a></li>
+									<li><a href="#3">Link3</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class=""><a href="javascript:;">contact</a></li>
+					</ul>
+				</div>
+			</section>
+		</header>
+		<!-- HEADER END-->
+		<!-- BANNER START-->
+		<section class="min-h-[calc(100vh-50px)] border flex items-center">
+			<div class="container">
+				<div class="flex items-center justify-center flex-col">
+					<h1
+						class="pt-[30px] capitalize font-bold text-white text-[48px] font-Raleway"
+					>
+						welcome to baker
+					</h1>
+					<h2 class="text-white text-[22px]">
+						We are team of talented designers making websites with Bootstrap
+					</h2>
+					<a
+						href="javascript:;"
+						class="transition ease-in-out duration-[.5s] mt-[40px] py-[10px] px-[35px] rounded-[30px] border-orange border-[1px] capitalize text-[18px] text-white hover:text-orange hover:bg-white"
+					>
+						get started
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- BANNER END-->
+	</body>
+</html>
