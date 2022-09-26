@@ -26,3 +26,22 @@
           filter: brightness(6) contrast(3);
   @apply mx-[4px] w-full;
 }
+.headerUl .dropdown {
+  @apply -ml-[10px];
+}
+.headerUl .dropdown li {
+  @apply pl-[20px] py-[10px] pr-[130px];
+}
+
+.banner-wrapper {
+  @apply relative bg-bannerBg bg-cover;
+}
+.banner-wrapper::after {
+  content: "";
+  background: rgba(45, 53, 69, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}

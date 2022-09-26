@@ -38,7 +38,12 @@ module.exports = {
 			// },
 			center: 'true',
 		}),
-		extend: {},
+		extend: {
+			backgroundImage: {
+				bannerBg:
+					'url(https://bootstrapmade.com/demo/templates/Baker/assets/img/hero-bg.jpg)',
+			},
+		},
 	},
 	plugins: [],
 }

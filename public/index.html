@@ -14,10 +14,10 @@
 
 	<body class="bg-blue-700 bg-[url('/bg-img.png')] bg-cover bg-no-repeat">
 		<!-- HEADER START -->
-		<header class="py-[20px] absolute w-full">
+		<header class="py-[20px] absolute w-full z-10">
 			<section class="container">
 				<div class="flex justify-between items-center">
-					<a>
+					<a href="javascript:;">
 						<h1
 							class="text-white text-[28px] font-[600] font-Poppins tracking-[2px]"
 						>
@@ -38,7 +38,7 @@
 									<img src="../arrow-down.png" alt="down-arrow" />
 								</span>
 							</a>
-							<div class="hidden absolute group-hover:flex">
+							<div class="dropdown hidden absolute bg-white group-hover:flex">
 								<ul>
 									<li><a href="#1">Link1</a></li>
 									<li><a href="#2">Link2</a></li>
@@ -53,8 +53,8 @@
 		</header>
 		<!-- HEADER END-->
 		<!-- BANNER START-->
-		<section class="min-h-[calc(100vh-50px)] border flex items-center">
-			<div class="container">
+		<section class="banner-wrapper min-h-[calc(100vh-50px)] border flex items-center">
+			<div class="container z-20">
 				<div class="flex items-center justify-center flex-col">
 					<h1
 						class="pt-[30px] capitalize font-bold text-white text-[48px] font-Raleway"
@@ -66,7 +66,7 @@
 					</h2>
 					<a
 						href="javascript:;"
-						class="transition ease-in-out duration-[.5s] mt-[40px] py-[10px] px-[35px] rounded-[30px] border-orange border-[1px] capitalize text-[18px] text-white hover:text-orange hover:bg-white"
+						class="transition ease-in-out duration-[.5s] mt-[40px] py-[10px] px-[35px] rounded-[30px] border-orange border-[1px] capitalize text-[18px] text-white hover:bg-orange"
 					>
 						get started
 					</a>
