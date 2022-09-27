@@ -6,6 +6,14 @@
     font-family: "Raleway", sans-serif;
   }
 }
+body {
+  height: 5000px;
+}
+
+header.scrollBg {
+  @apply bg-[#374055e6];
+}
+
 .headerUl > li.active {
   @apply text-orange;
 }
@@ -34,14 +42,23 @@
 }
 
 .banner-wrapper {
-  @apply relative bg-bannerBg bg-cover;
+  @apply bg-bannerBg bg-cover w-[100%] bg-center bg-fixed bg-no-repeat;
 }
-.banner-wrapper::after {
+.banner-wrapper::before {
   content: "";
   background: rgba(45, 53, 69, 0.7);
   position: absolute;
-  bottom: 0;
-  top: 0;
   left: 0;
   right: 0;
+  height: 100%;
+}
+
+.brands-wrapper {
+  @apply mt-[30px];
+}
+.brands-wrapper > div {
+  @apply w-[15%] flex justify-center items-center py-[20px];
+}
+.brands-wrapper > div > img {
+  @apply max-w-[45%] grayscale transition ease-in-out duration-[.5s] hover:grayscale-0 hover:scale-[1.2];
 }

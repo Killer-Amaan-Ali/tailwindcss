@@ -12,9 +12,11 @@
 		</style>
 	</head>
 
-	<body class="bg-blue-700 bg-[url('/bg-img.png')] bg-cover bg-no-repeat">
+	<body
+		class="bg-blue-700 bg-[url('/bg-img.png')] bg-contain bg-no-repeat transition ease-in-out duration-[.5s]"
+	>
 		<!-- HEADER START -->
-		<header class="py-[20px] absolute w-full z-10">
+		<header id="header" class="py-[20px] fixed w-full z-40 bg-transparent transition ease-in-out duration-[.25s]">
 			<section class="container">
 				<div class="flex justify-between items-center">
 					<a href="javascript:;">
@@ -40,9 +42,15 @@
 							</a>
 							<div class="dropdown hidden absolute bg-white group-hover:flex">
 								<ul>
-									<li><a href="#1">Link1</a></li>
-									<li><a href="#2">Link2</a></li>
-									<li><a href="#3">Link3</a></li>
+									<li>
+										<a href="#1" class="text-gray hover:text-orange">Link1</a>
+									</li>
+									<li>
+										<a href="#2" class="text-gray hover:text-orange">Link2</a>
+									</li>
+									<li>
+										<a href="#3" class="text-gray hover:text-orange">Link3</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -53,7 +61,9 @@
 		</header>
 		<!-- HEADER END-->
 		<!-- BANNER START-->
-		<section class="banner-wrapper min-h-[calc(100vh-50px)] border flex items-center">
+		<section
+			class="banner-wrapper relative min-h-[calc(100vh-130px)] flex items-center"
+		>
 			<div class="container z-20">
 				<div class="flex items-center justify-center flex-col">
 					<h1
@@ -74,5 +84,61 @@
 			</div>
 		</section>
 		<!-- BANNER END-->
+		<!-- NEW SECTION START-->
+		<section class="bg-[#f7f8fa]">
+			<div class="container">
+				<div class="brands-wrapper flex justify-between">
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+					<div class="brand-card">
+						<img
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							alt="myob"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
+
+	<script>
+		window.onscroll = function () {
+			myFunction()
+		}
+		let header = document.getElementById('header')
+
+		const myFunction = () => {
+			document.documentElement.scrollTop > 120
+				? (header.style.backgroundColor = '#374055e6')
+				: (header.style.backgroundColor = 'transparent')
+		}
+	</script>
 </html>

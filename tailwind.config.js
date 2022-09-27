@@ -14,8 +14,10 @@ module.exports = {
 		},
 		colors: {
 			orange: 'rgb(255, 193, 7)',
+			gray: '#414c64',
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
+			transparent: 'rgb(0, 0, 0, 0)',
 		},
 		// minHeight: ({ theme }) => ({
 		// 	'calc(100vh-80px)': 'calc(100vh - 80px)',
