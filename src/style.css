@@ -30,15 +30,15 @@ header.scrollBg {
   width: 10px;
 }
 .headerUl .group > a > span img {
-  -webkit-filter: brightness(6) contrast(3);
-          filter: brightness(6) contrast(3);
+  -webkit-filter: contrast(0%) brightness(100);
+          filter: contrast(0%) brightness(100);
   @apply mx-[4px] w-full;
 }
-.headerUl .dropdown {
+.headerUl .dropdown-box {
   @apply -ml-[10px];
 }
-.headerUl .dropdown li {
-  @apply pl-[20px] py-[10px] pr-[130px];
+.headerUl .dropdown-box li {
+  @apply transition ease-in-out duration-[.5s] pl-[20px] py-[10px] pr-[130px] text-gray hover:text-orange;
 }
 
 .banner-wrapper {
@@ -58,4 +58,8 @@ header.scrollBg {
 }
 .brands-wrapper > div > img {
   @apply max-w-[45%] grayscale transition ease-in-out duration-[.5s] hover:grayscale-0 hover:scale-[1.2];
+}
+
+.about-wrapper .about-inner-wrapper > div {
+  @apply w-1/2;
 }

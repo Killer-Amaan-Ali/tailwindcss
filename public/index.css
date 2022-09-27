@@ -567,6 +567,10 @@ html {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -593,10 +597,6 @@ html {
 
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .min-h-\[calc\(100vh-130px\)\] {
@@ -710,6 +710,10 @@ html {
   font-size: 18px;
 }
 
+.text-\[34px\] {
+  font-size: 34px;
+}
+
 .font-\[600\] {
   font-weight: 600;
 }
@@ -718,8 +722,16 @@ html {
   font-weight: 700;
 }
 
+.font-\[700\] {
+  font-weight: 700;
+}
+
 .capitalize {
   text-transform: capitalize;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
 }
 
 .tracking-\[2px\] {
@@ -734,6 +746,10 @@ html {
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(65 76 100 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .transition {
@@ -802,21 +818,34 @@ header.scrollBg {
 }
 
 .headerUl .group > a > span img {
-  filter: brightness(6) contrast(3);
+  filter: contrast(0%) brightness(100);
   margin-left: 4px;
   margin-right: 4px;
   width: 100%;
 }
 
-.headerUl .dropdown {
+.headerUl .dropdown-box {
   margin-left: -10px;
 }
 
-.headerUl .dropdown li {
+.headerUl .dropdown-box li {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 130px;
+  --tw-text-opacity: 1;
+  color: rgb(65 76 100 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerUl .dropdown-box li:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 .banner-wrapper {
@@ -866,16 +895,19 @@ header.scrollBg {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.about-wrapper .about-inner-wrapper > div {
+  width: 50%;
+}
+
 .hover\:bg-orange:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
-.hover\:text-orange:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+.group:hover .group-hover\:visible {
+  visibility: visible;
 }
 
-.group:hover .group-hover\:flex {
-  display: flex;
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }

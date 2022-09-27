@@ -30,14 +30,14 @@ header.scrollBg {
 	.group > a > span {
 		width: 10px;
 		img {
-			filter: brightness(6) contrast(3);
+			filter: contrast(0%) brightness(100);
 			@apply mx-[4px] w-full;
 		}
 	}
-	.dropdown {
+	.dropdown-box {
 		@apply -ml-[10px];
 		li {
-			@apply pl-[20px] py-[10px] pr-[130px];
+			@apply transition ease-in-out duration-[.5s] pl-[20px] py-[10px] pr-[130px] text-gray hover:text-orange;
 		}
 	}
 }
@@ -61,8 +61,11 @@ header.scrollBg {
 		}
 	}
 }
-// .headerUl {
-// 	li:hover {
-// 		@apply text-orange;
-// 	}
-// }
+
+.about-wrapper {
+	.about-inner-wrapper {
+		> div {
+			@apply w-1/2;
+		}
+	}
+}
