@@ -5,6 +5,7 @@ module.exports = {
 		fontFamily: {
 			Raleway: '"Raleway" , sans-serif',
 			Poppins: '"Poppins", sans-serif',
+			icons: 'bootstrap-icons !important',
 		},
 		screens: {
 			// sm: 'px',

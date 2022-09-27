@@ -677,11 +677,6 @@ html {
   padding-right: 35px;
 }
 
-.py-\[30px\] {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -693,6 +688,10 @@ html {
 
 .font-Poppins {
   font-family: "Poppins", sans-serif;
+}
+
+.font-icons {
+  font-family: bootstrap-icons !important;
 }
 
 .font-Raleway {
@@ -869,6 +868,16 @@ header.scrollBg {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.before\:content-\[\"\\f282\"\]::before {
+  --tw-content: "\f282";
+  content: var(--tw-content);
+}
+
+.before\:content-\[\"\\25bc\"\]::before {
+  --tw-content: "\25bc";
+  content: var(--tw-content);
 }
 
 .hover\:bg-orange:hover {
