@@ -53,9 +53,6 @@ header.scrollBg {
   height: 100%;
 }
 
-.brands-wrapper {
-  @apply mt-[30px];
-}
 .brands-wrapper > div {
   @apply w-[15%] flex justify-center items-center py-[20px];
 }
