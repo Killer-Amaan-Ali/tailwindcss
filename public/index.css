@@ -603,6 +603,10 @@ html {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .min-h-\[calc\(100vh-130px\)\] {
   min-height: calc(100vh - 130px);
 }
@@ -793,7 +797,6 @@ html {
 
 body {
   @layer bg-blue-700;
-  height: 5000px;
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;

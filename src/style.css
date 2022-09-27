@@ -8,7 +8,7 @@
 }
 body {
   @layer bg-blue-700;
-  @apply h-[5000px] transition ease-in-out duration-[.5s];
+  @apply transition ease-in-out duration-[.5s];
 }
 
 header.scrollBg {

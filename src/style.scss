@@ -8,8 +8,8 @@
 }
 body {
 	@layer bg-blue-700;
-	@apply h-[5000px] transition ease-in-out duration-[.5s];
-	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat;
+	@apply transition ease-in-out duration-[.5s];
+	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat h-[5000px];
 }
 header.scrollBg {
 	@apply bg-[#374055e6];

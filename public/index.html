@@ -21,10 +21,10 @@
 		</style>
 	</head>
 
-	<body>
+	<body page="tailwindcss">
 		<!-- HEADER START -->
 		<header
-			id="header"
+			id="headerElem"
 			class="py-[20px] fixed w-full z-40 bg-transparent transition ease-in-out duration-[.25s]"
 		>
 			<section class="container">
@@ -212,18 +212,28 @@
 			</div>
 		</section>
 		<!-- COUNT SECTION END-->
+
+		<!-- Footer Component -->
+		<header id="header" headerLinksProps=[{"title":"home","href":"javascript:;","class":"active"},{"title":"about","href":"javascript:;"},{"title":"services","href":"javascript:;"},{"title":"portfolio","href":"javascript:;"},{"title":"team","href":"javascript:;"},{"title":"pricing","href":"javascript:;"},{"title":"drop-down","href":"javascript:;"},{"title":"contact","href":"javascript:;"}] hidden></header>
+		<footer
+			id="footer"
+			cssFlag="true"
+			repoLink="https://github.com/Killer-Amaan-Ali/tailwindcss"
+		></footer>
+		<!-- <script src="https://the-fox.netlify.app/the-fox/assets/js/common.js"></script> -->
+		<!-- Footer Component -->
 	</body>
 
 	<script>
 		window.onscroll = function () {
 			myFunction()
 		}
-		let header = document.getElementById('header')
 
+		let headerElem = document.getElementById('headerElem')
 		const myFunction = () => {
 			document.documentElement.scrollTop > 120
-				? (header.style.backgroundColor = '#374055e6')
-				: (header.style.backgroundColor = 'transparent')
+				? (headerElem.style.backgroundColor = '#374055e6')
+				: (headerElem.style.backgroundColor = 'transparent')
 		}
 	</script>
 </html>
