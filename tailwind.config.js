@@ -5,6 +5,7 @@ module.exports = {
 		fontFamily: {
 			Raleway: '"Raleway" , sans-serif',
 			Poppins: '"Poppins", sans-serif',
+			OpenSans: '"Open Sans", sans-serif',
 			icons: 'bootstrap-icons !important',
 		},
 		screens: {
@@ -15,6 +16,8 @@ module.exports = {
 		},
 		colors: {
 			orange: 'rgb(255, 193, 7)',
+			sectBg: '#f7f8fa',
+			lightGray: '#848484',
 			gray: '#414c64',
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',

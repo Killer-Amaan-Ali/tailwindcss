@@ -595,6 +595,10 @@ html {
   margin-top: 40px;
 }
 
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
 .flex {
   display: flex;
 }
@@ -645,21 +649,9 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#f7f8fa\] {
+.bg-sectBg {
   --tw-bg-opacity: 1;
   background-color: rgb(247 248 250 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\'\/bg-img\.png\'\)\] {
-  background-image: url('/bg-img.png');
-}
-
-.bg-contain {
-  background-size: contain;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .py-\[20px\] {
@@ -677,13 +669,31 @@ html {
   padding-right: 35px;
 }
 
-.py-\[50px\] {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.px-\[5px\] {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .pt-\[30px\] {
   padding-top: 30px;
+}
+
+.pb-\[16px\] {
+  padding-bottom: 16px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-Poppins {
@@ -712,6 +722,10 @@ html {
 
 .text-\[34px\] {
   font-size: 34px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .font-\[600\] {
@@ -748,6 +762,11 @@ html {
   color: rgb(65 76 100 / var(--tw-text-opacity));
 }
 
+.text-lightGray {
+  --tw-text-opacity: 1;
+  color: rgb(132 132 132 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -760,12 +779,12 @@ html {
   transition-duration: 150ms;
 }
 
-.duration-\[\.5s\] {
-  transition-duration: .5s;
-}
-
 .duration-\[\.25s\] {
   transition-duration: .25s;
+}
+
+.duration-\[\.5s\] {
+  transition-duration: .5s;
 }
 
 .ease-in-out {
@@ -773,7 +792,14 @@ html {
 }
 
 body {
+  @layer bg-blue-700;
   height: 5000px;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header.scrollBg {
@@ -826,9 +852,15 @@ header.scrollBg {
 
 .headerUl .dropdown-box {
   margin-left: -10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
-.headerUl .dropdown-box li {
+.headerUl .dropdown-box ul {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.headerUl .dropdown-box ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -843,7 +875,7 @@ header.scrollBg {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.headerUl .dropdown-box li:hover {
+.headerUl .dropdown-box ul li:hover {
   --tw-text-opacity: 1;
   color: rgb(255 193 7 / var(--tw-text-opacity));
 }
@@ -897,6 +929,61 @@ header.scrollBg {
 
 .about-wrapper .about-inner-wrapper > div {
   width: 50%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.about-wrapper .rhs .rhs-card-wrapper {
+  display: flex;
+}
+
+.about-wrapper .rhs .rhs-card-wrapper .rhs-card {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.about-wrapper .rhs .rhs-card-wrapper .rhs-card span {
+  margin-top: 15px;
+  font-size: 48px;
+  --tw-text-opacity: 1;
+  color: rgb(132 132 132 / var(--tw-text-opacity));
+}
+
+.about-wrapper .rhs .rhs-card-wrapper .rhs-card h4 {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 900;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.about-wrapper .rhs .rhs-card-wrapper .rhs-card p {
+  margin-bottom: 0.25rem;
+  font-size: 15px;
+  --tw-text-opacity: 1;
+  color: rgb(132 132 132 / var(--tw-text-opacity));
+}
+
+.count-wrapper .count-inner-wrapper .counter-col {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-wrapper .count-inner-wrapper .counter-col h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  --tw-text-opacity: 1;
+  color: rgb(65 76 100 / var(--tw-text-opacity));
+}
+
+.count-wrapper .count-inner-wrapper .counter-col p {
+  font-size: 14px;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:bg-orange:hover {

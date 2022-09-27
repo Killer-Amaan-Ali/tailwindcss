@@ -10,11 +10,18 @@
 			@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 		</style>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<style>
+			.material-symbols-outlined {
+				font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+			}
+		</style>
 	</head>
 
-	<body
-		class="bg-blue-700 bg-[url('/bg-img.png')] bg-contain bg-no-repeat transition ease-in-out duration-[.5s]"
-	>
+	<body>
 		<!-- HEADER START -->
 		<header
 			id="header"
@@ -39,16 +46,10 @@
 						<li class="group transition ease-in-out duration-[.5s]">
 							<a href="javascript:;" class="flex items-center relative test">
 								drop down
-								<span class="flex items-center">
-									<img
-										src="https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png"
-										alt="down-arrow"
-										class=""
-									/>
-								</span>
+								<span class="material-symbols-outlined"> expand_more </span>
 							</a>
 							<div
-								class="dropdown-box invisible opacity-0 absolute bg-white group-hover:opacity-100 group-hover:visible"
+								class="transition ease-in-out duration-[.5s] dropdown-box invisible opacity-0 absolute bg-white group-hover:opacity-100 group-hover:visible"
 							>
 								<ul>
 									<li>
@@ -80,7 +81,7 @@
 					>
 						welcome to baker
 					</h1>
-					<h2 class="text-white text-[22px]">
+					<h2 class="text-white text-[22px] text-center">
 						We are team of talented designers making websites with Bootstrap
 					</h2>
 					<a
@@ -93,8 +94,9 @@
 			</div>
 		</section>
 		<!-- BANNER END-->
+
 		<!-- NEW SECTION START-->
-		<section class="bg-[#f7f8fa]">
+		<section class="bg-sectBg">
 			<div class="container">
 				<div class="brands-wrapper flex justify-between">
 					<div class="brand-card">
@@ -105,31 +107,31 @@
 					</div>
 					<div class="brand-card">
 						<img
-							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-2.png"
 							alt="myob"
 						/>
 					</div>
 					<div class="brand-card">
 						<img
-							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-3.png"
 							alt="myob"
 						/>
 					</div>
 					<div class="brand-card">
 						<img
-							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-4.png"
 							alt="myob"
 						/>
 					</div>
 					<div class="brand-card">
 						<img
-							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-5.png"
 							alt="myob"
 						/>
 					</div>
 					<div class="brand-card">
 						<img
-							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-1.png"
+							src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-6.png"
 							alt="myob"
 						/>
 					</div>
@@ -137,8 +139,9 @@
 			</div>
 		</section>
 		<!-- NEW SECTION END-->
-		<!-- NEW SECTION START-->
-		<section class="about-wrapper py-[50px]">
+
+		<!-- ABOUT SECTION START-->
+		<section class="about-wrapper py-[60px]">
 			<div class="container">
 				<div class="about-inner-wrapper flex">
 					<div class="lhs">
@@ -148,24 +151,35 @@
 						/>
 					</div>
 					<div class="rhs">
-						<h3 class="text-gray text-[34px] font-[700] leading-[40px]">
+						<h3
+							class="text-gray mb-[10px] text-[34px] font-[700] leading-[40px]"
+						>
 							Voluptatem dignissimos<br />
 							provident quasi
 						</h3>
-						<p>
+						<p class="text-lightGray text-[15px] pb-[16px]">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod<br />
 							tempor incididunt ut labore et dolore magna aliqua. Duis aute
 							irure dolor in<br />
 							reprehenderit
 						</p>
-						<div>
+						<div class="rhs-card-wrapper">
 							<div class="rhs-card">
-								<span></span>
-								<h4>Corporis voluptates sit</h4>
+								<span class="material-symbols-outlined"> article </span>
+								<h4 class="">Corporis voluptates sit</h4>
 								<p>
 									Consequuntur sunt aut quasi enim aliquam quae harum pariatur
 									laboris nisi ut aliquip
+								</p>
+							</div>
+							<div class="rhs-card">
+								<span class="material-symbols-outlined"> view_in_ar </span>
+								<h4 class="">Ulamco laboris nisi</h4>
+								<p>
+									Excepteur sint occaecat cupidatat<br />
+									non proident, sunt in culpa qui officia<br />
+									deserunt
 								</p>
 							</div>
 						</div>
@@ -173,7 +187,31 @@
 				</div>
 			</div>
 		</section>
-		<!-- NEW SECTION END-->
+		<!-- ABOUT SECTION END-->
+		<!-- COUNT SECTION START-->
+		<section class="count-wrapper bg-sectBg py-[40px]">
+			<div class="container">
+				<div class="count-inner-wrapper flex px-[5px] justify-between">
+					<div class="counter-col">
+						<h5>694</h5>
+						<p>Clients</p>
+					</div>
+					<div class="counter-col">
+						<h5>694</h5>
+						<p>Clients</p>
+					</div>
+					<div class="counter-col">
+						<h5>694</h5>
+						<p>Clients</p>
+					</div>
+					<div class="counter-col">
+						<h5>694</h5>
+						<p>Clients</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- COUNT SECTION END-->
 	</body>
 
 	<script>
