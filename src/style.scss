@@ -55,7 +55,7 @@ header.scrollBg {
 .brands-wrapper {
 	> div {
 		// @apply w-1/6;
-		@apply w-[15%] flex justify-center items-center py-[20px];
+		@apply w-[15%] flex justify-center items-center py-[30px];
 		> img {
 			@apply max-w-[45%] grayscale transition ease-in-out duration-[.5s] hover:grayscale-0 hover:scale-[1.2];
 		}
