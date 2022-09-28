@@ -7,8 +7,8 @@
   }
 }
 body {
-  @layer bg-blue-700;
   @apply transition ease-in-out duration-[.5s];
+  @layer bg-blue-700;
 }
 
 header.scrollBg {
@@ -93,4 +93,60 @@ header.scrollBg {
 }
 .count-wrapper .count-inner-wrapper .counter-col p {
   @apply text-[14px] text-[#444444];
+}
+
+.services-wrapper .services-header h2::after {
+  content: "";
+  background: #ffc107;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.services-wrapper .services-content {
+  @apply flex flex-wrap;
+}
+.services-wrapper .services-content .card-wrapper {
+  @apply flex w-1/3 px-[12px];
+  @apply transition ease-in-out duration-[.5s];
+}
+.services-wrapper .services-content .card-wrapper:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper {
+  -webkit-box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+          box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  @apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer;
+  @apply transition ease-in-out duration-[.5s];
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper:hover {
+  -webkit-box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon {
+  @apply flex w-[64px] h-[64px] justify-center items-center relative rounded-[50%];
+  @apply transition ease-in-out duration-[.5s];
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span {
+  @apply transition ease-in-out duration-[.5s];
+  @apply text-[32px] relative;
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper h4 {
+  @apply w-full text-center text-gray text-[22px] font-[600] mt-[10px] mb-[15px];
+}
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper p {
+  @apply w-full text-center font-OpenSans text-[14px] text-[#444444] font-[400];
+}
+
+.scroll-up {
+  @apply fixed bg-yellow p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
+  @apply transition ease-in-out duration-[.5s];
+}
+.scroll-up.hidden-elem {
+  @apply invisible opacity-0;
+}
+.scroll-up span {
+  @apply text-white;
 }

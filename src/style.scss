@@ -7,8 +7,8 @@
 	}
 }
 body {
-	@layer bg-blue-700;
 	@apply transition ease-in-out duration-[.5s];
+	@layer bg-blue-700;
 	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat h-[5000px];
 }
 header.scrollBg {
@@ -87,10 +87,6 @@ header.scrollBg {
 				@apply flex w-1/2 flex-col;
 				span {
 					@apply text-lightGray text-[48px] mt-[15px];
-					// font-family: boxicons !important;
-					// &::before {
-					// 	content: '\ebd5';
-					// }
 				}
 				h4 {
 					@apply text-[#444444] text-[20px] font-[900] mt-[5px];
@@ -113,5 +109,62 @@ header.scrollBg {
 				@apply text-[14px] text-[#444444];
 			}
 		}
+	}
+}
+.services-wrapper {
+	.services-header {
+		h2 {
+			&::after {
+				content: '';
+				background: #ffc107;
+				position: absolute;
+				width: 50px;
+				height: 3px;
+				bottom: 0;
+				left: calc(50% - (50px / 2));
+			}
+		}
+	}
+	.services-content {
+		@apply flex flex-wrap;
+		.card-wrapper {
+			@apply flex w-1/3 px-[12px];
+			@apply transition ease-in-out duration-[.5s];
+			&:hover {
+				transform: scale(1.05);
+			}
+			.card-inner-wrapper {
+				box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 5%);
+				@apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer;
+				@apply transition ease-in-out duration-[.5s];
+				&:hover {
+					box-shadow: 0px 0 35px 0 rgb(0 0 0 / 8%);
+				}
+				.icon {
+					@apply flex w-[64px] h-[64px] justify-center items-center relative rounded-[50%];
+					@apply transition ease-in-out duration-[.5s];
+					span {
+						@apply transition ease-in-out duration-[.5s];
+						@apply text-[32px] relative;
+					}
+				}
+				h4 {
+					@apply w-full text-center text-gray text-[22px] font-[600] mt-[10px] mb-[15px];
+				}
+				p {
+					@apply w-full text-center font-OpenSans text-[14px] text-[#444444] font-[400];
+				}
+			}
+		}
+	}
+}
+.scroll-up {
+	@apply fixed bg-yellow p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
+	@apply transition ease-in-out duration-[.5s];
+	&.hidden-elem {
+		@apply invisible opacity-0;
+	}
+	span {
+		@apply text-white;
 	}
 }

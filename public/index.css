@@ -599,6 +599,22 @@ html {
   margin-bottom: 10px;
 }
 
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[8px\] {
+  margin-bottom: 8px;
+}
+
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
+
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
 .flex {
   display: flex;
 }
@@ -613,6 +629,16 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .flex-col {
@@ -658,6 +684,16 @@ html {
   background-color: rgb(247 248 250 / var(--tw-bg-opacity));
 }
 
+.bg-offWhite {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#414c64\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(65 76 100 / var(--tw-bg-opacity));
+}
+
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -696,6 +732,14 @@ html {
   padding-bottom: 16px;
 }
 
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
+
+.pb-\[20px\] {
+  padding-bottom: 20px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -706,6 +750,10 @@ html {
 
 .font-Raleway {
   font-family: "Raleway" , sans-serif;
+}
+
+.font-OpenSans {
+  font-family: "Open Sans", sans-serif;
 }
 
 .text-\[28px\] {
@@ -732,6 +780,18 @@ html {
   font-size: 15px;
 }
 
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
 .font-\[600\] {
   font-weight: 600;
 }
@@ -744,12 +804,20 @@ html {
   font-weight: 700;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
 
 .leading-\[40px\] {
   line-height: 40px;
+}
+
+.leading-\[24px\] {
+  line-height: 24px;
 }
 
 .tracking-\[2px\] {
@@ -769,6 +837,41 @@ html {
 .text-lightGray {
   --tw-text-opacity: 1;
   color: rgb(132 132 132 / var(--tw-text-opacity));
+}
+
+.text-\[\#444444\] {
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.text-\[\#aab3c7\] {
+  --tw-text-opacity: 1;
+  color: rgb(170 179 199 / var(--tw-text-opacity));
+}
+
+.text-cyan {
+  --tw-text-opacity: 1;
+  color: rgb(71 174 255 / var(--tw-text-opacity));
+}
+
+.text-magenta {
+  --tw-text-opacity: 1;
+  color: rgb(232 3 104 / var(--tw-text-opacity));
+}
+
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(255 187 44 / var(--tw-text-opacity));
+}
+
+.text-orange {
+  --tw-text-opacity: 1;
+  color: rgb(255 193 7 / var(--tw-text-opacity));
+}
+
+.text-lightCyan {
+  --tw-text-opacity: 1;
+  color: rgb(17 219 207 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -796,13 +899,13 @@ html {
 }
 
 body {
-  @layer bg-blue-700;
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-duration: 150ms;
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @layer bg-blue-700;
 }
 
 header.scrollBg {
@@ -973,7 +1076,6 @@ header.scrollBg {
   width: 25%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .count-wrapper .count-inner-wrapper .counter-col h5 {
@@ -989,6 +1091,138 @@ header.scrollBg {
   color: rgb(68 68 68 / var(--tw-text-opacity));
 }
 
+.services-wrapper .services-header h2::after {
+  content: "";
+  background: #ffc107;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services-wrapper .services-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-wrapper .services-content .card-wrapper {
+  display: flex;
+  width: 33.333333%;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-wrapper .services-content .card-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper {
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  margin-bottom: 24px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper:hover {
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon {
+  position: relative;
+  display: flex;
+  height: 64px;
+  width: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  font-size: 32px;
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper h4 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(65 76 100 / var(--tw-text-opacity));
+}
+
+.services-wrapper .services-content .card-wrapper .card-inner-wrapper p {
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.scroll-up {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 187 44 / var(--tw-bg-opacity));
+  padding: 10px;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-up.hidden-elem {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.scroll-up span {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:bg-orange:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
@@ -996,6 +1230,36 @@ header.scrollBg {
 
 .group:hover .group-hover\:visible {
   visibility: visible;
+}
+
+.group:hover .group-hover\:bg-cyan {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 174 255 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-magenta {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 3 104 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 187 44 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-lightCyan {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 219 207 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:text-offWhite {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-100 {

@@ -15,13 +15,19 @@ module.exports = {
 			// xl: '1280px',
 		},
 		colors: {
-			orange: 'rgb(255, 193, 7)',
-			sectBg: '#f7f8fa',
-			lightGray: '#848484',
-			gray: '#414c64',
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
+			offWhite: '#f5f5f5',
+			gray: '#414c64',
+			lightGray: '#848484',
 			transparent: 'rgb(0, 0, 0, 0)',
+
+			sectBg: '#f7f8fa',
+			orange: 'rgb(255, 193, 7)',
+			magenta: '#e80368',
+			yellow: '#ffbb2c',
+			cyan: '#47aeff',
+			lightCyan: '#11dbcf',
 		},
 		// minHeight: ({ theme }) => ({
 		// 	'calc(100vh-80px)': 'calc(100vh - 80px)',
