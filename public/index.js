@@ -1,16 +1,15 @@
 let counterWrapper = document.getElementById('counterWrapper')
 let counter = []
 let counts = []
-let flag = [true, true, true, true, true]
+let flag = [true, true, true, true]
 let upto = [0, 0, 0, 0, 0]
 for (let i = 0; i < counterWrapper.children.length; i++) {
 	counter[i] = document.getElementById(`counter${i}`)
 	counter[i] = counter[i]?.innerHTML * 1
 }
 const updated = pos => {
-	if (flag[pos]) {
-		document.getElementById(`counter${pos}`).innerHTML = ++upto[pos]
-	}
+	document.getElementById(`counter${pos}`).innerHTML = ++upto[pos]
+
 	if (upto[pos] >= counter[pos]) {
 		clearInterval(counts[pos])
 		// document.getElementById(`counter${pos}`).innerHTML = counter[pos]
@@ -30,9 +29,11 @@ const scrollFunc = () => {
 		: (headerElem.style.backgroundColor = 'transparent')
 	if (document.documentElement.scrollTop > 490) {
 		for (let i = 0; i < counter.length; i++) {
-			counts[i] = setInterval(() => {
-				updated(i)
-			})
+			if (flag[i]) {
+				counts[i] = setInterval(() => {
+					updated(i)
+				})
+			}
 		}
 	}
 }
