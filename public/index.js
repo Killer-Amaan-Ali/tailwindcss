@@ -85,6 +85,7 @@ const scrollFunc = () => {
 window.onscroll = () => {
 	scrollFunc()
 }
+	scrollFunc()
 // let obj = [
 // 	{ name: 'sulaman', age: 38, sName: 'wadi' },
 // 	{ name: 'amaan', age: 18, sName: 'ali' },
