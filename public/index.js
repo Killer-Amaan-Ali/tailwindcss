@@ -1,21 +1,29 @@
-const toScroll = (elem, loc = 'banner') => {
-	elem.addEventListener('click', () => {
+const toScroll = (elem, loc = '') => {
+	let temp = typeof elem != 'string' ? elem : document.getElementById(elem)
+	temp.addEventListener('click', () => {
 		location.href = `#${loc}`
-		// window.scroll({
-		// top: `#${loc}`,
-		// 	behavior: 'smooth',
-		// })
-		// loc.scrollIntoView({ behavior: 'smooth' })
 	})
 }
 let headerUl = document.getElementById('headerUl')
-let headerLinks = []
-let sections = ['banner', 'aboutBanner', 'servicesBanner']
+let headLinks = []
+let sections = [
+	'banner',
+	'aboutSection',
+	'servicesSection',
+	'portfolioSection',
+	'teamSection',
+	'pricingSection',
+]
+sections[headerUl.children.length - 2] = 'footer'
 for (let i = 0; i < headerUl.children.length; i++) {
-	headerLinks[i] = document.getElementById(
+	headLinks[i] = document.getElementById(
 		headerUl?.children[i]?.attributes?.id?.value
 	)
-	toScroll(headerLinks[i], sections[i])
+	toScroll(headLinks[i], sections[i])
+
+	document.getElementById('footerScript') &&
+		// FOR FOOTER COMPONENT
+		toScroll(`headerLinks${[i]}`, sections[i])
 }
 
 let counterWrapper = document.getElementById('counterWrapper')
@@ -34,21 +42,19 @@ const updated = pos => {
 		document.getElementById(`counter${pos}`).innerHTML = ++upto[pos]
 	}
 
+	// if (flag[pos]) {
 	if (upto[pos] >= counter[pos]) {
 		clearInterval(counts[pos])
 		// document.getElementById(`counter${pos}`).innerHTML = counter[pos]
 		flag[pos] = false
 	}
+	// }
 }
 
 let headerElem = document.getElementById('headerElem')
 let scrollUp = document.getElementById('scrollUp')
 
-const scrollToTop = () => {
-	window.scrollTo({ top: 0 /* , behavior: 'smooth'  */ })
-}
-
-scrollUp.addEventListener('click', scrollToTop)
+toScroll(scrollUp)
 
 const scrollFunc = () => {
 	console.log(

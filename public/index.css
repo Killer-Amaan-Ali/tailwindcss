@@ -600,10 +600,6 @@ html {
   margin-bottom: 10px;
 }
 
-.mb-\[20px\] {
-  margin-bottom: 20px;
-}
-
 .mb-\[8px\] {
   margin-bottom: 8px;
 }
@@ -678,6 +674,11 @@ html {
   background-color: rgb(65 76 100 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f7f8fa\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 248 250 / var(--tw-bg-opacity));
+}
+
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -708,10 +709,6 @@ html {
 
 .pb-\[30px\] {
   padding-bottom: 30px;
-}
-
-.pb-\[20px\] {
-  padding-bottom: 20px;
 }
 
 .text-center {
@@ -1007,7 +1004,7 @@ header.scrollBg {
 .about-wrapper .rhs .rhs-card-wrapper .rhs-card h4 {
   margin-top: 5px;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
 }
@@ -1132,6 +1129,117 @@ header.scrollBg {
   color: rgb(68 68 68 / var(--tw-text-opacity));
 }
 
+.team-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-content .team-card-wrapper {
+  display: flex;
+  width: 25%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(65, 76, 100, 0.06);
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img {
+  position: relative;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  height: 25px;
+  width: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a {
+  fill: #414c64;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a:hover {
+  fill: rgb(255, 193, 7);
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
+  fill: inherit;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg:hover {
+  fill: inherit;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg path {
+  fill: inherit;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg path:hover {
+  fill: inherit;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-content h4 {
+  margin-bottom: 5px;
+  font-family: "Raleway" , sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(65 76 100 / var(--tw-text-opacity));
+}
+
+.team-content .team-card-wrapper .team-inner-wrapper .team-content span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(170 170 170 / var(--tw-text-opacity));
+}
+
 .scroll-up {
   position: fixed;
   right: 15px;
@@ -1187,8 +1295,10 @@ header.scrollBg {
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
-.heading-h2 {
+.h2-heading {
   position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
@@ -1197,7 +1307,7 @@ header.scrollBg {
   color: rgb(68 68 68 / var(--tw-text-opacity));
 }
 
-.heading-h2::after {
+.h2-heading::after {
   content: "";
   background: #ffc107;
   position: absolute;

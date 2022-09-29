@@ -90,7 +90,7 @@ header.scrollBg {
 					@apply text-[#8b97b3] text-[48px] mt-[15px];
 				}
 				h4 {
-					@apply text-[#444444] text-[20px] font-[900] mt-[5px];
+					@apply text-[#444444] text-[20px] font-[700] mt-[5px];
 				}
 				p {
 					@apply text-lightGray text-[15px] mb-1;
@@ -150,6 +150,49 @@ header.scrollBg {
 		}
 	}
 }
+.team-content {
+	@apply flex flex-wrap;
+	.team-card-wrapper {
+		@apply w-1/4 flex px-[12px];
+		.team-inner-wrapper {
+			@apply mb-[20px] rounded-[5px] overflow-hidden;
+			box-shadow: 0px 2px 15px rgb(65 76 100 / 6%);
+			.team-img {
+				@apply relative;
+				img {
+				}
+				.team-social {
+					@apply items-center absolute flex bottom-0 w-full justify-center py-[5px];
+					@apply transition ease-in-out duration-[.5s];
+					background-color: rgba(255, 255, 255, 0.85);
+					div {
+						@apply mx-[5px] w-[25px] h-[25px] flex justify-center items-center;
+						a {
+							@apply fill-[#414c64] hover:fill-primary;
+							@apply transition ease-in-out duration-[.5s];
+							svg {
+								@apply fill-[inherit] hover:fill-[inherit];
+								path {
+									@apply fill-[inherit] hover:fill-[inherit];
+								}
+							}
+						}
+					}
+				}
+			}
+			.team-content {
+				@apply flex flex-col items-center py-[25px] px-[15px];
+				h4 {
+					@apply text-[18px] text-[#414c64] font-[700] mb-[5px] font-Raleway;
+				}
+				span {
+					@apply text-[13px] font-[400] text-[#aaaaaa] font-OpenSans;
+				}
+			}
+		}
+	}
+}
+
 .scroll-up {
 	@apply fixed bg-yellow p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
 	@apply transition ease-in-out duration-[.5s];
@@ -163,8 +206,8 @@ header.scrollBg {
 .button {
 	@apply transition ease-in-out duration-[.5s] py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
 }
-.heading-h2 {
-	@apply relative uppercase text-[32px] font-bold text-[#444444] text-center;
+.h2-heading {
+	@apply relative uppercase text-[32px] font-bold text-[#444444] text-center pb-[20px] mb-[20px];
 	&::after {
 		content: '';
 		background: #ffc107;
@@ -175,6 +218,6 @@ header.scrollBg {
 		left: calc(50% - (50px / 2));
 	}
 }
-.p-content{
-@apply font-OpenSans text-center text-[#aab3c7] text-[14px];
+.p-content {
+	@apply font-OpenSans text-center text-[#aab3c7] text-[14px];
 }
