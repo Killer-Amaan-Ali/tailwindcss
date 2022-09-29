@@ -1,9 +1,31 @@
+const toScroll = (elem, loc = 'banner') => {
+	elem.addEventListener('click', () => {
+		location.href = `#${loc}`
+		// window.scroll({
+		// top: `#${loc}`,
+		// 	behavior: 'smooth',
+		// })
+		// loc.scrollIntoView({ behavior: 'smooth' })
+	})
+}
+let headerUl = document.getElementById('headerUl')
+let headerLinks = []
+let sections = ['banner', 'aboutBanner', 'servicesBanner']
+for (let i = 0; i < headerUl.children.length; i++) {
+	headerLinks[i] = document.getElementById(
+		headerUl?.children[i]?.attributes?.id?.value
+	)
+	toScroll(headerLinks[i], sections[i])
+}
+
 let counterWrapper = document.getElementById('counterWrapper')
 let counter = []
 let counts = []
-let flag = [true, true, true, true]
-let upto = [0, 0, 0, 0, 0]
+let flag = []
+let upto = []
 for (let i = 0; i < counterWrapper.children.length; i++) {
+	upto[i] = 0
+	flag[i] = 'true'
 	counter[i] = document.getElementById(`counter${i}`)
 	counter[i] = counter[i]?.innerHTML * 1
 }
@@ -22,8 +44,8 @@ const updated = pos => {
 let headerElem = document.getElementById('headerElem')
 let scrollUp = document.getElementById('scrollUp')
 
-const scrollToTop = (event) => {
-	window.scrollTo({ top: 0, behavior: 'smooth' })
+const scrollToTop = () => {
+	window.scrollTo({ top: 0 /* , behavior: 'smooth'  */ })
 }
 
 scrollUp.addEventListener('click', scrollToTop)
@@ -42,7 +64,10 @@ const scrollFunc = () => {
 			: 'scroll-up hidden-elem'
 	// headerElem.style.position = document.documentElement.scrollTop > 120 ? 'fixed' : 'absolute'
 
-	if (document.documentElement.scrollTop >= 490) {
+	if (
+		document.documentElement.scrollTop >= 490 &&
+		document.documentElement.scrollTop <= 1165
+	) {
 		for (let i = 0; i < counter.length; i++) {
 			counts[i] = setInterval(() => {
 				updated(i)

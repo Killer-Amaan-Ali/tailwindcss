@@ -412,6 +412,7 @@ video {
 
 html {
   font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
 }
 
 *, ::before, ::after {
@@ -631,10 +632,6 @@ html {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -655,19 +652,6 @@ html {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.rounded-\[30px\] {
-  border-radius: 30px;
-}
-
-.border-\[1px\] {
-  border-width: 1px;
-}
-
-.border-orange {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 193 7 / var(--tw-border-opacity));
 }
 
 .bg-transparent {
@@ -697,16 +681,6 @@ html {
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.px-\[35px\] {
-  padding-left: 35px;
-  padding-right: 35px;
 }
 
 .py-\[60px\] {
@@ -768,24 +742,12 @@ html {
   font-size: 22px;
 }
 
-.text-\[18px\] {
-  font-size: 18px;
-}
-
 .text-\[34px\] {
   font-size: 34px;
 }
 
 .text-\[15px\] {
   font-size: 15px;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
 }
 
 .text-\[16px\] {
@@ -802,10 +764,6 @@ html {
 
 .font-\[700\] {
   font-weight: 700;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .capitalize {
@@ -837,16 +795,6 @@ html {
 .text-lightGray {
   --tw-text-opacity: 1;
   color: rgb(132 132 132 / var(--tw-text-opacity));
-}
-
-.text-\[\#444444\] {
-  --tw-text-opacity: 1;
-  color: rgb(68 68 68 / var(--tw-text-opacity));
-}
-
-.text-\[\#aab3c7\] {
-  --tw-text-opacity: 1;
-  color: rgb(170 179 199 / var(--tw-text-opacity));
 }
 
 .text-cyan {
@@ -1053,7 +1001,7 @@ header.scrollBg {
   margin-top: 15px;
   font-size: 48px;
   --tw-text-opacity: 1;
-  color: rgb(132 132 132 / var(--tw-text-opacity));
+  color: rgb(139 151 179 / var(--tw-text-opacity));
 }
 
 .about-wrapper .rhs .rhs-card-wrapper .rhs-card h4 {
@@ -1089,16 +1037,6 @@ header.scrollBg {
   font-size: 14px;
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
-}
-
-.services-wrapper .services-header h2::after {
-  content: "";
-  background: #ffc107;
-  position: absolute;
-  width: 50px;
-  height: 3px;
-  bottom: 0;
-  left: calc(50% - 25px);
 }
 
 .services-wrapper .services-content {
@@ -1223,9 +1161,58 @@ header.scrollBg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:bg-orange:hover {
+.button {
+  border-radius: 30px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 193 7 / var(--tw-border-opacity));
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 18px;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+}
+
+.heading-h2 {
+  position: relative;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.heading-h2::after {
+  content: "";
+  background: #ffc107;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.p-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  --tw-text-opacity: 1;
+  color: rgb(170 179 199 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:visible {

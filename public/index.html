@@ -33,13 +33,13 @@
 					</h1>
 				</a>
 				<ul class="flex items-center headerUl" id="headerUl">
-					<li class="active"><a href="javascript:;">home</a></li>
-					<li class=""><a href="javascript:;">about</a></li>
-					<li class=""><a href="javascript:;">services</a></li>
-					<li class=""><a href="javascript:;">portfolio</a></li>
-					<li class=""><a href="javascript:;">team</a></li>
-					<li class=""><a href="javascript:;">pricing</a></li>
-					<li class="group transition ease-in-out duration-[.5s]">
+					<li id="home" class=""><a href="javascript:;">home</a></li>
+					<li id="about" class=""><a href="javascript:;">about</a></li>
+					<li id="services" class=""><a href="javascript:;">services</a></li>
+					<li id="portfolio" class=""><a href="javascript:;">portfolio</a></li>
+					<li id="team" class=""><a href="javascript:;">team</a></li>
+					<li id="pricing" class=""><a href="javascript:;">pricing</a></li>
+					<li id="dropDown" class="group transition ease-in-out duration-[.5s]">
 						<a href="javascript:;" class="flex items-center relative test">
 							drop down
 							<span class="material-symbols-outlined"> expand_more </span>
@@ -59,13 +59,14 @@
 							</ul>
 						</div>
 					</li>
-					<li class=""><a href="javascript:;">contact</a></li>
+					<li id="contact" class=""><a href="javascript:;">contact</a></li>
 				</ul>
 			</div>
 		</section>
 	</header>
 	<!-- HEADER END-->
 	<!-- BANNER START-->
+	<a href="" id="banner"></a>
 	<section class="banner-wrapper relative min-h-[calc(100vh-130px)] flex items-center">
 		<div class="container z-20">
 			<div class="flex items-center justify-center flex-col">
@@ -75,8 +76,7 @@
 				<h2 class="text-white text-[22px] text-center">
 					We are team of talented designers making websites with Bootstrap
 				</h2>
-				<a href="javascript:;"
-					class="transition ease-in-out duration-[.5s] mt-[40px] py-[10px] px-[35px] rounded-[30px] border-orange border-[1px] capitalize text-[18px] text-white hover:bg-orange">
+				<a href="javascript:;" class="mt-[40px] button">
 					get started
 				</a>
 			</div>
@@ -84,7 +84,8 @@
 	</section>
 	<!-- BANNER END-->
 
-	<!-- NEW SECTION START-->
+	<!-- ADVERT SECTION START-->
+	<a href="" id="aboutBanner"></a>
 	<section class="bg-sectBg">
 		<div class="container">
 			<div class="brands-wrapper flex justify-between">
@@ -109,7 +110,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- NEW SECTION END-->
+	<!-- ADVERT SECTION END-->
 
 	<!-- ABOUT SECTION START-->
 	<section class="about-wrapper py-[60px]">
@@ -157,6 +158,7 @@
 	</section>
 	<!-- ABOUT SECTION END-->
 	<!-- COUNT SECTION START-->
+	<a href="" id="servicesBanner"></a>
 	<section class="count-wrapper bg-sectBg py-[40px]">
 		<div class="container">
 			<div id="counterWrapper" class="count-inner-wrapper flex px-[5px] justify-between">
@@ -184,8 +186,8 @@
 	<section class="services-wrapper py-[60px]">
 		<div class="container">
 			<div class="services-header flex flex-col items-center pb-[30px]">
-				<h2 class="relative pb-[20px] mb-[20px] uppercase text-[32px] font-bold text-[#444444]">services</h2>
-				<p class="font-OpenSans text-center text-[#aab3c7] text-[14px]">Magnam dolores commodi suscipit. Necessitatibus
+				<h2 class="heading-h2 pb-[20px] mb-[20px]">services</h2>
+				<p class="p-content">Magnam dolores commodi suscipit. Necessitatibus
 					eius
 					consequatur ex
 					aliquid fuga eum quidem. Sit
@@ -277,8 +279,7 @@
 					velit esse cillum dolore eu fugiat nulla pariatur.
 					Excepteur sint
 					occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<a href="javascript:;"
-					class="w-fit transition ease-in-out duration-[.5s] mt-[10px] py-[10px] px-[35px] rounded-[30px] border-orange border-[1px] capitalize text-[18px] text-white hover:bg-orange">
+				<a href="javascript:;" class="w-fit mt-[10px] button">
 					call to action
 				</a>
 			</div>
@@ -289,7 +290,11 @@
 	<section class="testimonials-wrapper bg-[] py-[60px]">
 		<div class="container">
 			<div class="testimonials-title">
-				<h2 class="relative pb-[20px] mb-[20px] uppercase text-[32px] font-bold text-[#444444]">testimonials</h2>
+				<h2 class="heading-h2 pb-[20px] mb-[20px]">testimonials</h2>
+				<p class="p-content">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+					sint consectetur velit.
+					Quisquam quos quisquam cupiditate. Et nemo<br> qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+					quidem hic quas.</p>
 			</div>
 		</div>
 	</section>
@@ -305,10 +310,10 @@
 
 	<!-- Footer Component -->
 	<header id="header"
-		headerLinksProps=[{"title":"home","href":"javascript:;","class":"active"},{"title":"about","href":"javascript:;"},{"title":"services","href":"javascript:;"},{"title":"portfolio","href":"javascript:;"},{"title":"team","href":"javascript:;"},{"title":"pricing","href":"javascript:;"},{"title":"drop-down","href":"javascript:;"},{"title":"contact","href":"javascript:;"}]
+		headerLinksProps=[{"title":"home","href":"javascript:;","class":""},{"title":"about","href":"javascript:;"},{"title":"services","href":"javascript:;"},{"title":"portfolio","href":"javascript:;"},{"title":"team","href":"javascript:;"},{"title":"pricing","href":"javascript:;"},{"title":"drop_down","href":"javascript:;"},{"title":"contact","href":"javascript:;"}]
 		hidden></header>
 	<footer id="footer" cssFlag="true" repoLink="https://github.com/Killer-Amaan-Ali/tailwindcss"></footer>
-	<script src="https://the-fox.netlify.app/the-fox/assets/js/common.js"></script>
+	<!-- <script src="https://the-fox.netlify.app/the-fox/assets/js/common.js"></script> -->
 	<!-- Footer Component -->
 
 </body>
