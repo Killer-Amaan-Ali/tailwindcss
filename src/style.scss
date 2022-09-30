@@ -6,6 +6,9 @@
 		font-family: 'Raleway', sans-serif;
 		scroll-behavior: smooth;
 	}
+	p {
+		@apply font-OpenSans;
+	}
 }
 body {
 	@apply transition ease-in-out duration-[.5s];
