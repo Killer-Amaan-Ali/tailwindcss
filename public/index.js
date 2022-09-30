@@ -84,13 +84,27 @@ const scrollFunc = () => {
 	}
 
 	// FOR COUNTER ANUMATION
-	if (scroll >= 490 && scroll <= 1165) {
+	let countSect = document
+		.getElementById('countSection')
+		?.getBoundingClientRect()
+	console.log(
+		'Console ~ file: index.js ~ line 89 ~ scrollFunc ~ countSect',
+		countSect
+	)
+	if (countSect.top <= 600 || countSect.bottom <= -60) {
 		for (let i = 0; i < counter.length; i++) {
 			counts[i] = setInterval(() => {
 				updated(i)
 			})
 		}
 	}
+	// if (scroll >= 490 && scroll <= 1165) {
+	// 	for (let i = 0; i < counter.length; i++) {
+	// 		counts[i] = setInterval(() => {
+	// 			updated(i)
+	// 		})
+	// 	}
+	// }
 }
 
 // OLD DEPRECATED

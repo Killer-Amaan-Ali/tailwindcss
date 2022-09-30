@@ -624,8 +624,24 @@ p {
   display: none;
 }
 
+.h-\[calc\(100vh-130px\)\] {
+  height: calc(100vh - 130px);
+}
+
+.max-h-\[100vh\] {
+  max-height: 100vh;
+}
+
 .min-h-\[calc\(100vh-130px\)\] {
   min-height: calc(100vh - 130px);
+}
+
+.min-h-\[730px\] {
+  min-height: 730px;
+}
+
+.min-h-\[100vh\] {
+  min-height: 100vh;
 }
 
 .w-full {
