@@ -83,14 +83,10 @@ const scrollFunc = () => {
 			scrollActive(`headerLinksLi${[i]}`, sections[i], 100)
 	}
 
-	// FOR COUNTER ANUMATION
+	// FOR COUNTER ANIMATION
 	let countSect = document
 		.getElementById('countSection')
 		?.getBoundingClientRect()
-	console.log(
-		'Console ~ file: index.js ~ line 89 ~ scrollFunc ~ countSect',
-		countSect
-	)
 	if (countSect.top <= 600 || countSect.bottom <= -60) {
 		for (let i = 0; i < counter.length; i++) {
 			counts[i] = setInterval(() => {
@@ -98,6 +94,9 @@ const scrollFunc = () => {
 			})
 		}
 	}
+
+	// FOR COUNTER OLD ANIMATION
+
 	// if (scroll >= 490 && scroll <= 1165) {
 	// 	for (let i = 0; i < counter.length; i++) {
 	// 		counts[i] = setInterval(() => {

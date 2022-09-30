@@ -632,18 +632,6 @@ p {
   max-height: 100vh;
 }
 
-.min-h-\[calc\(100vh-130px\)\] {
-  min-height: calc(100vh - 130px);
-}
-
-.min-h-\[730px\] {
-  min-height: 730px;
-}
-
-.min-h-\[100vh\] {
-  min-height: 100vh;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1031,6 +1019,7 @@ header.scrollBg {
 
 .about-wrapper .rhs .rhs-card-wrapper .rhs-card p {
   margin-bottom: 0.25rem;
+  width: 95%;
   font-size: 15px;
   --tw-text-opacity: 1;
   color: rgb(132 132 132 / var(--tw-text-opacity));

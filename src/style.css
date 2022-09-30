@@ -87,7 +87,7 @@ header.scrollBg {
   @apply text-[#444444] text-[20px] font-[700] mt-[5px];
 }
 .about-wrapper .rhs .rhs-card-wrapper .rhs-card p {
-  @apply text-lightGray text-[15px] mb-1;
+  @apply text-lightGray text-[15px] mb-1 w-[95%];
 }
 
 .count-wrapper .count-inner-wrapper .counter-col {
