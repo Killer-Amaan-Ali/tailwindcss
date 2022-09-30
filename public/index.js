@@ -1,5 +1,5 @@
-const toScroll = (elem, loc = '') => {
-	let temp = typeof elem != 'string' ? elem : document.getElementById(elem)
+const toScroll = (elem, loc = 'footer') => {
+	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
 	temp.addEventListener('click', () => {
 		location.href = `#${loc}`
 	})
@@ -13,8 +13,10 @@ let sections = [
 	'portfolioSection',
 	'teamSection',
 	'pricingSection',
+	'footer',
+	// 'contactSection',
 ]
-sections[headerUl.children.length - 2] = 'footer'
+
 for (let i = 0; i < headerUl.children.length; i++) {
 	headLinks[i] = document.getElementById(
 		headerUl?.children[i]?.attributes?.id?.value
@@ -24,6 +26,7 @@ for (let i = 0; i < headerUl.children.length; i++) {
 	document.getElementById('footerScript') &&
 		// FOR FOOTER COMPONENT
 		toScroll(`headerLinks${[i]}`, sections[i])
+	headLinks[i] = headLinks[i].attributes.id.value
 }
 
 let counterWrapper = document.getElementById('counterWrapper')
@@ -42,38 +45,46 @@ const updated = pos => {
 		document.getElementById(`counter${pos}`).innerHTML = ++upto[pos]
 	}
 
-	// if (flag[pos]) {
-	if (upto[pos] >= counter[pos]) {
-		clearInterval(counts[pos])
-		// document.getElementById(`counter${pos}`).innerHTML = counter[pos]
-		flag[pos] = false
+	if (flag[pos]) {
+		if (upto[pos] >= counter[pos]) {
+			clearInterval(counts[pos])
+			// document.getElementById(`counter${pos}`).innerHTML = counter[pos]
+			flag[pos] = false
+		}
 	}
-	// }
 }
 
 let headerElem = document.getElementById('headerElem')
 let scrollUp = document.getElementById('scrollUp')
 
-toScroll(scrollUp)
+toScroll(scrollUp, '')
 
 const scrollFunc = () => {
+	let scroll = document.documentElement.scrollTop
 	console.log(
-		'Console ~ file: index.html ~ line 253 ~ scrollFunc ~ document.documentElement.scrollTop',
-		document.documentElement.scrollTop
+		'Console ~ file: index.html ~ line 253 ~ scrollFunc ~ scroll',
+		scroll
 	)
-	headerElem.style.backgroundColor =
-		document.documentElement.scrollTop > 120 ? '#374055e6' : 'transparent'
+	headerElem.style.backgroundColor = scroll > 120 ? '#374055e6' : 'transparent'
+	scrollUp.classList = scroll > 200 ? 'scroll-up' : 'scroll-up hidden-elem'
 
-	scrollUp.classList =
-		document.documentElement.scrollTop > 200
-			? 'scroll-up'
-			: 'scroll-up hidden-elem'
-	// headerElem.style.position = document.documentElement.scrollTop > 120 ? 'fixed' : 'absolute'
+	// OLD DEPRECATED
+	// classChange('home', 0, 300)
+	// classChange('about', 490, 1000)
+	// classChange('services', 1111, 1840)
+	// OLD DEPRECATED
 
-	if (
-		document.documentElement.scrollTop >= 490 &&
-		document.documentElement.scrollTop <= 1165
-	) {
+	// scrollActive('home', 'banner')
+	// scrollActive('services', 'servicesSection', 150)
+	for (let i = 0; i < headLinks.length; i++) {
+		scrollActive(headLinks[i], sections[i], 100)
+		// FOR FOOTER COMPONENT
+		document.getElementById('footerScript') &&
+			scrollActive(`headerLinksLi${[i]}`, sections[i], 100)
+	}
+
+	// FOR COUNTER ANUMATION
+	if (scroll >= 490 && scroll <= 1165) {
 		for (let i = 0; i < counter.length; i++) {
 			counts[i] = setInterval(() => {
 				updated(i)
@@ -82,10 +93,28 @@ const scrollFunc = () => {
 	}
 }
 
+// OLD DEPRECATED
+// const classChange = (elem, min, max) => {
+// 	let scroll = document.documentElement.scrollTop
+// 	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
+// 	temp.classList = (scroll >= min) & (scroll < max) ? 'active' : ''
+// }
+
+const scrollActive = (elem, mount = 'footer', breathe = 100) => {
+	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
+	let bound = document?.getElementById(mount)?.getBoundingClientRect()
+	console.log(
+		'Console ~ file: index.js ~ line 106 ~ scrollActive ~ bound',
+		bound
+	)
+	temp.classList =
+		(bound?.top <= breathe) & (bound?.bottom >= -breathe) ? 'active' : ''
+}
+
 window.onscroll = () => {
 	scrollFunc()
 }
-	scrollFunc()
+scrollFunc()
 // let obj = [
 // 	{ name: 'sulaman', age: 38, sName: 'wadi' },
 // 	{ name: 'amaan', age: 18, sName: 'ali' },
