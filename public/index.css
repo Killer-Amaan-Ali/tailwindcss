@@ -1070,6 +1070,7 @@ header.scrollBg {
 }
 
 .testimonials-wrapper .testimonials-content ul li {
+  width: 33%;
   min-width: 33%;
   overflow: hidden;
   padding-left: 20px;

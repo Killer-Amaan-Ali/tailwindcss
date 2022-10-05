@@ -122,7 +122,7 @@ header.scrollBg {
 		ul {
 			@apply flex justify-between;
 			li {
-				@apply px-[20px] min-w-[33%] overflow-hidden;
+				@apply px-[20px] min-w-[33%] w-[33%] overflow-hidden;
 				// &:first-child {
 				// 	@apply pl-0;
 				// }
