@@ -1061,7 +1061,7 @@ header.scrollBg {
   margin-top: 30px;
   margin-bottom: 30px;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .testimonials-wrapper .testimonials-content ul {
@@ -1096,6 +1096,7 @@ header.scrollBg {
 }
 
 .testimonials-wrapper .testimonials-content ul li > div p span {
+  border-radius: 10px;
   --tw-text-opacity: 1;
   color: rgb(255 231 160 / var(--tw-text-opacity));
 }
