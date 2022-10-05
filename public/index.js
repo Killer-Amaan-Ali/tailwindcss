@@ -38,7 +38,8 @@ for (let i = 0; i < counterWrapper.children.length; i++) {
 	upto[i] = 0
 	flag[i] = 'true'
 	counter[i] = document.getElementById(`counter${i}`)
-	counter[i] = counter[i]?.innerHTML * 1
+	// counter[i] = counter[i]?.innerHTML * 1
+	counter[i] = counter[i]?.attributes?.value?.value * 1
 }
 const updated = pos => {
 	if (flag[pos]) {
@@ -61,10 +62,10 @@ toScroll(scrollUp, '')
 
 const scrollFunc = () => {
 	let scroll = document.documentElement.scrollTop
-	console.log(
-		'Console ~ file: index.html ~ line 253 ~ scrollFunc ~ scroll',
-		scroll
-	)
+	// console.log(
+	// 	'Console ~ file: index.html ~ line 253 ~ scrollFunc ~ scroll',
+	// 	scroll
+	// )
 	headerElem.style.backgroundColor = scroll > 120 ? '#374055e6' : 'transparent'
 	scrollUp.classList = scroll > 200 ? 'scroll-up' : 'scroll-up hidden-elem'
 
@@ -116,10 +117,10 @@ const scrollFunc = () => {
 const scrollActive = (elem, mount = 'footer', breathe = 100) => {
 	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
 	let bound = document?.getElementById(mount)?.getBoundingClientRect()
-	console.log(
-		'Console ~ file: index.js ~ line 106 ~ scrollActive ~ bound',
-		bound
-	)
+	// console.log(
+	// 	'Console ~ file: index.js ~ line 106 ~ scrollActive ~ bound',
+	// 	bound
+	// )
 	temp.classList =
 		(bound?.top <= breathe) & (bound?.bottom >= -breathe) ? 'active' : ''
 }
