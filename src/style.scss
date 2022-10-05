@@ -138,7 +138,12 @@ header.scrollBg {
 					p {
 						@apply p-[20px] text-[16px] italic bg-[#fafafc] pb-[50px] rounded-[inherit] rounded-b-none;
 						span {
+							&.material-symbols-outlined {
+								font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0,
+									'opsz' 48;
+							}
 							@apply text-[#ffe7a0];
+
 							&:first-child {
 								transform: rotate(180deg);
 							}
