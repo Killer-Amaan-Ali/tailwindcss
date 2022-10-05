@@ -100,32 +100,39 @@ header.scrollBg {
   @apply text-[14px] text-[#444444];
 }
 
+.testimonials-wrapper .testimonials-content {
+  @apply w-full overflow-x-scroll my-[30px];
+}
 .testimonials-wrapper .testimonials-content ul {
-  @apply w-full overflow-scroll flex flex-wrap;
+  @apply flex justify-between;
 }
 .testimonials-wrapper .testimonials-content ul li {
-  @apply px-[10px];
+  @apply px-[20px] min-w-[33%] overflow-hidden;
 }
 .testimonials-wrapper .testimonials-content ul li > div {
-  -webkit-box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
-          box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
-  @apply flex flex-col;
-}
-.testimonials-wrapper .testimonials-content ul li > div:hover {
-  -webkit-box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-}
-.testimonials-wrapper .testimonials-content ul li > div img {
-  @apply rounded-[50%] w-[90px] border-[6px] border-[#fff];
-}
-.testimonials-wrapper .testimonials-content ul li > div h3 {
-  @apply text-[18px] font-[bold] text-[#111];
-}
-.testimonials-wrapper .testimonials-content ul li > div h4 {
-  @apply text-[14px] font-[bold] text-[#999];
+  @apply flex flex-col rounded-[20px];
 }
 .testimonials-wrapper .testimonials-content ul li > div p {
-  @apply italic;
+  @apply p-[20px] text-[16px] italic bg-[#fafafc] pb-[50px] rounded-[inherit] rounded-b-none;
+}
+.testimonials-wrapper .testimonials-content ul li > div p span {
+  @apply text-[#ffe7a0];
+}
+.testimonials-wrapper .testimonials-content ul li > div p span:first-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.testimonials-wrapper .testimonials-content ul li > div > div {
+  @apply px-[20px];
+}
+.testimonials-wrapper .testimonials-content ul li > div > div img {
+  @apply mt-[-20px] mb-[5px] rounded-[50%] w-[90px] border-[6px] border-[#fff];
+}
+.testimonials-wrapper .testimonials-content ul li > div > div h3 {
+  @apply text-[18px] font-[600] text-[#111];
+}
+.testimonials-wrapper .testimonials-content ul li > div > div h4 {
+  @apply text-[14px] font-[500] text-[#999];
 }
 
 .services-wrapper .services-content {
