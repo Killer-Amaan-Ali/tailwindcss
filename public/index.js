@@ -23,8 +23,8 @@ for (let i = 0; i < headerUl.children.length; i++) {
 	)
 	toScroll(headLinks[i], sections[i])
 
+	// FOR FOOTER COMPONENT
 	document.getElementById('footerScript') &&
-		// FOR FOOTER COMPONENT
 		toScroll(`headerLinks${[i]}`, sections[i])
 	headLinks[i] = headLinks[i].attributes.id.value
 }
@@ -129,6 +129,7 @@ window.onscroll = () => {
 	scrollFunc()
 }
 scrollFunc()
+
 // let obj = [
 // 	{ name: 'sulaman', age: 38, sName: 'wadi' },
 // 	{ name: 'amaan', age: 18, sName: 'ali' },
