@@ -1,3 +1,8 @@
+// :root {
+// 	--footerPrim: red !important;
+// 	--footerSec: blue !important;
+// }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,11 +123,18 @@ header.scrollBg {
 
 .testimonials-wrapper {
 	.testimonials-content {
-		@apply w-full overflow-x-auto my-[30px];
+		@apply w-full my-[30px];
+		// @apply overflow-x-auto;
+		@apply overflow-hidden;
 		ul {
-			@apply flex justify-between;
+			@apply flex;
+			// @apply justify-between;
+			transition: ease-in-out 0.5s;
 			li {
-				@apply px-[20px] min-w-[33%] w-[33%] overflow-hidden;
+				transition: inherit;
+				@apply px-[20px];
+				@apply min-w-[33%] w-[33%] overflow-hidden;
+
 				// &:first-child {
 				// 	@apply pl-0;
 				// }
@@ -161,6 +173,14 @@ header.scrollBg {
 							@apply text-[14px] font-[500] text-[#999];
 						}
 					}
+				}
+			}
+		}
+		.sliderCounters {
+			.material-symbols-outlined {
+				@apply text-orange cursor-pointer text-[18px];
+				&.active {
+					font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 				}
 			}
 		}

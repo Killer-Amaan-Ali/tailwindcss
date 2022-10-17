@@ -152,3 +152,34 @@ scrollFunc()
 // console.log(a > 50 ? a + b : a - b)
 // }
 // fire(60, 10)
+
+let sliderWrapper = document.getElementById('sliderWrapper')
+let sliderCounters = document.getElementById('sliderCounters')
+let modified = sliderWrapper.children.length - 3
+let temp = ``
+let firstChild = sliderWrapper.children[0]
+let width = firstChild.clientWidth
+
+for (let i = 0; i <= modified; i++) {
+	i === 0 ? (mode = 'active') : (mode = '')
+	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+}
+sliderCounters.children[0].innerHTML = temp
+temp = ''
+
+const sliderActive = e => {
+	// console.log(sliderWrapper.getBoundingClientRect())
+	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
+		// console.log(sliderWrapper.children[i].getBoundingClientRect())
+		sliderCounters.children[0].children[i].classList.remove('active')
+	}
+	e.classList.add('active')
+	let calc = width * e.id
+	firstChild.style.marginLeft = `-${calc}px`
+}
+
+// let i = 0
+// setInterval(() => {
+// 	i < modified ? i++ : (i = 0)
+// 	document.getElementById(i).click()
+// }, 5000)
