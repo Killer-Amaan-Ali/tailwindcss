@@ -162,18 +162,19 @@ let width = firstChild.clientWidth
 
 let lenOfCards = []
 for (let i = 0; i < sliderWrapper.children.length; i++) {
-	console.log(sliderWrapper.getBoundingClientRect().width)
-	console.log(sliderWrapper.children[i].getBoundingClientRect().x)
-	if (
-		sliderWrapper.getBoundingClientRect().width >=
+	// console.log(sliderWrapper.getBoundingClientRect().width)
+	// console.log(sliderWrapper.children[i].getBoundingClientRect().x)
+
+	// if (
+	// 	sliderWrapper.getBoundingClientRect().width >=
+	// 	sliderWrapper.children[i].getBoundingClientRect().x
+	// ) {
+	lenOfCards[i] =
+		sliderWrapper.getBoundingClientRect().width -
 		sliderWrapper.children[i].getBoundingClientRect().x
-	) {
-		lenOfCards[i] =
-			sliderWrapper.getBoundingClientRect().width -
-			sliderWrapper.children[i].getBoundingClientRect().x
-	}
+	// }
 }
-modified = lenOfCards.length - 1
+modified = lenOfCards.length - 3
 
 for (let i = 0; i <= modified; i++) {
 	i === 0 ? (mode = 'active') : (mode = '')
