@@ -155,31 +155,60 @@ scrollFunc()
 
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
-let modified = sliderWrapper.children.length - 3
+let modified = sliderWrapper.children.length
 let temp = ``
 let firstChild = sliderWrapper.children[0]
 let width = firstChild.clientWidth
+
+let lenOfCards = []
+for (let i = 0; i < sliderWrapper.children.length; i++) {
+	console.log(sliderWrapper.getBoundingClientRect().width)
+	console.log(sliderWrapper.children[i].getBoundingClientRect().x)
+	if (
+		sliderWrapper.getBoundingClientRect().width >=
+		sliderWrapper.children[i].getBoundingClientRect().x
+	) {
+		lenOfCards[i] =
+			sliderWrapper.getBoundingClientRect().width -
+			sliderWrapper.children[i].getBoundingClientRect().x
+	}
+}
+modified = lenOfCards.length - 1
 
 for (let i = 0; i <= modified; i++) {
 	i === 0 ? (mode = 'active') : (mode = '')
 	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
 }
+
 sliderCounters.children[0].innerHTML = temp
 temp = ''
-
+let current
 const sliderActive = e => {
-	// console.log(sliderWrapper.getBoundingClientRect())
 	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
-		// console.log(sliderWrapper.children[i].getBoundingClientRect())
 		sliderCounters.children[0].children[i].classList.remove('active')
 	}
 	e.classList.add('active')
 	let calc = width * e.id
 	firstChild.style.marginLeft = `-${calc}px`
+	current = e.id
 }
 
-// let i = 0
-// setInterval(() => {
-// 	i < modified ? i++ : (i = 0)
-// 	document.getElementById(i).click()
-// }, 5000)
+// AUTO SCROLL
+let i = 0
+let number = 5
+let seconds = number * 1000
+let scrollFlag = true
+const autoScroll = () => {
+	i = current
+	i < modified ? i++ : (i = 0)
+	document.getElementById(i).click()
+}
+const mouseIn = () => {
+	scrollFlag = false
+	return scrollFlag
+}
+const mouseOut = () => {
+	scrollFlag = true
+	return scrollFlag
+}
+scrollFlag ? setInterval(autoScroll, seconds) : setInterval(null, seconds)
