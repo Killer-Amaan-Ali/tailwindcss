@@ -15,8 +15,19 @@
 		@apply font-OpenSans;
 	}
 }
+
+.transition {
+	@apply ease-in-out duration-[.5s];
+	// &.t-500 {
+	// 	@apply duration-[.5s];
+	// }
+	&.t-1000 {
+		@apply duration-[1.0s];
+	}
+}
+
 body {
-	@apply transition ease-in-out duration-[.5s];
+	// @extend .transition;
 	@layer bg-blue-700;
 	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat h-[5000px];
 }
@@ -25,10 +36,11 @@ header.scrollBg {
 }
 .headerUl {
 	> li.active {
-		@apply text-orange;
+		@apply text-primary;
 	}
 	> li {
-		@apply text-[15px] transition ease-in-out duration-[.5s] mx-[15px] capitalize text-white hover:text-orange;
+		@extend .transition;
+		@apply text-[15px] mx-[15px] capitalize text-white hover:text-primary;
 
 		&:first-child {
 			@apply ml-[0];
@@ -51,7 +63,8 @@ header.scrollBg {
 		ul {
 			@apply py-[5px];
 			li {
-				@apply transition ease-in-out duration-[.5s] pl-[20px] py-[10px] pr-[130px] text-gray hover:text-orange;
+				@apply pl-[20px] py-[10px] pr-[130px] text-gray hover:text-primary;
+				@extend .transition;
 				// &:first-child {
 				// 	@apply pt-[20px];
 				// }
@@ -78,7 +91,8 @@ header.scrollBg {
 		// @apply w-1/6;
 		@apply w-[15%] flex justify-center items-center py-[30px];
 		> img {
-			@apply max-w-[45%] grayscale transition ease-in-out duration-[.5s] hover:grayscale-0 hover:scale-[1.2];
+			@extend .transition;
+			@apply max-w-[45%] grayscale hover:grayscale-0 hover:scale-[1.2];
 		}
 	}
 }
@@ -129,10 +143,10 @@ header.scrollBg {
 		ul {
 			@apply flex;
 			// @apply justify-between;
-			transition: ease-in-out 0.5s;
+			@extend .transition;
+			@extend .t-1000;
 			li {
-				transition: inherit;
-				@apply px-[20px];
+				@apply px-[20px] transition-[inherit];
 				@apply min-w-[33%] w-[33%] overflow-hidden;
 
 				// &:first-child {
@@ -150,7 +164,7 @@ header.scrollBg {
 					p {
 						@apply p-[20px] text-[16px] italic bg-[#fafafc] pb-[50px] rounded-[inherit] rounded-b-none;
 						span {
-							@apply text-[#ffe7a0] rounded-[10px];
+							@apply text-primary rounded-[10px] opacity-[.5];
 
 							&.material-symbols-outlined {
 								font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0,
@@ -178,11 +192,28 @@ header.scrollBg {
 		}
 		.sliderCounters {
 			.material-symbols-outlined {
-				@apply text-orange cursor-pointer text-[18px];
+				@apply text-primary cursor-pointer text-[22px];
 				&.active {
 					font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 				}
 			}
+		}
+	}
+}
+.portfolio-wrapper {
+	.container {
+		.portfolio-title {
+			.categories {
+				> li {
+					@extend .transition;
+					@apply px-[10px] text-[#414c64] rounded-[50px] py-[5px] px-[15px] mx-[10px] bg-[#fafafc] cursor-pointer hover:bg-primary;
+					&.active {
+						@apply bg-orange;
+					}
+				}
+			}
+		}
+		.portfolio-content {
 		}
 	}
 }
@@ -195,23 +226,23 @@ header.scrollBg {
 	.services-content {
 		@apply flex flex-wrap;
 		.card-wrapper {
+			@extend .transition;
 			@apply flex w-1/3 px-[12px];
-			@apply transition ease-in-out duration-[.5s];
 			&:hover {
 				transform: scale(1.05);
 			}
 			.card-inner-wrapper {
 				box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 5%);
 				@apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer;
-				@apply transition ease-in-out duration-[.5s];
+				@extend .transition;
 				&:hover {
 					box-shadow: 0px 0 35px 0 rgb(0 0 0 / 8%);
 				}
 				.icon {
 					@apply flex w-[64px] h-[64px] justify-center items-center relative rounded-[50%];
-					@apply transition ease-in-out duration-[.5s];
+					@extend .transition;
 					span {
-						@apply transition ease-in-out duration-[.5s];
+						@extend .transition;
 						@apply text-[32px] relative;
 					}
 				}
@@ -238,13 +269,13 @@ header.scrollBg {
 				}
 				.team-social {
 					@apply items-center absolute flex bottom-0 w-full justify-center py-[5px];
-					@apply transition ease-in-out duration-[.5s];
+					@extend .transition;
 					background-color: rgba(255, 255, 255, 0.85);
 					div {
 						@apply mx-[5px] w-[25px] h-[25px] flex justify-center items-center;
 						a {
 							@apply fill-[#414c64] hover:fill-primary;
-							@apply transition ease-in-out duration-[.5s];
+							@extend .transition;
 							svg {
 								@apply fill-[inherit] hover:fill-[inherit];
 								path {
@@ -269,8 +300,8 @@ header.scrollBg {
 }
 
 .scroll-up {
-	@apply fixed bg-yellow p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
-	@apply transition ease-in-out duration-[.5s];
+	@apply fixed bg-primary p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
+	@extend .transition;
 	&.hidden-elem {
 		@apply invisible opacity-0;
 	}
@@ -278,19 +309,20 @@ header.scrollBg {
 		@apply text-white;
 	}
 }
-.button {
-	@apply transition ease-in-out duration-[.5s] py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
+.button-primary {
+	@apply py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
+	@extend .transition;
 }
 .h2-heading {
 	@apply relative uppercase text-[32px] font-bold text-[#444444] text-center pb-[20px] mb-[20px];
 	&::after {
 		content: '';
-		background: #ffc107;
 		position: absolute;
 		width: 50px;
 		height: 3px;
 		bottom: 0;
 		left: calc(50% - (50px / 2));
+		@apply bg-primary;
 	}
 }
 .p-content {

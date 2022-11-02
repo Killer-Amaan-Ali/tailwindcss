@@ -11,8 +11,14 @@
     @apply font-OpenSans;
   }
 }
+.transition, .button-primary, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img, .headerUl .dropdown-box ul li, .headerUl > li {
+  @apply ease-in-out duration-[.5s];
+}
+.transition.t-1000, .t-1000.button-primary, .t-1000.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a.t-1000, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-1000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span.t-1000, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-1000.icon, .services-wrapper .services-content .card-wrapper .t-1000.card-inner-wrapper, .services-wrapper .services-content .t-1000.card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li.t-1000, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img.t-1000, .headerUl .dropdown-box ul li.t-1000, .headerUl > li.t-1000 {
+  @apply duration-[1.0s];
+}
+
 body {
-  @apply transition ease-in-out duration-[.5s];
   @layer bg-blue-700;
 }
 
@@ -21,10 +27,10 @@ header.scrollBg {
 }
 
 .headerUl > li.active {
-  @apply text-orange;
+  @apply text-primary;
 }
 .headerUl > li {
-  @apply text-[15px] transition ease-in-out duration-[.5s] mx-[15px] capitalize text-white hover:text-orange;
+  @apply text-[15px] mx-[15px] capitalize text-white hover:text-primary;
 }
 .headerUl > li:first-child {
   @apply ml-[0];
@@ -49,7 +55,7 @@ header.scrollBg {
   @apply py-[5px];
 }
 .headerUl .dropdown-box ul li {
-  @apply transition ease-in-out duration-[.5s] pl-[20px] py-[10px] pr-[130px] text-gray hover:text-orange;
+  @apply pl-[20px] py-[10px] pr-[130px] text-gray hover:text-primary;
 }
 
 .banner-wrapper {
@@ -68,7 +74,7 @@ header.scrollBg {
   @apply w-[15%] flex justify-center items-center py-[30px];
 }
 .brands-wrapper > div > img {
-  @apply max-w-[45%] grayscale transition ease-in-out duration-[.5s] hover:grayscale-0 hover:scale-[1.2];
+  @apply max-w-[45%] grayscale hover:grayscale-0 hover:scale-[1.2];
 }
 
 .about-wrapper .about-inner-wrapper > div {
@@ -106,13 +112,9 @@ header.scrollBg {
 }
 .testimonials-wrapper .testimonials-content ul {
   @apply flex;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
 }
 .testimonials-wrapper .testimonials-content ul li {
-  -webkit-transition: inherit;
-  transition: inherit;
-  @apply px-[20px];
+  @apply px-[20px] transition-[inherit];
   @apply min-w-[33%] w-[33%] overflow-hidden;
 }
 .testimonials-wrapper .testimonials-content ul li > div {
@@ -122,7 +124,7 @@ header.scrollBg {
   @apply p-[20px] text-[16px] italic bg-[#fafafc] pb-[50px] rounded-[inherit] rounded-b-none;
 }
 .testimonials-wrapper .testimonials-content ul li > div p span {
-  @apply text-[#ffe7a0] rounded-[10px];
+  @apply text-primary rounded-[10px] opacity-[.5];
 }
 .testimonials-wrapper .testimonials-content ul li > div p span.material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -144,18 +146,23 @@ header.scrollBg {
   @apply text-[14px] font-[500] text-[#999];
 }
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined {
-  @apply text-orange cursor-pointer text-[18px];
+  @apply text-primary cursor-pointer text-[22px];
 }
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.active {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
+.portfolio-wrapper .container .portfolio-title .categories > li {
+  @apply px-[10px] text-[#414c64] rounded-[50px] py-[5px] px-[15px] mx-[10px] bg-[#fafafc] cursor-pointer hover:bg-primary;
+}
+.portfolio-wrapper .container .portfolio-title .categories > li.active {
+  @apply bg-orange;
+}
 .services-wrapper .services-content {
   @apply flex flex-wrap;
 }
 .services-wrapper .services-content .card-wrapper {
   @apply flex w-1/3 px-[12px];
-  @apply transition ease-in-out duration-[.5s];
 }
 .services-wrapper .services-content .card-wrapper:hover {
   -webkit-transform: scale(1.05);
@@ -165,7 +172,6 @@ header.scrollBg {
   -webkit-box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
           box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
   @apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer;
-  @apply transition ease-in-out duration-[.5s];
 }
 .services-wrapper .services-content .card-wrapper .card-inner-wrapper:hover {
   -webkit-box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
@@ -173,10 +179,8 @@ header.scrollBg {
 }
 .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon {
   @apply flex w-[64px] h-[64px] justify-center items-center relative rounded-[50%];
-  @apply transition ease-in-out duration-[.5s];
 }
 .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span {
-  @apply transition ease-in-out duration-[.5s];
   @apply text-[32px] relative;
 }
 .services-wrapper .services-content .card-wrapper .card-inner-wrapper h4 {
@@ -202,7 +206,6 @@ header.scrollBg {
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social {
   @apply items-center absolute flex bottom-0 w-full justify-center py-[5px];
-  @apply transition ease-in-out duration-[.5s];
   background-color: rgba(255, 255, 255, 0.85);
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div {
@@ -210,7 +213,6 @@ header.scrollBg {
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a {
   @apply fill-[#414c64] hover:fill-primary;
-  @apply transition ease-in-out duration-[.5s];
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
   @apply fill-[inherit] hover:fill-[inherit];
@@ -229,8 +231,7 @@ header.scrollBg {
 }
 
 .scroll-up {
-  @apply fixed bg-yellow p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
-  @apply transition ease-in-out duration-[.5s];
+  @apply fixed bg-primary p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
 }
 .scroll-up.hidden-elem {
   @apply invisible opacity-0;
@@ -239,8 +240,8 @@ header.scrollBg {
   @apply text-white;
 }
 
-.button {
-  @apply transition ease-in-out duration-[.5s] py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
+.button-primary {
+  @apply py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
 }
 
 .h2-heading {
@@ -248,12 +249,12 @@ header.scrollBg {
 }
 .h2-heading::after {
   content: "";
-  background: #ffc107;
   position: absolute;
   width: 50px;
   height: 3px;
   bottom: 0;
   left: calc(50% - 25px);
+  @apply bg-primary;
 }
 
 .p-content {
