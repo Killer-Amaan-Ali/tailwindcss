@@ -159,17 +159,15 @@ let modified
 let temp = ``
 let noOfCards = 3
 
-modified = sliderWrapper.children.length - noOfCards
-
-for (let i = 0; i <= modified; i++) {
-	i === 0 ? (mode = 'active') : (mode = '')
-	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
-}
-
-sliderCounters.children[0].innerHTML = temp
-temp = ''
-let current
 const sliderActive = e => {
+	window.innerWidth <= 768
+		? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
+		: window.innerWidth <= 1280
+		? (sliderWrapper.setAttribute('style', '--width:50%;'), (noOfCards = 2))
+		: window.innerWidth <= 1336
+		? (sliderWrapper.setAttribute('style', '--width:33%;'), (noOfCards = 3))
+		: null
+
 	let child = sliderWrapper.children[e.id]
 	let width = child.getBoundingClientRect().width
 	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
@@ -181,22 +179,31 @@ const sliderActive = e => {
 	current = e.id
 }
 
+modified = sliderWrapper.children.length - noOfCards
+for (let i = 0; i <= modified; i++) {
+	i === 0 ? (mode = 'active') : (mode = '')
+	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+}
+sliderCounters.children[0].innerHTML = temp
+temp = ''
+
+let current
+
 // AUTO SCROLL
 let i = 0
 let number = 5
 let seconds = number * 1000
-let scrollFlag = true
 const autoScroll = () => {
 	i = current
 	i < modified ? i++ : (i = 0)
 	document.getElementById(i)?.click()
 }
+autoScroll()
+
+var refreshIntervalId = setInterval(autoScroll, seconds)
 const mouseIn = () => {
-	scrollFlag = false
-	return scrollFlag
+	clearInterval(refreshIntervalId)
 }
 const mouseOut = () => {
-	scrollFlag = true
-	return scrollFlag
+	var refreshIntervalId = setInterval(autoScroll, seconds)
 }
-scrollFlag ? setInterval(autoScroll, seconds) : setInterval(null, null)

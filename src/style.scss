@@ -1,7 +1,8 @@
-// :root {
-// 	--footerPrim: red !important;
-// 	--footerSec: blue !important;
-// }
+:root {
+	--primary: rgb(255, 193, 7);
+	// --footerPrim: var(--primary) !important;
+	// --footerSec: blue !important;
+}
 
 @tailwind base;
 @tailwind components;
@@ -144,9 +145,21 @@ header.scrollBg {
 			// @apply justify-between;
 			@extend .transition;
 			@extend .t-1000;
+			--width: 33%;
+			@media screen and (max-width: 1336px) {
+			--width: 33%;
+			}
+			@media screen and (max-width: 1280px) {
+			--width: 50%;
+			}
+			@media screen and (max-width: 768px) {
+			--width: 100%;
+			}
+
 			li {
-				@apply px-[20px] transition-[inherit];
-				@apply min-w-[33%] w-[33%] overflow-hidden;
+				width: var(--width);
+				min-width: var(--width);
+				@apply px-[20px] transition-[inherit] overflow-hidden;
 
 				// &:first-child {
 				// 	@apply pl-0;

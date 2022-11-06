@@ -1,3 +1,7 @@
+:root {
+  --primary: rgb(255, 193, 7);
+}
+
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
@@ -1057,17 +1061,36 @@ header.scrollBg {
 
 .testimonials-wrapper .testimonials-content ul {
   display: flex;
+  --width: 33%;
+}
+
+@media screen and (max-width: 1336px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 33%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 100%;
+  }
 }
 
 .testimonials-wrapper .testimonials-content ul li {
+  width: var(--width);
+  min-width: var(--width);
+  overflow: hidden;
   padding-left: 20px;
   padding-right: 20px;
   transition-property: inherit;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  width: 33%;
-  min-width: 33%;
-  overflow: hidden;
 }
 
 .testimonials-wrapper .testimonials-content ul li > div {

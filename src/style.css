@@ -1,3 +1,7 @@
+:root {
+  --primary: rgb(255, 193, 7);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -107,10 +111,27 @@ header.scrollBg {
 }
 .testimonials-wrapper .testimonials-content ul {
   @apply flex;
+  --width: 33%;
+}
+@media screen and (max-width: 1336px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 33%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .testimonials-wrapper .testimonials-content ul {
+    --width: 100%;
+  }
 }
 .testimonials-wrapper .testimonials-content ul li {
-  @apply px-[20px] transition-[inherit];
-  @apply min-w-[33%] w-[33%] overflow-hidden;
+  width: var(--width);
+  min-width: var(--width);
+  @apply px-[20px] transition-[inherit] overflow-hidden;
 }
 .testimonials-wrapper .testimonials-content ul li > div {
   @apply flex flex-col rounded-[20px];
