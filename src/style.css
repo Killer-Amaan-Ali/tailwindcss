@@ -14,10 +14,10 @@
     @apply font-OpenSans;
   }
 }
-.transition, .button-primary, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img, .headerUl .dropdown-box ul li, .headerUl > li, body {
+.transition, .h2-heading, .button-primary, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img, .headerUl .dropdown-box ul li, .headerUl > li, body {
   @apply ease-in-out duration-[.5s];
 }
-.transition.t-1000, .t-1000.button-primary, .t-1000.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a.t-1000, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-1000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span.t-1000, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-1000.icon, .services-wrapper .services-content .card-wrapper .t-1000.card-inner-wrapper, .services-wrapper .services-content .t-1000.card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li.t-1000, .testimonials-wrapper .testimonials-content .sliderCounters .t-1000.material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img.t-1000, .headerUl .dropdown-box ul li.t-1000, .headerUl > li.t-1000, body.t-1000 {
+.transition.t-1000, .t-1000.h2-heading, .t-1000.button-primary, .t-1000.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a.t-1000, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-1000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon span.t-1000, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-1000.icon, .services-wrapper .services-content .card-wrapper .t-1000.card-inner-wrapper, .services-wrapper .services-content .t-1000.card-wrapper, .portfolio-wrapper .container .portfolio-title .categories > li.t-1000, .testimonials-wrapper .testimonials-content .sliderCounters .t-1000.material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img.t-1000, .headerUl .dropdown-box ul li.t-1000, .headerUl > li.t-1000, body.t-1000 {
   @apply duration-[1.0s];
 }
 
@@ -261,16 +261,20 @@ header.scrollBg {
 }
 
 .h2-heading {
-  @apply relative uppercase text-[32px] font-bold text-[#444444] text-center pb-[20px] mb-[20px];
+  @apply flex justify-center mx-[auto] relative uppercase text-[32px] font-bold text-[#444444] text-center pb-[20px] mb-[20px] w-fit;
 }
 .h2-heading::after {
   content: "";
+  -webkit-transition: inherit;
+  transition: inherit;
   position: absolute;
   width: 50px;
   height: 3px;
   bottom: 0;
-  left: calc(50% - 25px);
   @apply bg-primary;
+}
+.h2-heading:hover::after {
+  width: 70px;
 }
 
 .p-content {

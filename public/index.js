@@ -201,9 +201,9 @@ const autoScroll = () => {
 autoScroll()
 
 var refreshIntervalId = setInterval(autoScroll, seconds)
+const mouseOut = () => {
+	refreshIntervalId = setInterval(autoScroll, seconds)
+}
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
-}
-const mouseOut = () => {
-	var refreshIntervalId = setInterval(autoScroll, seconds)
 }
