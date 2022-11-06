@@ -192,6 +192,7 @@ header.scrollBg {
 		}
 		.sliderCounters {
 			.material-symbols-outlined {
+				@extend .transition;
 				@apply text-primary cursor-pointer text-[22px];
 				&.active {
 					font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;

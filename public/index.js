@@ -155,26 +155,11 @@ scrollFunc()
 
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
-let modified = sliderWrapper.children.length
+let modified
 let temp = ``
-let firstChild = sliderWrapper.children[0]
-let width = firstChild.clientWidth
+let noOfCards = 3
 
-let lenOfCards = []
-for (let i = 0; i < sliderWrapper.children.length; i++) {
-	// console.log(sliderWrapper.getBoundingClientRect().width)
-	// console.log(sliderWrapper.children[i].getBoundingClientRect().x)
-
-	// if (
-	// 	sliderWrapper.getBoundingClientRect().width >=
-	// 	sliderWrapper.children[i].getBoundingClientRect().x
-	// ) {
-	lenOfCards[i] =
-		sliderWrapper.getBoundingClientRect().width -
-		sliderWrapper.children[i].getBoundingClientRect().x
-	// }
-}
-modified = lenOfCards.length - 3
+modified = sliderWrapper.children.length - noOfCards
 
 for (let i = 0; i <= modified; i++) {
 	i === 0 ? (mode = 'active') : (mode = '')
@@ -185,12 +170,14 @@ sliderCounters.children[0].innerHTML = temp
 temp = ''
 let current
 const sliderActive = e => {
+	let child = sliderWrapper.children[e.id]
+	let width = child.getBoundingClientRect().width
 	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
 		sliderCounters.children[0].children[i].classList.remove('active')
 	}
 	e.classList.add('active')
 	let calc = width * e.id
-	firstChild.style.marginLeft = `-${calc}px`
+	sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	current = e.id
 }
 
@@ -202,7 +189,7 @@ let scrollFlag = true
 const autoScroll = () => {
 	i = current
 	i < modified ? i++ : (i = 0)
-	document.getElementById(i).click()
+	document.getElementById(i)?.click()
 }
 const mouseIn = () => {
 	scrollFlag = false
@@ -212,4 +199,4 @@ const mouseOut = () => {
 	scrollFlag = true
 	return scrollFlag
 }
-scrollFlag ? setInterval(autoScroll, seconds) : setInterval(null, seconds)
+scrollFlag ? setInterval(autoScroll, seconds) : setInterval(null, null)
