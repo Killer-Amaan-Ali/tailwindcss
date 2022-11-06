@@ -27,8 +27,7 @@
 }
 
 body {
-	// @extend .transition;
-	@layer bg-blue-700;
+	@extend .transition;
 	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat h-[5000px];
 }
 header.scrollBg {
@@ -209,7 +208,7 @@ header.scrollBg {
 					@extend .transition;
 					@apply px-[10px] text-[#414c64] rounded-[50px] py-[5px] px-[15px] mx-[10px] bg-[#fafafc] cursor-pointer hover:bg-primary;
 					&.active {
-						@apply bg-orange;
+						@apply bg-primary;
 					}
 				}
 			}
