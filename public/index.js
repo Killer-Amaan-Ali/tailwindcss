@@ -130,29 +130,8 @@ window.onscroll = () => {
 }
 scrollFunc()
 
-// let obj = [
-// 	{ name: 'sulaman', age: 38, sName: 'wadi' },
-// 	{ name: 'amaan', age: 18, sName: 'ali' },
-// 	{ name: 'mariyam', age: 49, sName: 'wadi' },
-// ]
-
-// let alpha = ['a', 'b']
-// let num = [1, 2]
-// const fire = (a = 0, b = 0) => {
-// let updatedArray = []
-// for (let i = 0; i < obj.length; i++) {
-// 	updatedArray[i].name = obj[i].name
-// }
-// updatedArray.map()
-// console.log(updatedArray)
-// let news = []
-// news = [...alpha, ...num]
-// console.log('Console ~ file: index.js ~ line 60 ~ fire ~ alpha', news)
-// console.log((a || 0) + (b || 0))
-// console.log(a > 50 ? a + b : a - b)
-// }
-// fire(60, 10)
 let infiniteSlider = false
+infiniteSlider = true
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper.children.length
@@ -166,7 +145,7 @@ if (infiniteSlider) {
 	modified = sliderWrapper.children.length - noOfCards
 }
 
-const sliderActive = e => {
+const updateWidth = () => {
 	// responsive
 	window.innerWidth <= 768
 		? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
@@ -175,33 +154,35 @@ const sliderActive = e => {
 		: window.innerWidth <= 1336
 		? (sliderWrapper.setAttribute('style', '--width:33%;'), (noOfCards = 3))
 		: null
-
+}
+updateWidth()
+const sliderActive = e => {
+	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
 	let width = child.getBoundingClientRect().width
 	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
 		sliderCounters.children[0].children[i].classList.remove('active')
 	}
-	if (infiniteSlider) {
-		for (let i = 0; i < sliderWrapper.children.length; i++) {
-			sliderWrapper.innerHTML += sliderWrapper.children[0].innerHTML
-		}
-	}
-	e.classList.add('active')
-	let calc = width * e.id
+	e?.classList?.add('active')
+	let calc
+	calc = width * e.id
+	// console.log('e.id', +e.id)
+	// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
+	// console.log('modified', modified)
+	// console.log(sliderWrapper.children.length - noOfCards - 1)
+
 	sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	current = e.id
+	// }
 }
-
-for (let i = 0; i <= modified; i++) {
-	i === 0 ? (mode = 'active') : (mode = '')
-	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+if (infiniteSlider) {
+	for (let i = 0; i < noOfCards; i++) {
+		sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`
+	}
 }
-sliderCounters.children[0].innerHTML = temp
-temp = ''
-
-let current
 
 // AUTO SCROLL
+let current
 let i = 0
 let number = 5
 let seconds = number * 1000
@@ -211,14 +192,24 @@ const autoScroll = () => {
 	document.getElementById(i)?.click()
 }
 autoScroll()
+setInterval(updateWidth, 1000)
 
-var refreshIntervalId = setInterval(autoScroll, seconds)
+var refreshIntervalId
+refreshIntervalId = setInterval(autoScroll, seconds)
 const mouseOut = () => {
 	refreshIntervalId = setInterval(autoScroll, seconds)
 }
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
 }
+sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)')
+sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)')
+for (let i = 0; i <= modified; i++) {
+	i === 0 ? (mode = 'active') : (mode = '')
+	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+}
+sliderCounters.children[0].innerHTML = temp
+temp = ''
 
 let portfolioCategories = document.getElementById('portfolioCategories')
 let portfolioContent = document.getElementById('portfolioContent')

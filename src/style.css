@@ -195,10 +195,10 @@ header.scrollBg {
   @apply mt-[-20px] mb-[5px] rounded-[50%] w-[90px] border-[6px] border-[#fff];
 }
 .testimonials-wrapper .testimonials-content ul li > div > div h3 {
-  @apply text-[18px] font-[600] text-[#111];
+  @apply text-[18px] font-[600] text-[#111] capitalize;
 }
 .testimonials-wrapper .testimonials-content ul li > div > div h4 {
-  @apply text-[14px] font-[500] text-[#999];
+  @apply text-[14px] font-[500] text-[#999] capitalize;
 }
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined {
   @apply text-primary cursor-pointer text-[22px];
@@ -295,7 +295,9 @@ header.scrollBg {
   @apply fill-[#414c64] transition-[inherit] hover:fill-primary;
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
-  @apply fill-[inherit] hover:fill-[inherit];
+  width: 25px !important;
+  max-width: 25px !important;
+  @apply fill-[inherit] hover:fill-[inherit] w-[25px];
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg path {
   @apply fill-[inherit] hover:fill-[inherit];
