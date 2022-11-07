@@ -131,7 +131,7 @@ window.onscroll = () => {
 scrollFunc()
 
 let infiniteSlider = false
-infiniteSlider = true
+// infiniteSlider = true
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper.children.length
