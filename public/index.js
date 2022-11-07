@@ -155,7 +155,7 @@ scrollFunc()
 
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
-let modified
+let modified = sliderWrapper.children.length
 let temp = ``
 let noOfCards = 3
 
@@ -180,6 +180,7 @@ const sliderActive = e => {
 }
 
 modified = sliderWrapper.children.length - noOfCards
+// modified = sliderWrapper.children.length - 1 // for infinite carousel
 for (let i = 0; i <= modified; i++) {
 	i === 0 ? (mode = 'active') : (mode = '')
 	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
@@ -206,4 +207,19 @@ const mouseOut = () => {
 }
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
+}
+
+let categories = document.getElementById('portfolioCategories')
+let categoryMode = categories.getElementsByClassName('active')[0].innerHTML
+
+const categoryActive = e => {
+	for (let i = 0; i < categories.children.length; i++) {
+		categories.children[i].classList.remove('active')
+	}
+	e.target.classList.add('active')
+	categoryMode = e.target.innerHTML
+}
+
+for (let i = 0; i < categories.children.length; i++) {
+	categories.children[i].addEventListener('click', categoryActive)
 }
