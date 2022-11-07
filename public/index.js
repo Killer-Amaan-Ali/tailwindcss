@@ -152,14 +152,22 @@ scrollFunc()
 // console.log(a > 50 ? a + b : a - b)
 // }
 // fire(60, 10)
-
+let infiniteSlider = false
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper.children.length
 let temp = ``
 let noOfCards = 3
 
+if (infiniteSlider) {
+	modified = sliderWrapper.children.length - 1
+	// for infinite carousel
+} else {
+	modified = sliderWrapper.children.length - noOfCards
+}
+
 const sliderActive = e => {
+	// responsive
 	window.innerWidth <= 768
 		? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
 		: window.innerWidth <= 1280
@@ -173,14 +181,17 @@ const sliderActive = e => {
 	for (let i = 0; i < sliderCounters.children[0].children.length; i++) {
 		sliderCounters.children[0].children[i].classList.remove('active')
 	}
+	if (infiniteSlider) {
+		for (let i = 0; i < sliderWrapper.children.length; i++) {
+			sliderWrapper.innerHTML += sliderWrapper.children[0].innerHTML
+		}
+	}
 	e.classList.add('active')
 	let calc = width * e.id
 	sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	current = e.id
 }
 
-modified = sliderWrapper.children.length - noOfCards
-// modified = sliderWrapper.children.length - 1 // for infinite carousel
 for (let i = 0; i <= modified; i++) {
 	i === 0 ? (mode = 'active') : (mode = '')
 	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
