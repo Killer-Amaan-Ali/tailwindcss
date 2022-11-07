@@ -273,16 +273,16 @@ header.scrollBg {
 			.portfolio-card {
 				@apply w-[33%] overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px];
 				@extend .transition;
+				@extend .t-750;
 				img {
 					@extend .transition;
-					@extend .t-750;
+					@extend .t-500;
 					@apply delay-300;
 				}
 				.portfolio-info {
 					@extend .transition;
-					@extend .t-750;
-					@apply px-[20px] py-[15px] absolute bottom-0 left-[unset] mt-[-20px] flex items-center justify-between bg-primary w-[90%] text-[white];
 					@extend .t-500;
+					@apply px-[20px] py-[15px] absolute bottom-0 left-[unset] mt-[-20px] flex items-center justify-between bg-primary w-[90%] text-[white];
 					> div {
 						@apply flex;
 						&:first-child {

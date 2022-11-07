@@ -209,17 +209,34 @@ const mouseIn = () => {
 	clearInterval(refreshIntervalId)
 }
 
-let categories = document.getElementById('portfolioCategories')
-let categoryMode = categories.getElementsByClassName('active')[0].innerHTML
+let portfolioCategories = document.getElementById('portfolioCategories')
+let portfolioContent = document.getElementById('portfolioContent')
+let categoryMode =
+	portfolioCategories.getElementsByClassName('active')[0].innerHTML
+let filteredMode = []
 
 const categoryActive = e => {
-	for (let i = 0; i < categories.children.length; i++) {
-		categories.children[i].classList.remove('active')
-	}
-	e.target.classList.add('active')
+	e.preventDefault()
 	categoryMode = e.target.innerHTML
+	for (let i = 0; i < portfolioCategories.children.length; i++) {
+		portfolioCategories.children[i].classList.remove('active')
+	}
+	for (let i = 0; i < portfolioContent.children.length; i++) {
+		filteredMode[i] =
+			portfolioContent.children[i].getAttribute('portfolio-mode')
+		if (filteredMode[i] !== categoryMode) {
+			portfolioContent.children[i].style.display = 'none'
+		} else {
+			portfolioContent.children[i].style.display = 'flex'
+		}
+		if (categoryMode === 'all') {
+			portfolioContent.children[i].style.display = 'flex'
+		}
+	}
+
+	e.target.classList.add('active')
 }
 
-for (let i = 0; i < categories.children.length; i++) {
-	categories.children[i].addEventListener('click', categoryActive)
+for (let i = 0; i < portfolioCategories.children.length; i++) {
+	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
