@@ -35,6 +35,9 @@
 	&.t-1000 {
 		@apply duration-[1.0s];
 	}
+	&.t-5000 {
+		@apply duration-[5.0s];
+	}
 }
 
 .button-primary {
@@ -269,10 +272,17 @@ header.scrollBg {
 			}
 		}
 		.portfolio-content {
+			@apply relative overflow-hidden items-center;
+			@extend .transition;
+			@extend .t-750;
 			.portfolio-card {
 				@apply w-[33%] overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px];
 				@extend .transition;
 				@extend .t-750;
+				// @extend .t-5000;
+				&.hide {
+					@apply z-[-1] scale-0 p-0 w-0;
+				}
 				img {
 					@extend .transition;
 					@extend .t-500;

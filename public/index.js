@@ -227,12 +227,12 @@ const categoryActive = e => {
 		filteredMode[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
 		if (filteredMode[i] !== categoryMode) {
-			portfolioContent.children[i].style.display = 'none'
+			portfolioContent.children[i].classList.add('hide')
 		} else {
-			portfolioContent.children[i].style.display = 'flex'
+			portfolioContent.children[i].classList.remove('hide')
 		}
 		if (categoryMode === 'all') {
-			portfolioContent.children[i].style.display = 'flex'
+			portfolioContent.children[i].classList.remove('hide')
 		}
 	}
 
