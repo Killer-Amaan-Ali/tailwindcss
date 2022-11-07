@@ -21,6 +21,10 @@ h6 {
     @apply font-OpenSans;
   }
 }
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
 .transition, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img, .portfolio-wrapper .container .portfolio-content .portfolio-card, .portfolio-wrapper .container .portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img, .headerUl .dropdown-box ul li, .headerUl > li, body, .h2-heading, .button-primary {
   @apply ease-in-out;
 }

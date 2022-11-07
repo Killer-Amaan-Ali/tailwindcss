@@ -15,8 +15,9 @@ module.exports = {
 			// xl: '1280px',
 		},
 		colors: {
-			primary: 'rgb(255, 193, 7)',
-			// primary: 'red',
+			// primary: 'rgb(255, 193, 7)',
+			primary: 'red',
+			// primary: '#58d9ef', // cyan
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
 			offWhite: '#f5f5f5',

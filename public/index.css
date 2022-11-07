@@ -903,6 +903,11 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
 .transition,  .scroll-up,  .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social,  .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon,  .services-wrapper .services-content .card-wrapper .card-inner-wrapper,  .services-wrapper .services-content .card-wrapper,  .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info,  .portfolio-wrapper .container .portfolio-content .portfolio-card img,  .portfolio-wrapper .container .portfolio-content .portfolio-card,  .portfolio-wrapper .container .portfolio-content,  .portfolio-wrapper .container .portfolio-title .portfolio-categories > li,  .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined,  .testimonials-wrapper .testimonials-content ul,  .brands-wrapper > div > img,  .headerUl .dropdown-box ul li,  .headerUl > li,  body,  .h2-heading,  .button-primary {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -927,7 +932,7 @@ p {
   border-radius: 30px;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(255 193 7 / var(--tw-border-opacity));
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 35px;
@@ -940,7 +945,7 @@ p {
 
 .button-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .h2-heading {
@@ -971,7 +976,7 @@ p {
   height: 3px;
   bottom: 0;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .h2-heading:hover::after {
@@ -992,7 +997,7 @@ header.scrollBg {
 
 .headerUl > li.active {
   --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .headerUl > li {
@@ -1006,7 +1011,7 @@ header.scrollBg {
 
 .headerUl > li:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .headerUl > li:first-child {
@@ -1049,7 +1054,7 @@ header.scrollBg {
 
 .headerUl .dropdown-box ul li:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .banner-wrapper {
@@ -1214,7 +1219,7 @@ header.scrollBg {
 .testimonials-wrapper .testimonials-content ul li > div p span {
   border-radius: 10px;
   --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+  color: rgb(255 0 0 / var(--tw-text-opacity));
   opacity: .5;
 }
 
@@ -1261,7 +1266,7 @@ header.scrollBg {
   cursor: pointer;
   font-size: 22px;
   --tw-text-opacity: 1;
-  color: rgb(255 193 7 / var(--tw-text-opacity));
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.active {
@@ -1286,12 +1291,12 @@ header.scrollBg {
 
 .portfolio-wrapper .container .portfolio-title .portfolio-categories > li:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.active {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .portfolio-wrapper .container .portfolio-content {
@@ -1335,7 +1340,7 @@ header.scrollBg {
   align-items: center;
   justify-content: space-between;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
@@ -1497,7 +1502,7 @@ header.scrollBg {
 }
 
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a:hover {
-  fill: rgb(255, 193, 7);
+  fill: red;
 }
 
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
@@ -1554,7 +1559,7 @@ header.scrollBg {
   justify-content: center;
   border-radius: 50%;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
   padding: 10px;
 }
 

@@ -23,7 +23,9 @@
 		@apply font-OpenSans;
 	}
 }
-
+::-webkit-scrollbar-thumb{
+	@apply bg-primary;
+}
 .transition {
 	@apply ease-in-out;
 	&.t-500 {
