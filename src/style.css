@@ -304,8 +304,8 @@ header.scrollBg {
   @apply fill-[#414c64] transition-[inherit] hover:fill-primary;
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
-  width: 25px !important;
-  max-width: 25px !important;
+  width: 22px !important;
+  max-width: 22px !important;
   @apply fill-[inherit] hover:fill-[inherit] w-[25px];
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg path {
