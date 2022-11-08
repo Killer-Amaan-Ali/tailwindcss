@@ -210,6 +210,10 @@ header.scrollBg {
 			@media screen and (max-width: 768px) {
 				--width: 100%;
 			}
+			&.default {
+				overflow-x: scroll;
+				padding-bottom: 20px;
+			}
 			&.noTransition {
 				transition: none !important;
 			}

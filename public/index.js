@@ -133,8 +133,9 @@ scrollFunc()
 let infiniteSlider = false
 infiniteSlider = true
 let sliderWrapper = document.getElementById('sliderWrapper')
+sliderWrapper.classList.remove('default')
 let sliderCounters = document.getElementById('sliderCounters')
-let modified = sliderWrapper.children.length
+let modified = sliderWrapper?.children.length
 let temp = ``
 let noOfCards = 3
 
@@ -159,9 +160,9 @@ const updateWidth = () => {
 updateWidth()
 if (infiniteSlider) {
 	// for infinite carousel
-	modified = sliderWrapper.children.length - 1
+	modified = sliderWrapper?.children.length - 1
 } else {
-	modified = sliderWrapper.children.length - noOfCards
+	modified = sliderWrapper?.children.length - noOfCards
 }
 // console.log('sliderWrapper.children.length', sliderWrapper.children.length)
 // console.log('noOfCards', noOfCards)
@@ -216,7 +217,8 @@ const sliderActive = e => {
 }
 if (infiniteSlider) {
 	for (let i = 0; i < noOfCards; i++) {
-		sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`
+		sliderWrapper &&
+			(sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`)
 	}
 }
 
@@ -242,8 +244,9 @@ const mouseIn = () => {
 	clearInterval(refreshIntervalId)
 }
 // clearInterval(refreshIntervalId)
-sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)')
-sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)')
+sliderWrapper &&
+	(sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)'),
+	sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)'))
 const sliderDots = () => {
 	for (let i = 0; i <= modified; i++) {
 		i === 0 ? (mode = 'active') : (mode = '')

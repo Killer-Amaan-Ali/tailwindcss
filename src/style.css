@@ -181,6 +181,10 @@ header.scrollBg {
     --width: 100%;
   }
 }
+.testimonials-wrapper .testimonials-content ul.default {
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
 .testimonials-wrapper .testimonials-content ul.noTransition {
   -webkit-transition: none !important;
   transition: none !important;
