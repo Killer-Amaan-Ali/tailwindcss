@@ -163,10 +163,10 @@ if (infiniteSlider) {
 } else {
 	modified = sliderWrapper.children.length - noOfCards
 }
-console.log('sliderWrapper.children.length', sliderWrapper.children.length)
-console.log('noOfCards', noOfCards)
+// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
+// console.log('noOfCards', noOfCards)
 let coun = 0
-let tflag = false
+let infiCarousFlag = false
 const sliderActive = e => {
 	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
@@ -186,9 +186,8 @@ const sliderActive = e => {
 		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	} else {
 		coun = e.id
-		if (+coun == 0 && tflag) {
+		if (+coun == 0 && infiCarousFlag) {
 			coun = sliderWrapper.children.length - noOfCards
-			console.log('amaan')
 			setTimeout(() => {
 				sliderWrapper.classList.add('noTransition')
 				sliderWrapper.style.transform = ''
@@ -198,17 +197,14 @@ const sliderActive = e => {
 			}, 1100)
 		}
 		if (+coun == sliderWrapper.children.length - noOfCards - 1) {
-			console.log('chekc')
-			tflag = true
+			infiCarousFlag = true
 		} else if (
 			+coun >= 0 &&
 			+coun <= sliderWrapper.children.length - noOfCards - 1
 		) {
-			tflag = false
-			// coun = e.id
-			console.log('tflag', tflag)
+			infiCarousFlag = false
 		}
-		// console.log(tflag)
+		// console.log(infiCarousFlag)
 		// console.log('+coun', +coun)
 		// console.log('+e.id', +e.id)
 		// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
@@ -221,7 +217,6 @@ const sliderActive = e => {
 if (infiniteSlider) {
 	for (let i = 0; i < noOfCards; i++) {
 		sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`
-		// sliderWrapper.children[i].remove()
 	}
 }
 
