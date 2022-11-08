@@ -48,6 +48,10 @@ h6 {
 .button-secondary {
   @apply py-[10px] px-[35px] bg-primary capitalize text-[18px] text-white rounded-[4px] hover:bg-primaryHover;
 }
+.button-secondary.grayed {
+  @apply border-[2px] border-solid border-[#c8cedc] text-[#6c7c9f];
+  @apply bg-[transparent] hover:bg-[transparent];
+}
 .button-secondary.rounded {
   @apply rounded-[30px];
 }
@@ -338,6 +342,21 @@ header.scrollBg {
 }
 .team-content .team-card-wrapper .team-inner-wrapper .team-content span {
   @apply text-[13px] font-[400] text-[#aaaaaa] font-OpenSans;
+}
+
+.pricing-wrapper .pricing-content {
+  @apply py-[30px];
+}
+.pricing-wrapper .pricing-content > ul > li {
+  width: 25%;
+}
+.pricing-wrapper .pricing-content > ul > li div {
+  @apply p-[20px] bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+.pricing-wrapper .pricing-content > ul > li div > ul {
+  @apply w-full;
 }
 
 .scroll-up {

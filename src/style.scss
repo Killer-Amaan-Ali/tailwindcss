@@ -52,6 +52,10 @@
 	@extend .transition;
 	@extend .t-500;
 	@apply py-[10px] px-[35px] bg-primary capitalize text-[18px] text-white rounded-[4px] hover:bg-primaryHover;
+	&.grayed {
+		@apply border-[2px] border-solid border-[#c8cedc] text-[#6c7c9f];
+		@apply bg-[transparent] hover:bg-[transparent];
+	}
 	&.rounded {
 		@apply rounded-[30px];
 	}
@@ -418,6 +422,25 @@ header.scrollBg {
 	}
 }
 
+.pricing-wrapper {
+	.pricing-title {
+	}
+	.pricing-content {
+		@apply py-[30px];
+		> ul {
+			> li {
+				width: 25%;
+				div {
+					@apply p-[20px] bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center;
+					box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
+					> ul {
+						@apply w-full;
+					}
+				}
+			}
+		}
+	}
+}
 .scroll-up {
 	@apply fixed bg-primary p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center hover:bg-primaryHover;
 	@extend .transition;
