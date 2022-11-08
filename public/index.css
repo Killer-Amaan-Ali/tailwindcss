@@ -714,10 +714,6 @@ p {
   justify-content: space-between;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .bg-transparent {
   background-color: rgb(0, 0, 0, 0);
 }
@@ -1238,6 +1234,10 @@ header.scrollBg {
 }
 
 .testimonials-wrapper .testimonials-content ul.noTransition {
+  transition: none !important;
+}
+
+.testimonials-wrapper .testimonials-content ul.noTransition li {
   transition: none !important;
 }
 

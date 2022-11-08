@@ -168,6 +168,8 @@ if (infiniteSlider) {
 // console.log('noOfCards', noOfCards)
 let coun = 0
 let infiCarousFlag = false
+let transformMode = true
+// transformMode = false
 const sliderActive = e => {
 	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
@@ -183,8 +185,9 @@ const sliderActive = e => {
 	// console.log('calc', +calc)
 
 	if (!infiniteSlider) {
-		// sliderWrapper.children[0].style.marginLeft = `-${calc}px`
-		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
+		transformMode
+			? (sliderWrapper.style.transform = `translate(-${calc}px, 0px)`)
+			: (sliderWrapper.children[0].style.marginLeft = `-${calc}px`)
 	} else {
 		coun = e.id
 		// if (coun > 0) {
@@ -208,7 +211,9 @@ const sliderActive = e => {
 			coun = sliderWrapper.children.length - noOfCards
 			setTimeout(() => {
 				sliderWrapper.classList.add('noTransition')
-				sliderWrapper.style.transform = ''
+				transformMode
+					? (sliderWrapper.style.transform = '')
+					: (sliderWrapper.children[0].style.marginLeft = `0`)
 			}, 1000)
 			setTimeout(() => {
 				sliderWrapper.classList.remove('noTransition')
@@ -227,7 +232,9 @@ const sliderActive = e => {
 		// console.log('+e.id', +e.id)
 		// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
 		calc = width * coun
-		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
+		transformMode
+			? (sliderWrapper.style.transform = `translate(-${calc}px, 0px)`)
+			: (sliderWrapper.children[0].style.marginLeft = `-${calc}px`)
 	}
 	current = e.id
 	// }

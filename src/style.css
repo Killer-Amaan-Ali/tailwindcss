@@ -193,6 +193,10 @@ header.scrollBg {
   -webkit-transition: none !important;
   transition: none !important;
 }
+.testimonials-wrapper .testimonials-content ul.noTransition li {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
 .testimonials-wrapper .testimonials-content ul li {
   width: var(--width);
   min-width: var(--width);
