@@ -1187,6 +1187,10 @@ header.scrollBg {
   }
 }
 
+.testimonials-wrapper .testimonials-content ul.noTransition {
+  transition: none !important;
+}
+
 .testimonials-wrapper .testimonials-content ul li {
   width: var(--width);
   min-width: var(--width);

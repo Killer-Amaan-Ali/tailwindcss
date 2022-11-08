@@ -140,7 +140,7 @@ let noOfCards = 3
 
 const updateWidth = () => {
 	// responsive
-	console.log(window.innerWidth)
+	// console.log(window.innerWidth)
 	window.innerWidth <= 768
 		? (noOfCards = 1)
 		: window.innerWidth <= 1280
@@ -165,6 +165,8 @@ if (infiniteSlider) {
 }
 console.log('sliderWrapper.children.length', sliderWrapper.children.length)
 console.log('noOfCards', noOfCards)
+let coun = 0
+let tflag = false
 const sliderActive = e => {
 	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
@@ -180,13 +182,46 @@ const sliderActive = e => {
 	// console.log('calc', +calc)
 
 	// sliderWrapper.children[0].style.marginLeft = `-${calc}px`
-	sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
+	if (!infiniteSlider) {
+		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
+	} else {
+		coun = e.id
+		if (+coun == 0 && tflag) {
+			coun = sliderWrapper.children.length - noOfCards
+			console.log('amaan')
+			setTimeout(() => {
+				sliderWrapper.classList.add('noTransition')
+				sliderWrapper.style.transform = ''
+			}, 1000)
+			setTimeout(() => {
+				sliderWrapper.classList.remove('noTransition')
+			}, 1100)
+		}
+		if (+coun == sliderWrapper.children.length - noOfCards - 1) {
+			console.log('chekc')
+			tflag = true
+		} else if (
+			+coun >= 0 &&
+			+coun <= sliderWrapper.children.length - noOfCards - 1
+		) {
+			tflag = false
+			// coun = e.id
+			console.log('tflag', tflag)
+		}
+		// console.log(tflag)
+		// console.log('+coun', +coun)
+		// console.log('+e.id', +e.id)
+		// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
+		calc = width * coun
+		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
+	}
 	current = e.id
 	// }
 }
 if (infiniteSlider) {
 	for (let i = 0; i < noOfCards; i++) {
 		sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`
+		// sliderWrapper.children[i].remove()
 	}
 }
 
@@ -211,6 +246,7 @@ const mouseOut = () => {
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
 }
+// clearInterval(refreshIntervalId)
 sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)')
 sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)')
 const sliderDots = () => {

@@ -23,7 +23,7 @@
 		@apply font-OpenSans;
 	}
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	@apply bg-primary;
 }
 .transition {
@@ -200,6 +200,9 @@ header.scrollBg {
 			}
 			@media screen and (max-width: 768px) {
 				--width: 100%;
+			}
+			&.noTransition {
+				transition: none !important;
 			}
 			li {
 				width: var(--width);
