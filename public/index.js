@@ -131,31 +131,40 @@ window.onscroll = () => {
 scrollFunc()
 
 let infiniteSlider = false
-// infiniteSlider = true
+infiniteSlider = true
 let sliderWrapper = document.getElementById('sliderWrapper')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper.children.length
 let temp = ``
 let noOfCards = 3
 
+const updateWidth = () => {
+	// responsive
+	console.log(window.innerWidth)
+	window.innerWidth <= 768
+		? (noOfCards = 1)
+		: window.innerWidth <= 1280
+		? (noOfCards = 2)
+		: window.innerWidth <= 1336
+		? (noOfCards = 3)
+		: null
+	// window.innerWidth <= 768
+	// 	? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
+	// 	: window.innerWidth <= 1280
+	// 	? (sliderWrapper.setAttribute('style', '--width:50%;'), (noOfCards = 2))
+	// 	: window.innerWidth <= 1336
+	// 	? (sliderWrapper.setAttribute('style', '--width:33%;'), (noOfCards = 3))
+	// 	: null
+}
+updateWidth()
 if (infiniteSlider) {
-	modified = sliderWrapper.children.length - 1
 	// for infinite carousel
+	modified = sliderWrapper.children.length - 1
 } else {
 	modified = sliderWrapper.children.length - noOfCards
 }
-
-const updateWidth = () => {
-	// responsive
-	window.innerWidth <= 768
-		? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
-		: window.innerWidth <= 1280
-		? (sliderWrapper.setAttribute('style', '--width:50%;'), (noOfCards = 2))
-		: window.innerWidth <= 1336
-		? (sliderWrapper.setAttribute('style', '--width:33%;'), (noOfCards = 3))
-		: null
-}
-updateWidth()
+console.log('sliderWrapper.children.length', sliderWrapper.children.length)
+console.log('noOfCards', noOfCards)
 const sliderActive = e => {
 	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
@@ -167,10 +176,10 @@ const sliderActive = e => {
 	let calc
 	calc = width * e.id
 	// console.log('e.id', +e.id)
-	// console.log('sliderWrapper.children.length', sliderWrapper.children.length)
-	// console.log('modified', modified)
-	// console.log(sliderWrapper.children.length - noOfCards - 1)
+	// console.log('width', +width)
+	// console.log('calc', +calc)
 
+	// sliderWrapper.children[0].style.marginLeft = `-${calc}px`
 	sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	current = e.id
 	// }
@@ -204,12 +213,14 @@ const mouseIn = () => {
 }
 sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)')
 sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)')
-for (let i = 0; i <= modified; i++) {
-	i === 0 ? (mode = 'active') : (mode = '')
-	temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+const sliderDots = () => {
+	for (let i = 0; i <= modified; i++) {
+		i === 0 ? (mode = 'active') : (mode = '')
+		temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
+	}
+	sliderCounters.children[0].innerHTML = temp
+	temp = ''
 }
-sliderCounters.children[0].innerHTML = temp
-temp = ''
 
 let portfolioCategories = document.getElementById('portfolioCategories')
 let portfolioContent = document.getElementById('portfolioContent')
@@ -242,3 +253,4 @@ const categoryActive = e => {
 for (let i = 0; i < portfolioCategories.children.length; i++) {
 	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
+sliderDots()
