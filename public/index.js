@@ -187,6 +187,23 @@ const sliderActive = e => {
 		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	} else {
 		coun = e.id
+		// if (coun > 0) {
+		// 	setTimeout(() => {
+		// 		sliderWrapper.children[coun - 1].classList.add('shrink')
+		// 	}, 200)
+		// 	setTimeout(() => {
+		// 		sliderWrapper.children[coun - 1].classList.remove('shrink')
+		// 	}, 1000)
+		// 	} else {
+		// 	sliderWrapper.children[sliderWrapper.children.length - 1].classList.add(
+		// 		'shrink'
+		// 	)
+		// 	setTimeout(() => {
+		// 		sliderWrapper.children[
+		// 			sliderWrapper.children.length - 1
+		// 		].classList.remove('shrink')
+		// 	}, 500)
+		// }
 		if (+coun == 0 && infiCarousFlag) {
 			coun = sliderWrapper.children.length - noOfCards
 			setTimeout(() => {
