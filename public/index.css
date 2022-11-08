@@ -676,6 +676,10 @@ p {
   width: fit-content;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 .translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -708,6 +712,10 @@ p {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-transparent {
@@ -1242,6 +1250,12 @@ header.scrollBg {
   transition-property: inherit;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.testimonials-wrapper .testimonials-content ul li.shrink {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .testimonials-wrapper .testimonials-content ul li > div {

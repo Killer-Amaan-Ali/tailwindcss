@@ -225,7 +225,9 @@ header.scrollBg {
 				width: var(--width);
 				min-width: var(--width);
 				@apply px-[20px] transition-[inherit] overflow-hidden;
-
+				&.shrink {
+					@apply scale-0;
+				}
 				// &:first-child {
 				// 	@apply pl-0;
 				// }

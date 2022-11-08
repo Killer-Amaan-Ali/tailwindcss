@@ -182,8 +182,8 @@ const sliderActive = e => {
 	// console.log('width', +width)
 	// console.log('calc', +calc)
 
-	// sliderWrapper.children[0].style.marginLeft = `-${calc}px`
 	if (!infiniteSlider) {
+		// sliderWrapper.children[0].style.marginLeft = `-${calc}px`
 		sliderWrapper.style.transform = `translate(-${calc}px, 0px)`
 	} else {
 		coun = e.id
