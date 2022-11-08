@@ -15,11 +15,11 @@ module.exports = {
 			// xl: '1280px',
 		},
 		colors: {
-			primary: 'rgb(255, 193, 7)',
-			primaryHover: '#ffce3a',
+			// primary: 'rgb(255, 193, 7)',
+			// primaryHover: '#ffce3a',
 
-			// primary: 'red',
-			// primaryHover: '#ff3a3a',
+			primary: 'red',
+			primaryHover: '#ff3a3a',
 
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
