@@ -239,9 +239,11 @@ var refreshIntervalId
 refreshIntervalId = setInterval(autoScroll, seconds)
 const mouseOut = () => {
 	refreshIntervalId = setInterval(autoScroll, seconds)
+	console.log('carousel played')
 }
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
+	console.log('carousel stopped')
 }
 // clearInterval(refreshIntervalId)
 sliderWrapper &&
