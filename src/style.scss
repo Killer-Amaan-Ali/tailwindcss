@@ -48,6 +48,15 @@
 	@apply py-[10px] px-[35px] rounded-[30px] border-primary border-[2px] capitalize text-[18px] text-white hover:bg-primary;
 }
 
+.button-secondary {
+	@extend .transition;
+	@extend .t-500;
+	@apply py-[10px] px-[35px] bg-primary capitalize text-[18px] text-white rounded-[4px] hover:bg-primaryHover;
+	&.rounded {
+		@apply rounded-[30px];
+	}
+}
+
 .h2-heading {
 	@extend .transition;
 	@extend .t-500;
@@ -406,7 +415,7 @@ header.scrollBg {
 }
 
 .scroll-up {
-	@apply fixed bg-primary p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center;
+	@apply fixed bg-primary p-[10px] rounded-[50%] right-[15px] bottom-[15px] flex justify-center items-center hover:bg-primaryHover;
 	@extend .transition;
 	@extend .t-500;
 	&.hidden-elem {

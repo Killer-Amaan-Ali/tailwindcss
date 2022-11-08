@@ -16,8 +16,9 @@ module.exports = {
 		},
 		colors: {
 			// primary: 'rgb(255, 193, 7)',
+			// primaryHover: '#ffce3a',
 			primary: 'red',
-			// primary: '#58d9ef', // cyan
+			primaryHover: '#ff3a3a',
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
 			offWhite: '#f5f5f5',
