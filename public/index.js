@@ -1,11 +1,29 @@
+let lightboxWrapper = document.getElementById('lightboxWrapper')
+let menuOpen = document.getElementById('menuOpen')
+let menuClose = document.getElementById('menuClose')
+let lightboxLinks = document.getElementById('lightboxLinks')
+let headerUl = document.getElementById('headerUl')
+
+window.innerWidth <= 900 ? (lightboxLinks.innerHTML = headerUl.innerHTML) : null
+
+const closeNav = () => {
+	lightboxWrapper.classList.add('invisibleBox')
+}
+const openNav = () => {
+	lightboxWrapper.classList.remove('invisibleBox')
+}
+
+menuOpen.addEventListener('click', openNav)
+menuClose.addEventListener('click', closeNav)
+
 const toScroll = (elem, loc = 'footer') => {
 	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
 	temp.addEventListener('click', () => {
 		location.href = `#${loc}`
 	})
 }
-let headerUl = document.getElementById('headerUl')
 let headLinks = []
+let headModalLinks = []
 let sections = [
 	'banner',
 	'aboutSection',
@@ -18,10 +36,19 @@ let sections = [
 ]
 
 for (let i = 0; i < headerUl.children.length; i++) {
+	// headLinks[i] = headerUl?.children[i]?.attributes?.id?.value
+
 	headLinks[i] = document.getElementById(
 		headerUl?.children[i]?.attributes?.id?.value
 	)
 	toScroll(headLinks[i], sections[i])
+
+	// FOR MODAL
+	window.innerWidth <= 900
+		? ((lightboxLinks.children[i].attributes.id.value += 'Modal'),
+		  (headModalLinks[i] = lightboxLinks?.children[i]?.attributes?.id?.value),
+		  toScroll(headModalLinks[i], sections[i]))
+		: null
 
 	// FOR FOOTER COMPONENT
 	document.getElementById('footerScript') &&
@@ -82,6 +109,10 @@ const scrollFunc = () => {
 		// FOR FOOTER COMPONENT
 		document.getElementById('footerScript') &&
 			scrollActive(`headerLinksLi${[i]}`, sections[i], 100)
+		// FOR MODAL
+		window.innerWidth <= 900
+			? scrollActive(headModalLinks[i], sections[i], 100)
+			: null
 	}
 
 	// FOR COUNTER ANIMATION

@@ -9,17 +9,18 @@ module.exports = {
 			icons: 'bootstrap-icons !important',
 		},
 		screens: {
-			// sm: 'px',
-			md: '786px',
-			lg: '1110px',
+			sm: '768px',
+			md: '900px',
+			lg: '1170px',
 			// xl: '1280px',
 		},
 		colors: {
-			// primary: 'rgb(255, 193, 7)',
-			// primaryHover: '#ffce3a',
-
-			primary: 'red',
-			primaryHover: '#ff3a3a',
+			primarys: {
+				100: 'rgb(255, 193, 7)',
+				200: '#ffce3a',
+				// 100: 'red',
+				// 200: '#ff3a3a',
+			},
 
 			white: 'rgb(255, 255, 255)',
 			black: 'rgb(0, 0, 0)',
