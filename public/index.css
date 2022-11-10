@@ -1532,6 +1532,7 @@ header .lightboxLinks > li:first-child {
 .portfolio-wrapper .container .portfolio-content {
   position: relative;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -1539,12 +1540,30 @@ header .lightboxLinks > li:first-child {
   position: relative;
   margin-bottom: 30px;
   display: flex;
-  width: 33%;
+  width: 80%;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-wrapper .container .portfolio-content .portfolio-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .portfolio-wrapper .container .portfolio-content .portfolio-card {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 1170px) {
+  .portfolio-wrapper .container .portfolio-content .portfolio-card {
+    width: 33.333333%;
+  }
 }
 
 .portfolio-wrapper .container .portfolio-content .portfolio-card.hide {
@@ -1611,13 +1630,14 @@ header .lightboxLinks > li:first-child {
 
 .services-wrapper .services-content .card-wrapper {
   display: flex;
+  width: 100%;
   padding-left: 12px;
   padding-right: 12px;
 }
 
 @media (min-width: 768px) {
   .services-wrapper .services-content .card-wrapper {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -1641,6 +1661,7 @@ header .lightboxLinks > li:first-child {
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
   margin-bottom: 24px;
   display: flex;
+  width: 100%;
   cursor: pointer;
   flex-direction: column;
   align-items: center;

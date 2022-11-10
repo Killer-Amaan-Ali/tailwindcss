@@ -341,11 +341,11 @@ header {
 			}
 		}
 		.portfolio-content {
-			@apply relative overflow-hidden items-center;
+			@apply relative overflow-hidden items-center justify-center;
 			@extend .transition;
 			@extend .t-750;
 			.portfolio-card {
-				@apply w-[33%] overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px];
+				@apply w-[80%] sm:w-1/2 md:w-1/3 lg:w-1/3  overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px];
 				@extend .transition;
 				@extend .t-750;
 				// @extend .t-5000;
@@ -394,13 +394,13 @@ header {
 		.card-wrapper {
 			@extend .transition;
 			@extend .t-500;
-			@apply flex px-[12px] sm:w-full md:w-1/2 lg:w-1/3;
+			@apply flex px-[12px] w-full sm:w-1/2 md:w-1/2 lg:w-1/3;
 			&:hover {
 				transform: scale(1.05);
 			}
 			.card-inner-wrapper {
 				box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 5%);
-				@apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer;
+				@apply flex flex-col items-center pt-[70px] pr-[20px] pb-[80px] pl-[20px] mb-[24px] cursor-pointer w-full;
 				@extend .transition;
 				@extend .t-500;
 				&:hover {
