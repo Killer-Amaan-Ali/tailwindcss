@@ -428,6 +428,7 @@ h4,
 h5, 
 h6 {
   font-family: "Raleway" , sans-serif;
+  line-height: 1.2;
 }
 
 p {
@@ -671,6 +672,10 @@ p {
   margin-bottom: 25px;
 }
 
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
 .flex {
   display: flex;
 }
@@ -681,10 +686,6 @@ p {
 
 .h-\[100vh\] {
   height: 100vh;
-}
-
-.h-\[calc\(100vh-130px\)\] {
-  height: calc(100vh - 130px);
 }
 
 .max-h-\[100vh\] {
@@ -1540,7 +1541,8 @@ header .lightboxLinks > li:first-child {
   position: relative;
   margin-bottom: 30px;
   display: flex;
-  width: 80%;
+  width: 100%;
+  max-width: 550px;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -1717,13 +1719,27 @@ header .lightboxLinks > li:first-child {
 .team-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .team-content .team-card-wrapper {
   display: flex;
-  width: 25%;
+  width: 100%;
+  max-width: 550px;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .team-content .team-card-wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .team-content .team-card-wrapper {
+    width: 25%;
+  }
 }
 
 .team-content .team-card-wrapper .team-inner-wrapper {
@@ -1795,6 +1811,8 @@ header .lightboxLinks > li:first-child {
   display: flex;
   flex-direction: column;
   align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 15px;
@@ -1875,6 +1893,10 @@ header .lightboxLinks > li:first-child {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.footerSection.section1 > a > img {
+  filter: hue-rotate(535deg) contrast(2.5);
+}
+
 .group:hover .group-hover\:visible {
   visibility: visible;
 }
@@ -1921,6 +1943,12 @@ header .lightboxLinks > li:first-child {
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .sm\:h-\[calc\(100vh-130px\)\] {
+    height: calc(100vh - 130px);
+  }
 }
 
 @media (min-width: 900px) {

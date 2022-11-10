@@ -158,6 +158,7 @@ const scrollActive = (elem, mount = 'footer', breathe = 100) => {
 
 window.onscroll = () => {
 	scrollFunc()
+	closeNav()
 }
 scrollFunc()
 
