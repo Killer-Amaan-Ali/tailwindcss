@@ -98,13 +98,6 @@ body {
 // 	@apply bg-[#374055e6];
 // }
 header {
-	.lightbox-wrapper {
-		@extend .transition;
-		@extend .t-500;
-		&.invisibleBox {
-			@apply opacity-0 invisible;
-		}
-	}
 	.lightboxLinks,
 	.headerUl {
 		> li {
@@ -149,21 +142,35 @@ header {
 			}
 		}
 	}
-	--h: 8%;
-	.cross-wrapper {
-		height: var(--h);
-	}
-	.lightboxLinks {
-		@apply relative;
-		height: calc(100% - var(--h));
-		&::before {
+	.lightbox-wrapper {
+		--h: 8%;
+		@extend .transition;
+		@extend .t-500;
+		&:before {
 			content: '';
-			@apply absolute bg-[white] h-full w-full top-0 left-0 z-[-1];
+			@apply bg-[#2d3545e6] absolute top-0 left-0 h-[100vh] w-[100vw] z-[-1];
 		}
-		> li {
-			@apply mx-[20px] text-[#414c64] my-[10px] w-full;
-			&:first-child {
-				@apply mx-[20px];
+		&.invisibleBox {
+			@apply opacity-0 invisible;
+		}
+		.cross-wrapper {
+			height: var(--h);
+		}
+		.lightboxLinks {
+			@apply relative;
+			height: calc(100% - var(--h));
+			&::before {
+				content: '';
+				@apply absolute bg-[white] h-full w-full top-0 left-0 z-[-1];
+			}
+			> li {
+				@apply mx-[20px] text-[#414c64] my-[10px] w-full;
+				&.active {
+					@apply text-primarys-100;
+				}
+				&:first-child {
+					@apply mx-[20px];
+				}
 			}
 		}
 	}
@@ -341,11 +348,11 @@ header {
 			}
 		}
 		.portfolio-content {
-			@apply relative overflow-hidden items-center justify-center;
+			@apply relative overflow-hidden items-center justify-center sm:justify-start;
 			@extend .transition;
 			@extend .t-750;
 			.portfolio-card {
-				@apply overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/3 lg:w-1/3;
+				@apply overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/3;
 				@extend .transition;
 				@extend .t-750;
 				// @extend .t-5000;
@@ -427,7 +434,7 @@ header {
 .team-content {
 	@apply flex flex-wrap justify-center;
 	.team-card-wrapper {
-		@apply flex px-[12px] w-full max-w-[550px] sm:w-1/2 md:w-1/4;
+		@apply flex px-[12px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/4;
 		.team-inner-wrapper {
 			@apply mb-[20px] rounded-[5px] overflow-hidden;
 			box-shadow: 0px 2px 15px rgb(65 76 100 / 6%);
@@ -447,7 +454,7 @@ header {
 							svg {
 								width: 22px !important;
 								max-width: 22px !important;
-								@apply fill-[inherit] hover:fill-[inherit] w-[25px];
+								@apply fill-[inherit] hover:fill-[inherit] w-[25px] transition-[inherit];
 								path {
 									@apply fill-[inherit] hover:fill-[inherit];
 								}
@@ -477,7 +484,7 @@ header {
 		> ul {
 			> li {
 				width: 25%;
-				div {
+				>div {
 					@apply p-[20px] bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center;
 					box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
 					> ul {
@@ -501,7 +508,7 @@ header {
 }
 .footerSection.section1 > a {
 	> img {
-			filter: hue-rotate(535deg) contrast(2.5);
-			// filter: hue-rotate(245deg) contrast(2.5);
+		filter: hue-rotate(535deg) contrast(2.5);
+		// filter: hue-rotate(245deg) contrast(2.5);
 	}
 }

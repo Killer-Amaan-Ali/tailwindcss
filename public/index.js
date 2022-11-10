@@ -4,7 +4,7 @@ let menuClose = document.getElementById('menuClose')
 let lightboxLinks = document.getElementById('lightboxLinks')
 let headerUl = document.getElementById('headerUl')
 
-window.innerWidth <= 900 ? (lightboxLinks.innerHTML = headerUl.innerHTML) : null
+lightboxLinks.innerHTML = headerUl.innerHTML
 
 const closeNav = () => {
 	lightboxWrapper.classList.add('invisibleBox')
@@ -14,7 +14,8 @@ const openNav = () => {
 }
 
 menuOpen.addEventListener('click', openNav)
-menuClose.addEventListener('click', closeNav)
+// menuClose.addEventListener('click', closeNav)
+lightboxWrapper.addEventListener('click', closeNav)
 
 const toScroll = (elem, loc = 'footer') => {
 	let temp = typeof elem !== 'string' ? elem : document.getElementById(elem)
@@ -32,7 +33,7 @@ let sections = [
 	'teamSection',
 	'pricingSection',
 	'footer',
-	// 'contactSection',
+	'contactSection',
 ]
 
 for (let i = 0; i < headerUl.children.length; i++) {
@@ -44,11 +45,9 @@ for (let i = 0; i < headerUl.children.length; i++) {
 	toScroll(headLinks[i], sections[i])
 
 	// FOR MODAL
-	window.innerWidth <= 900
-		? ((lightboxLinks.children[i].attributes.id.value += 'Modal'),
-		  (headModalLinks[i] = lightboxLinks?.children[i]?.attributes?.id?.value),
-		  toScroll(headModalLinks[i], sections[i]))
-		: null
+	lightboxLinks.children[i].attributes.id.value += 'Modal'
+	headModalLinks[i] = lightboxLinks?.children[i]?.attributes?.id?.value
+	toScroll(headModalLinks[i], sections[i])
 
 	// FOR FOOTER COMPONENT
 	document.getElementById('footerScript') &&
@@ -110,9 +109,7 @@ const scrollFunc = () => {
 		document.getElementById('footerScript') &&
 			scrollActive(`headerLinksLi${[i]}`, sections[i], 100)
 		// FOR MODAL
-		window.innerWidth <= 900
-			? scrollActive(headModalLinks[i], sections[i], 100)
-			: null
+		scrollActive(headModalLinks[i], sections[i], 100)
 	}
 
 	// FOR COUNTER ANIMATION
@@ -202,7 +199,19 @@ let coun = 0
 let infiCarousFlag = false
 let transformMode = true
 // transformMode = false
+
 const sliderActive = e => {
+	// TO DELAY NEXT SLIDE AFTER CLICK
+	let delay = true
+	// delay = false
+	if (delay) {
+		let newTime = seconds / 2
+		clearInterval(refreshIntervalId)
+		setTimeout(() => {
+			refreshIntervalId = setInterval(autoScroll, seconds)
+		}, newTime)
+	}
+
 	// if (!e.classList.contains('active')) {
 	let child = sliderWrapper.children[e.id]
 	let width = child.getBoundingClientRect().width
