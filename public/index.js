@@ -29,6 +29,7 @@ let sections = [
 	'banner',
 	'aboutSection',
 	'servicesSection',
+	// 'testimonialsSection',
 	'portfolioSection',
 	'teamSection',
 	'pricingSection',
