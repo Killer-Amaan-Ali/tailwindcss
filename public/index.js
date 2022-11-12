@@ -205,11 +205,8 @@ const sliderActive = e => {
 	let delay = true
 	// delay = false
 	if (delay) {
-		let newTime = seconds / 2
 		clearInterval(refreshIntervalId)
-		setTimeout(() => {
-			refreshIntervalId = setInterval(autoScroll, seconds)
-		}, newTime)
+		refreshIntervalId = setInterval(autoScroll, seconds)
 	}
 
 	// if (!e.classList.contains('active')) {
