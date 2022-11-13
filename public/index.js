@@ -33,7 +33,8 @@ let sections = [
 	'portfolioSection',
 	'teamSection',
 	'pricingSection',
-	'footer',
+	'#',
+	// 'footer',
 	'contactSection',
 ]
 
