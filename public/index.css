@@ -1556,7 +1556,6 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 }
 
 .portfolio-wrapper .container .portfolio-content .portfolio-card {
-  position: relative;
   margin-bottom: 30px;
   display: flex;
   width: 100%;
@@ -1586,6 +1585,10 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   }
 }
 
+.portfolio-wrapper .container .portfolio-content .portfolio-card {
+  position: relative;
+}
+
 .portfolio-wrapper .container .portfolio-content .portfolio-card.hide {
   z-index: -1;
   width: 0px;
@@ -1593,6 +1596,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   padding: 0px;
+  opacity: 0;
 }
 
 .portfolio-wrapper .container .portfolio-content .portfolio-card img {

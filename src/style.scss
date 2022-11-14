@@ -352,13 +352,17 @@ header {
 			@extend .transition;
 			@extend .t-750;
 			.portfolio-card {
-				@apply overflow-hidden relative flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/3;
+				@apply overflow-hidden flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/3;
+				@apply relative;
 				@extend .transition;
 				@extend .t-750;
-				// @extend .t-5000;
 				&.hide {
-					@apply z-[-1] scale-0 p-0 w-0;
+					@apply z-[-1] scale-0 p-0 w-0 opacity-0;
 				}
+				// @apply absolute;
+				// &.hide {
+				// 	@apply opacity-0 invisible scale-0 z-[-1];
+				// }
 				img {
 					@extend .transition;
 					@extend .t-500;

@@ -335,6 +335,7 @@ const categoryActive = e => {
 		portfolioCategories.children[i].classList.remove('active')
 	}
 	for (let i = 0; i < portfolioContent.children.length; i++) {
+		// portfolioContent.children[i].setAttribute('style', `left: 0;`)
 		filteredMode[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
 		if (filteredMode[i] !== categoryMode) {
