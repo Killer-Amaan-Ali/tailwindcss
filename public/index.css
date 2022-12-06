@@ -654,6 +654,11 @@ p {
   z-index: 20;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .mt-\[15px\] {
   margin-top: 15px;
 }
@@ -680,6 +685,14 @@ p {
 
 .mb-\[25px\] {
   margin-bottom: 25px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .flex {
@@ -808,6 +821,11 @@ p {
   padding-right: 5px;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-\[15px\] {
   padding-bottom: 15px;
 }
@@ -822,6 +840,14 @@ p {
 
 .pb-\[30px\] {
   padding-bottom: 30px;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-center {
