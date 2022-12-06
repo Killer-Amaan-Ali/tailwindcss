@@ -34,7 +34,7 @@ let sections = [
 	'teamSection',
 	'pricingSection',
 	// 'footer',
-	'#',
+	'',
 	'contactSection',
 ]
 
@@ -72,9 +72,9 @@ for (let i = 0; i < counterWrapper.children.length; i++) {
 const updated = pos => {
 	if (flag[pos]) {
 		document.getElementById(`counter${pos}`).innerHTML = ++upto[pos]
-	}
+		// }
 
-	if (flag[pos]) {
+		// if (flag[pos]) {
 		if (upto[pos] >= counter[pos]) {
 			clearInterval(counts[pos])
 			// document.getElementById(`counter${pos}`).innerHTML = counter[pos]
@@ -95,6 +95,12 @@ const scrollFunc = () => {
 	// 	scroll
 	// )
 	headerElem.style.backgroundColor = scroll > 120 ? '#374055e6' : 'transparent'
+	headerElem.setAttribute(
+		'style',
+		scroll > 120
+			? 'background-color: #374055e6; padding: 18px 0;'
+			: 'background-color: transparent;'
+	)
 	scrollUp.classList = scroll > 200 ? 'scroll-up' : 'scroll-up hidden-elem'
 
 	// OLD DEPRECATED

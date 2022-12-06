@@ -90,7 +90,7 @@
 	<section class="banner-wrapper relative h-[100vh] sm:h-[calc(100vh-130px)] max-h-[100vh] flex items-center">
 		<div class="container z-20">
 			<div class="flex items-center justify-center flex-col">
-				<h1 class="pt-[30px] text-[48px] capitalize font-bold text-white font-Raleway">
+				<h1 class="text-center pt-[30px] text-[48px] capitalize font-bold text-white font-Raleway">
 					welcome to baker
 				</h1>
 				<h2 class="text-white mt-[15px] text-[22px] text-center">
@@ -105,7 +105,6 @@
 	<!-- BANNER END-->
 
 	<!-- ADVERT SECTION START-->
-	<a href="" id="aboutSection"></a>
 	<section class="bg-sectBg">
 		<div class="container">
 			<div class="brands-wrapper flex-wrap flex justify-between">
@@ -124,6 +123,7 @@
 				<div class="brand-card">
 					<img src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-5.png" alt="myob" />
 				</div>
+				<a href="" id="aboutSection"></a>
 				<div class="brand-card">
 					<img src="https://bootstrapmade.com/demo/templates/Baker/assets/img/clients/client-6.png" alt="myob" />
 				</div>
@@ -650,7 +650,7 @@
 	</section>
 	<!-- PORTFOLIO SECTION END-->
 	<!-- TEAM SECTION START-->
-	<section class="team-wrapper py-[60px] bg-[#f7f8fa]">
+	<section class="team-wrapper py-[60px] bg-sectBg">
 		<div class="container">
 			<div class="team-title pb-[30px]">
 				<h2 class="h2-heading">team</h2>
@@ -895,16 +895,58 @@
 			</div>
 			<div class="pricing-content flex flex-col">
 				<ul class="flex w-full">
-					<li>
+					<li class="pricing-card">
 						<div>
-							<h3>free</h3>
-							<h4><sup>$</sup>0<span> / month</span></h4>
-							<ul>
+							<h3 class="pricing-type">free</h3>
+							<h4 class="pricing-price"><sup>$</sup>0<span> / month</span></h4>
+							<ul class="pricing-card-list">
 								<li>Aida dere</li>
 								<li>Nec feugiat nisl</li>
 								<li>Nulla at volutpat dola</li>
-								<li class="na">Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
+								<li class="strike">Pharetra massa</li>
+								<li class="strike">Massa ultricies mi</li>
+							</ul>
+							<div class="btn-wrap"> <a href="#" class="button-secondary grayed">Buy Now</a></div>
+						</div>
+					</li>
+					<li class="pricing-card active">
+						<div>
+							<h3 class="pricing-type">business</h3>
+							<h4 class="pricing-price"><sup>$</sup>19<span> / month</span></h4>
+							<ul class="pricing-card-list">
+								<li>Aida dere</li>
+								<li>Nec feugiat nisl</li>
+								<li>Nulla at volutpat dola</li>
+								<li>Pharetra massa</li>
+								<li class="strike">Massa ultricies mi</li>
+							</ul>
+							<div class="btn-wrap"> <a href="#" class="button-secondary grayed">Buy Now</a></div>
+						</div>
+					</li>
+					<li class="pricing-card">
+						<div>
+							<h3 class="pricing-type">developer</h3>
+							<h4 class="pricing-price"><sup>$</sup>29<span> / month</span></h4>
+							<ul class="pricing-card-list">
+								<li>Aida dere</li>
+								<li>Nec feugiat nisl</li>
+								<li>Nulla at volutpat dola</li>
+								<li>Pharetra massa</li>
+								<li>Massa ultricies mi</li>
+							</ul>
+							<div class="btn-wrap"> <a href="#" class="button-secondary grayed">Buy Now</a></div>
+						</div>
+					</li>
+					<li class="pricing-card advanced" style="--cntnt: 'advanced';">
+						<div>
+							<h3 class="pricing-type">ultimate</h3>
+							<h4 class="pricing-price"><sup>$</sup>49<span> / month</span></h4>
+							<ul class="pricing-card-list">
+								<li>Aida dere</li>
+								<li>Nec feugiat nisl</li>
+								<li>Nulla at volutpat dola</li>
+								<li>Pharetra massa</li>
+								<li>Massa ultricies mi</li>
 							</ul>
 							<div class="btn-wrap"> <a href="#" class="button-secondary grayed">Buy Now</a></div>
 						</div>
@@ -912,9 +954,28 @@
 				</ul>
 			</div>
 		</div>
-		<a href="" id="contactSection"></a>
+		<a href="" id="faqSection"></a>
 	</section>
 	<!-- PRICING SECTION END-->
+
+	<!-- FAQ SECTION START-->
+	<section class="faq-wrapper py-[60px] bg-sectBg">
+		<div class="container">
+			<div class="faq-title">
+				<h2 class="h2-heading">frequently asked questions</h2>
+				<p class="p-content">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+					quidem. Sit sint consectetur velit.
+					Quisquam quos quisquam cupiditate. Et nemo<br>qui impedit suscipit alias ea. Quia fugiat sit in iste officiis
+					commodi
+					quidem hic quas.</p>
+			</div>
+			<div class="faq-content flex flex-col">
+			</div>
+		</div>
+		<a href="" id="contactSection"></a>
+	</section>
+	<!-- FAQ SECTION END-->
+
 	<!-- CONTACT SECTION START-->
 	<section class="contact-wrapper py-[60px]">
 		<div class="container">
@@ -931,6 +992,7 @@
 		</div>
 	</section>
 	<!-- CONTACT SECTION END-->
+
 
 
 	<a href="javascript:;" id="scrollUp" class="scroll-up hidden-elem">

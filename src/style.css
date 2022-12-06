@@ -1,6 +1,6 @@
 :root {
   --primary: theme("colors.primarys.100") !important;
-  --primaryHover: theme("colors.primarys.200") !important;
+  --primaryHover:theme("colors.primarys.200") !important;
   --primaryText: var(--primary) !important;
   --secondaryText: var(--primaryHover) !important;
 }
@@ -32,37 +32,33 @@ h6 {
   @apply px-[20px];
 }
 
-.transition, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img, .portfolio-wrapper .container .portfolio-content .portfolio-card, .portfolio-wrapper .container .portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img, header .lightbox-wrapper, header .lightboxLinks .dropdown-box ul li,
+.transition, .scroll-up, .pricing-wrapper .pricing-content > ul .pricing-card, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img, .portfolio-wrapper .container .portfolio-content .portfolio-card, .portfolio-wrapper .container .portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content > ul, .brands-wrapper > div > img, header .lightbox-wrapper, header .lightboxLinks .dropdown-box ul li,
 header .headerUl .dropdown-box ul li, header .lightboxLinks > li,
-header .headerUl > li, body, .h2-heading, .button-secondary, .button-primary {
+header .headerUl > li, header, body, .h2-heading, .button-secondary, .button-primary {
   @apply ease-in-out;
 }
-.transition.t-500, .scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img, .portfolio-wrapper .container .portfolio-content .t-500.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-card.scroll-up, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .card-wrapper .portfolio-card.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content .portfolio-card.card-inner-wrapper, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .portfolio-card.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content .portfolio-card.card-wrapper, .portfolio-wrapper .container .t-500.portfolio-content, .portfolio-wrapper .container .portfolio-content.scroll-up, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .portfolio-content.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content.card-inner-wrapper, .portfolio-wrapper .container .services-wrapper .services-content .portfolio-content.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content.card-wrapper, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content ul.t-500, .testimonials-wrapper .testimonials-content ul.scroll-up, .brands-wrapper > div > img, header .transition.lightbox-wrapper, header .lightbox-wrapper.scroll-up, header .portfolio-wrapper .container .portfolio-content .lightbox-wrapper.portfolio-card, .portfolio-wrapper .container .portfolio-content header .lightbox-wrapper.portfolio-card, header .portfolio-wrapper .container .lightbox-wrapper.portfolio-content, .portfolio-wrapper .container header .lightbox-wrapper.portfolio-content, header .testimonials-wrapper .testimonials-content ul.lightbox-wrapper, .testimonials-wrapper .testimonials-content header ul.lightbox-wrapper, header .t-500.lightbox-wrapper, header .lightbox-wrapper, header .lightboxLinks .dropdown-box ul li,
+.transition.t-500, .scroll-up, .pricing-wrapper .pricing-content > ul .pricing-card, .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper, .services-wrapper .services-content .card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img, .portfolio-wrapper .container .portfolio-content .transition.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-card.scroll-up, .portfolio-wrapper .container .portfolio-content .pricing-wrapper .pricing-content > ul .portfolio-card.pricing-card, .pricing-wrapper .pricing-content > ul .portfolio-wrapper .container .portfolio-content .portfolio-card.pricing-card, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .card-wrapper .portfolio-card.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content .portfolio-card.card-inner-wrapper, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .portfolio-card.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content .portfolio-card.card-wrapper, .portfolio-wrapper .container .portfolio-content .t-500.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-card, .portfolio-wrapper .container .t-500.portfolio-content, .portfolio-wrapper .container .portfolio-content.scroll-up, .portfolio-wrapper .container .pricing-wrapper .pricing-content > ul .portfolio-content.pricing-card, .pricing-wrapper .pricing-content > ul .portfolio-wrapper .container .portfolio-content.pricing-card, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .portfolio-content.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content.card-inner-wrapper, .portfolio-wrapper .container .services-wrapper .services-content .portfolio-content.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-content.portfolio-card, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li, .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined, .testimonials-wrapper .testimonials-content > ul.t-500, .testimonials-wrapper .testimonials-content > ul.scroll-up, .testimonials-wrapper .portfolio-wrapper .container .portfolio-content .testimonials-content > ul.portfolio-card, .portfolio-wrapper .container .portfolio-content .testimonials-wrapper .testimonials-content > ul.portfolio-card, .brands-wrapper > div > img, header .lightbox-wrapper, header .lightboxLinks .dropdown-box ul li,
 header .headerUl .dropdown-box ul li, header .lightboxLinks > li,
-header .headerUl > li, body.t-500, header body.lightbox-wrapper, .h2-heading, .button-secondary, .button-primary {
+header .headerUl > li, header, body.t-500, .portfolio-wrapper .container .portfolio-content body.portfolio-card, .h2-heading, .button-secondary, .button-primary {
   @apply duration-[.5s];
 }
-.transition.t-750, .t-750.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-750.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-750.icon, .services-wrapper .services-content .card-wrapper .t-750.card-inner-wrapper, .services-wrapper .services-content .t-750.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-750.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-750, .portfolio-wrapper .container .portfolio-content .transition.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-card.scroll-up, .portfolio-wrapper .container .portfolio-content .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-card.team-social, .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-wrapper .container .portfolio-content .portfolio-card.team-social, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-card.icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-wrapper .container .portfolio-content .portfolio-card.icon, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .card-wrapper .portfolio-card.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content .portfolio-card.card-inner-wrapper, .portfolio-wrapper .container .portfolio-content .services-wrapper .services-content .portfolio-card.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content .portfolio-card.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-card.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.portfolio-card, .portfolio-wrapper .container .portfolio-content .t-750.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-card, .portfolio-wrapper .container .transition.portfolio-content, .portfolio-wrapper .container .portfolio-content.scroll-up, .portfolio-wrapper .container .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-content.team-social, .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-wrapper .container .portfolio-content.team-social, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-content.icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-wrapper .container .portfolio-content.icon, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .portfolio-content.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content.card-inner-wrapper, .portfolio-wrapper .container .services-wrapper .services-content .portfolio-content.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-content.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.portfolio-content, .portfolio-wrapper .container .portfolio-content .portfolio-content.portfolio-card, .portfolio-wrapper .container .t-750.portfolio-content, .portfolio-wrapper .container .portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-750, .portfolio-wrapper .container .portfolio-title .portfolio-content .portfolio-categories > li.portfolio-card, .portfolio-wrapper .container .portfolio-content .portfolio-title .portfolio-categories > li.portfolio-card, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.portfolio-content, .testimonials-wrapper .testimonials-content .sliderCounters .t-750.material-symbols-outlined, .testimonials-wrapper .testimonials-content .sliderCounters .portfolio-wrapper .container .portfolio-content .material-symbols-outlined.portfolio-card, .portfolio-wrapper .container .portfolio-content .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.portfolio-card, .testimonials-wrapper .testimonials-content .sliderCounters .portfolio-wrapper .container .material-symbols-outlined.portfolio-content, .portfolio-wrapper .container .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.portfolio-content, .testimonials-wrapper .testimonials-content ul.t-750, .testimonials-wrapper .testimonials-content .portfolio-wrapper .container .portfolio-content ul.portfolio-card, .portfolio-wrapper .container .portfolio-content .testimonials-wrapper .testimonials-content ul.portfolio-card, .testimonials-wrapper .testimonials-content .portfolio-wrapper .container ul.portfolio-content, .portfolio-wrapper .container .testimonials-wrapper .testimonials-content ul.portfolio-content, .brands-wrapper > div > img.t-750, .portfolio-wrapper .container .portfolio-content .brands-wrapper > div > img.portfolio-card, .portfolio-wrapper .container .brands-wrapper > div > img.portfolio-content, header .t-750.lightbox-wrapper, header .portfolio-wrapper .container .portfolio-content .lightbox-wrapper.portfolio-card, .portfolio-wrapper .container .portfolio-content header .lightbox-wrapper.portfolio-card, header .portfolio-wrapper .container .lightbox-wrapper.portfolio-content, .portfolio-wrapper .container header .lightbox-wrapper.portfolio-content, header .lightboxLinks .dropdown-box ul li.t-750, header .lightboxLinks .dropdown-box ul .portfolio-wrapper .container .portfolio-content li.portfolio-card, .portfolio-wrapper .container .portfolio-content header .lightboxLinks .dropdown-box ul li.portfolio-card, header .lightboxLinks .dropdown-box ul .portfolio-wrapper .container li.portfolio-content, .portfolio-wrapper .container header .lightboxLinks .dropdown-box ul li.portfolio-content,
+.transition.t-750, .t-750.scroll-up, .pricing-wrapper .pricing-content > ul .t-750.pricing-card, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-750.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-750.icon, .services-wrapper .services-content .card-wrapper .t-750.card-inner-wrapper, .services-wrapper .services-content .t-750.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-750.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-750, .portfolio-wrapper .container .portfolio-content .t-750.portfolio-card, .portfolio-wrapper .container .transition.portfolio-content, .portfolio-wrapper .container .portfolio-content.scroll-up, .portfolio-wrapper .container .pricing-wrapper .pricing-content > ul .portfolio-content.pricing-card, .pricing-wrapper .pricing-content > ul .portfolio-wrapper .container .portfolio-content.pricing-card, .portfolio-wrapper .container .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-content.team-social, .team-content .team-card-wrapper .team-inner-wrapper .team-img .portfolio-wrapper .container .portfolio-content.team-social, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-content.icon, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .portfolio-wrapper .container .portfolio-content.icon, .portfolio-wrapper .container .services-wrapper .services-content .card-wrapper .portfolio-content.card-inner-wrapper, .services-wrapper .services-content .card-wrapper .portfolio-wrapper .container .portfolio-content.card-inner-wrapper, .portfolio-wrapper .container .services-wrapper .services-content .portfolio-content.card-wrapper, .services-wrapper .services-content .portfolio-wrapper .container .portfolio-content.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .portfolio-content.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.portfolio-content, .portfolio-wrapper .container .portfolio-content .portfolio-content.portfolio-card, .portfolio-wrapper .container .t-750.portfolio-content, .portfolio-wrapper .container .portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-750, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.portfolio-content, .testimonials-wrapper .testimonials-content .sliderCounters .t-750.material-symbols-outlined, .testimonials-wrapper .testimonials-content .sliderCounters .portfolio-wrapper .container .material-symbols-outlined.portfolio-content, .portfolio-wrapper .container .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.portfolio-content, .testimonials-wrapper .testimonials-content > ul.t-750, .testimonials-wrapper .portfolio-wrapper .container .testimonials-content > ul.portfolio-content, .portfolio-wrapper .container .testimonials-wrapper .testimonials-content > ul.portfolio-content, .brands-wrapper > div > img.t-750, .portfolio-wrapper .container .brands-wrapper > div > img.portfolio-content, header .t-750.lightbox-wrapper, header .portfolio-wrapper .container .lightbox-wrapper.portfolio-content, .portfolio-wrapper .container header .lightbox-wrapper.portfolio-content, header .lightboxLinks .dropdown-box ul li.t-750, header .lightboxLinks .dropdown-box ul .portfolio-wrapper .container li.portfolio-content, .portfolio-wrapper .container header .lightboxLinks .dropdown-box ul li.portfolio-content,
 header .headerUl .dropdown-box ul li.t-750,
-header .headerUl .dropdown-box ul .portfolio-wrapper .container .portfolio-content li.portfolio-card,
-.portfolio-wrapper .container .portfolio-content header .headerUl .dropdown-box ul li.portfolio-card,
 header .headerUl .dropdown-box ul .portfolio-wrapper .container li.portfolio-content,
-.portfolio-wrapper .container header .headerUl .dropdown-box ul li.portfolio-content, header .lightboxLinks > li.t-750, header .portfolio-wrapper .container .portfolio-content .lightboxLinks > li.portfolio-card, .portfolio-wrapper .container .portfolio-content header .lightboxLinks > li.portfolio-card, header .portfolio-wrapper .container .lightboxLinks > li.portfolio-content, .portfolio-wrapper .container header .lightboxLinks > li.portfolio-content,
+.portfolio-wrapper .container header .headerUl .dropdown-box ul li.portfolio-content, header .lightboxLinks > li.t-750, header .portfolio-wrapper .container .lightboxLinks > li.portfolio-content, .portfolio-wrapper .container header .lightboxLinks > li.portfolio-content,
 header .headerUl > li.t-750,
-header .portfolio-wrapper .container .portfolio-content .headerUl > li.portfolio-card,
-.portfolio-wrapper .container .portfolio-content header .headerUl > li.portfolio-card,
 header .portfolio-wrapper .container .headerUl > li.portfolio-content,
-.portfolio-wrapper .container header .headerUl > li.portfolio-content, body.t-750, .portfolio-wrapper .container .portfolio-content body.portfolio-card, .portfolio-wrapper .container body.portfolio-content, .t-750.h2-heading, .portfolio-wrapper .container .portfolio-content .h2-heading.portfolio-card, .portfolio-wrapper .container .h2-heading.portfolio-content, .t-750.button-secondary, .portfolio-wrapper .container .portfolio-content .button-secondary.portfolio-card, .portfolio-wrapper .container .button-secondary.portfolio-content, .t-750.button-primary, .portfolio-wrapper .container .portfolio-content .button-primary.portfolio-card, .portfolio-wrapper .container .button-primary.portfolio-content {
+.portfolio-wrapper .container header .headerUl > li.portfolio-content, header.t-750, .portfolio-wrapper .container header.portfolio-content, body.t-750, .portfolio-wrapper .container body.portfolio-content, .t-750.h2-heading, .portfolio-wrapper .container .h2-heading.portfolio-content, .t-750.button-secondary, .portfolio-wrapper .container .button-secondary.portfolio-content, .t-750.button-primary, .portfolio-wrapper .container .button-primary.portfolio-content {
   @apply duration-[.75s];
 }
-.transition.t-1000, .t-1000.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-1000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-1000.icon, .services-wrapper .services-content .card-wrapper .t-1000.card-inner-wrapper, .services-wrapper .services-content .t-1000.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-1000.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-1000, .portfolio-wrapper .container .portfolio-content .t-1000.portfolio-card, .portfolio-wrapper .container .t-1000.portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-1000, .testimonials-wrapper .testimonials-content .sliderCounters .t-1000.material-symbols-outlined, .testimonials-wrapper .testimonials-content ul, .brands-wrapper > div > img.t-1000, header .t-1000.lightbox-wrapper, header .lightboxLinks .dropdown-box ul li.t-1000,
+.transition.t-1000, .t-1000.scroll-up, .pricing-wrapper .pricing-content > ul .t-1000.pricing-card, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-1000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-1000.icon, .services-wrapper .services-content .card-wrapper .t-1000.card-inner-wrapper, .services-wrapper .services-content .t-1000.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-1000.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-1000, .portfolio-wrapper .container .portfolio-content .t-1000.portfolio-card, .portfolio-wrapper .container .t-1000.portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-1000, .testimonials-wrapper .testimonials-content .sliderCounters .t-1000.material-symbols-outlined, .testimonials-wrapper .testimonials-content > ul, .brands-wrapper > div > img.t-1000, header .t-1000.lightbox-wrapper, header .lightboxLinks .dropdown-box ul li.t-1000,
 header .headerUl .dropdown-box ul li.t-1000, header .lightboxLinks > li.t-1000,
-header .headerUl > li.t-1000, body.t-1000, .t-1000.h2-heading, .t-1000.button-secondary, .t-1000.button-primary {
+header .headerUl > li.t-1000, header.t-1000, body.t-1000, .t-1000.h2-heading, .t-1000.button-secondary, .t-1000.button-primary {
   @apply duration-[1.0s];
 }
-.transition.t-5000, .t-5000.scroll-up, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-5000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-5000.icon, .services-wrapper .services-content .card-wrapper .t-5000.card-inner-wrapper, .services-wrapper .services-content .t-5000.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-5000.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-5000, .portfolio-wrapper .container .portfolio-content .t-5000.portfolio-card, .portfolio-wrapper .container .t-5000.portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-5000, .testimonials-wrapper .testimonials-content .sliderCounters .t-5000.material-symbols-outlined, .testimonials-wrapper .testimonials-content ul.t-5000, .brands-wrapper > div > img.t-5000, header .t-5000.lightbox-wrapper, header .lightboxLinks .dropdown-box ul li.t-5000,
+.transition.t-5000, .t-5000.scroll-up, .pricing-wrapper .pricing-content > ul .t-5000.pricing-card, .team-content .team-card-wrapper .team-inner-wrapper .team-img .t-5000.team-social, .services-wrapper .services-content .card-wrapper .card-inner-wrapper .t-5000.icon, .services-wrapper .services-content .card-wrapper .t-5000.card-inner-wrapper, .services-wrapper .services-content .t-5000.card-wrapper, .portfolio-wrapper .container .portfolio-content .portfolio-card .t-5000.portfolio-info, .portfolio-wrapper .container .portfolio-content .portfolio-card img.t-5000, .portfolio-wrapper .container .portfolio-content .t-5000.portfolio-card, .portfolio-wrapper .container .t-5000.portfolio-content, .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.t-5000, .testimonials-wrapper .testimonials-content .sliderCounters .t-5000.material-symbols-outlined, .testimonials-wrapper .testimonials-content > ul.t-5000, .brands-wrapper > div > img.t-5000, header .t-5000.lightbox-wrapper, header .lightboxLinks .dropdown-box ul li.t-5000,
 header .headerUl .dropdown-box ul li.t-5000, header .lightboxLinks > li.t-5000,
-header .headerUl > li.t-5000, body.t-5000, .t-5000.h2-heading, .t-5000.button-secondary, .t-5000.button-primary {
+header .headerUl > li.t-5000, header.t-5000, body.t-5000, .t-5000.h2-heading, .t-5000.button-secondary, .t-5000.button-primary {
   @apply duration-[5.0s];
 }
 
@@ -75,7 +71,7 @@ header .headerUl > li.t-5000, body.t-5000, .t-5000.h2-heading, .t-5000.button-se
 }
 .button-secondary.grayed {
   @apply border-[2px] border-solid border-[#c8cedc] text-[#6c7c9f];
-  @apply bg-[transparent] hover:bg-[transparent];
+  @apply bg-[transparent] hover:bg-[white];
 }
 .button-secondary.rounded {
   @apply rounded-[30px];
@@ -187,7 +183,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 }
 
 .brands-wrapper > div {
-  @apply w-[30%] flex justify-center items-center py-[30px] lg:w-[15%];
+  @apply w-1/2 flex justify-center items-center py-[30px] sm:w-[30%] lg:w-[15%];
 }
 .brands-wrapper > div > img {
   @apply max-w-[45%] grayscale hover:grayscale-0 hover:scale-[1.2];
@@ -206,7 +202,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   @apply flex;
 }
 .about-wrapper .about-inner-wrapper .rhs .rhs-card-wrapper .rhs-card {
-  @apply flex w-1/2 flex-col mx-[10px];
+  @apply flex w-1/2 flex-col mr-[10px];
 }
 .about-wrapper .about-inner-wrapper .rhs .rhs-card-wrapper .rhs-card span {
   @apply text-[#8b97b3] text-[48px] mt-[15px];
@@ -222,7 +218,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   @apply w-1/2 md:w-1/4 flex flex-col items-center;
 }
 .count-wrapper .count-inner-wrapper .counter-col:last-child, .count-wrapper .count-inner-wrapper .counter-col:nth-last-child(2) {
-  @apply pt-[20px];
+  @apply pt-[20px] sm:pt-[20px] md:p-0;
 }
 .count-wrapper .count-inner-wrapper .counter-col h5 {
   @apply text-[48px] text-gray font-OpenSans;
@@ -235,71 +231,71 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   @apply w-full my-[30px];
   @apply overflow-hidden;
 }
-.testimonials-wrapper .testimonials-content ul {
+.testimonials-wrapper .testimonials-content > ul {
   @apply flex;
   --width: 33%;
 }
 @media screen and (max-width: 1336px) {
-  .testimonials-wrapper .testimonials-content ul {
+  .testimonials-wrapper .testimonials-content > ul {
     --width: 33%;
   }
 }
 @media screen and (max-width: 1280px) {
-  .testimonials-wrapper .testimonials-content ul {
+  .testimonials-wrapper .testimonials-content > ul {
     --width: 50%;
   }
 }
 @media screen and (max-width: 768px) {
-  .testimonials-wrapper .testimonials-content ul {
+  .testimonials-wrapper .testimonials-content > ul {
     --width: 100%;
   }
 }
-.testimonials-wrapper .testimonials-content ul.default {
+.testimonials-wrapper .testimonials-content > ul.default {
   overflow-x: scroll;
   padding-bottom: 20px;
 }
-.testimonials-wrapper .testimonials-content ul.noTransition {
+.testimonials-wrapper .testimonials-content > ul.noTransition {
   -webkit-transition: none !important;
   transition: none !important;
 }
-.testimonials-wrapper .testimonials-content ul.noTransition li {
+.testimonials-wrapper .testimonials-content > ul.noTransition li {
   -webkit-transition: none !important;
   transition: none !important;
 }
-.testimonials-wrapper .testimonials-content ul li {
+.testimonials-wrapper .testimonials-content > ul li {
   width: var(--width);
   min-width: var(--width);
   @apply px-[20px] transition-[inherit] overflow-hidden;
 }
-.testimonials-wrapper .testimonials-content ul li.shrink {
+.testimonials-wrapper .testimonials-content > ul li.shrink {
   @apply scale-0;
 }
-.testimonials-wrapper .testimonials-content ul li > div {
-  @apply flex flex-col rounded-[20px];
+.testimonials-wrapper .testimonials-content > ul li > div {
+  @apply flex flex-col rounded-[20px] transition-[inherit];
 }
-.testimonials-wrapper .testimonials-content ul li > div p {
+.testimonials-wrapper .testimonials-content > ul li > div p {
   @apply p-[20px] text-[16px] italic bg-[#fafafc] pb-[50px] rounded-[inherit] rounded-b-none;
 }
-.testimonials-wrapper .testimonials-content ul li > div p span {
+.testimonials-wrapper .testimonials-content > ul li > div p span {
   @apply text-primarys-100 rounded-[10px] opacity-[.5];
 }
-.testimonials-wrapper .testimonials-content ul li > div p span.material-symbols-outlined {
+.testimonials-wrapper .testimonials-content > ul li > div p span.material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
-.testimonials-wrapper .testimonials-content ul li > div p span:first-child {
+.testimonials-wrapper .testimonials-content > ul li > div p span:first-child {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.testimonials-wrapper .testimonials-content ul li > div > div {
+.testimonials-wrapper .testimonials-content > ul li > div > div {
   @apply px-[20px];
 }
-.testimonials-wrapper .testimonials-content ul li > div > div img {
+.testimonials-wrapper .testimonials-content > ul li > div > div img {
   @apply mt-[-20px] mb-[5px] rounded-[50%] w-[90px] border-[6px] border-[#fff];
 }
-.testimonials-wrapper .testimonials-content ul li > div > div h3 {
+.testimonials-wrapper .testimonials-content > ul li > div > div h3 {
   @apply text-[18px] font-[600] text-[#111] capitalize;
 }
-.testimonials-wrapper .testimonials-content ul li > div > div h4 {
+.testimonials-wrapper .testimonials-content > ul li > div > div h4 {
   @apply text-[14px] font-[500] text-[#999] capitalize;
 }
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined {
@@ -322,8 +318,11 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   @apply overflow-hidden flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/3;
   @apply relative;
 }
+.portfolio-wrapper .container .portfolio-content .portfolio-card:hover {
+  @apply scale-[1.05];
+}
 .portfolio-wrapper .container .portfolio-content .portfolio-card.hide {
-  @apply z-[-1] scale-0 p-0 w-0 opacity-0;
+  @apply translate-x-[100%] z-[-1] scale-0 p-0 m-0 w-0 opacity-0;
 }
 .portfolio-wrapper .container .portfolio-content .portfolio-card img {
   @apply delay-300;
@@ -424,16 +423,68 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 .pricing-wrapper .pricing-content {
   @apply py-[30px];
 }
-.pricing-wrapper .pricing-content > ul > li {
-  width: 25%;
+.pricing-wrapper .pricing-content > ul .pricing-card {
+  @apply w-1/4 p-[10px];
 }
-.pricing-wrapper .pricing-content > ul > li > div {
-  @apply p-[20px] bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center;
+.pricing-wrapper .pricing-content > ul .pricing-card > div {
+  @apply bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center transition-[inherit];
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
 }
-.pricing-wrapper .pricing-content > ul > li > div > ul {
-  @apply w-full;
+.pricing-wrapper .pricing-content > ul .pricing-card > div:hover {
+  @apply scale-[1.05];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-type {
+  @apply py-[20px] px-[15px] text-[#777777] bg-[#f8f8f8] w-full capitalize font-[600] mb-[20px];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-price {
+  @apply text-primarys-100 font-[600] mb-[20px] text-[36px] font-Poppins;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-price > sup {
+  @apply text-[20px] top-[-15px] left-[-13px];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-price > span {
+  @apply text-[#bababa] font-[300] text-[16px];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-card-list {
+  @apply w-full p-0 text-[#444444] text-center text-[14px] mb-[20px];
+  line-height: 1.42;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-card-list > li {
+  @apply pb-[16px];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-card-list > li.strike {
+  @apply text-[#ccc];
+  text-decoration: line-through;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .btn-wrap {
+  @apply w-full bg-[#f8f8f8] py-[25px] px-[15px];
+}
+.pricing-wrapper .pricing-content > ul .pricing-card > div .btn-wrap > a {
+  @apply text-[14px] font-[600] font-Raleway;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card.active > div .pricing-type {
+  @apply bg-primarys-100 text-white;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card.active > div .btn-wrap > a {
+  @apply bg-primarys-100 border-primarys-100 text-white hover:bg-primarys-200;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card.advanced > div {
+  position: relative;
+}
+.pricing-wrapper .pricing-content > ul .pricing-card.advanced > div::after {
+  content: var(--cntnt);
+  position: absolute;
+  text-transform: capitalize;
+  top: 25px;
+  right: -90px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  @apply bg-primarys-100;
 }
 
 .scroll-up {

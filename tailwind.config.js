@@ -8,11 +8,17 @@ module.exports = {
 			OpenSans: '"Open Sans", sans-serif',
 			icons: 'bootstrap-icons !important',
 		},
+		// screens: {
+		// 	sm: '768px',
+		// 	md: '900px',
+		// 	lg: '1170px',
+		// 	// xl: '1280px',
+		// },
 		screens: {
 			sm: '768px',
 			md: '900px',
-			lg: '1170px',
-			// xl: '1280px',
+			lg: '1280px',
+			xl: '1336px',
 		},
 		colors: {
 			primarys: {
@@ -49,12 +55,12 @@ module.exports = {
 			base: ['16px', '24px'],
 		},
 		container: ({ theme }) => ({
-			// screens: {
-			// sm: 'px',
-			// md: 'px',
-			// lg: '1120px',
-			// xl: '1280px',
-			// },
+			screens: {
+			sm: '640px',
+			md: '768px',
+			lg: '1120px',
+			xl: '1170px',
+			},
 			center: 'true',
 		}),
 		extend: {
