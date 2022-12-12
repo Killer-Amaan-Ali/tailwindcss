@@ -7,9 +7,11 @@ let headerUl = document.getElementById('headerUl')
 lightboxLinks.innerHTML = headerUl.innerHTML
 
 const closeNav = () => {
+	document.body.removeAttribute('style')
 	lightboxWrapper.classList.add('invisibleBox')
 }
 const openNav = () => {
+	document.body.setAttribute('style', 'overflow: hidden;')
 	lightboxWrapper.classList.remove('invisibleBox')
 }
 
@@ -163,7 +165,7 @@ const scrollActive = (elem, mount = 'footer', breathe = 100) => {
 
 window.onscroll = () => {
 	scrollFunc()
-	closeNav()
+	// closeNav()
 }
 scrollFunc()
 
@@ -182,10 +184,10 @@ const updateWidth = () => {
 	window.innerWidth <= 768
 		? (noOfCards = 1)
 		: window.innerWidth <= 1280
-		? (noOfCards = 2)
-		: window.innerWidth <= 1336
-		? (noOfCards = 3)
-		: null
+			? (noOfCards = 2)
+			: window.innerWidth <= 1336
+				? (noOfCards = 3)
+				: null
 	// window.innerWidth <= 768
 	// 	? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
 	// 	: window.innerWidth <= 1280
@@ -236,23 +238,6 @@ const sliderActive = e => {
 			: (sliderWrapper.children[0].style.marginLeft = `-${calc}px`)
 	} else {
 		coun = e.id
-		// if (coun > 0) {
-		// 	setTimeout(() => {
-		// 		sliderWrapper.children[coun - 1].classList.add('shrink')
-		// 	}, 200)
-		// 	setTimeout(() => {
-		// 		sliderWrapper.children[coun - 1].classList.remove('shrink')
-		// 	}, 1000)
-		// 	} else {
-		// 	sliderWrapper.children[sliderWrapper.children.length - 1].classList.add(
-		// 		'shrink'
-		// 	)
-		// 	setTimeout(() => {
-		// 		sliderWrapper.children[
-		// 			sliderWrapper.children.length - 1
-		// 		].classList.remove('shrink')
-		// 	}, 500)
-		// }
 		if (+coun == 0 && infiCarousFlag) {
 			coun = sliderWrapper.children.length - noOfCards
 			setTimeout(() => {
@@ -283,8 +268,8 @@ const sliderActive = e => {
 			: (sliderWrapper.children[0].style.marginLeft = `-${calc}px`)
 	}
 	current = e.id
-	// }
 }
+
 if (infiniteSlider) {
 	for (let i = 0; i < noOfCards; i++) {
 		sliderWrapper &&
@@ -318,7 +303,7 @@ const mouseIn = () => {
 // clearInterval(refreshIntervalId)
 sliderWrapper &&
 	(sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)'),
-	sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)'))
+		sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)'))
 const sliderDots = () => {
 	for (let i = 0; i <= modified; i++) {
 		i === 0 ? (mode = 'active') : (mode = '')
@@ -361,3 +346,19 @@ for (let i = 0; i < portfolioCategories.children.length; i++) {
 	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
 sliderDots()
+
+
+let accordion = document.getElementById('accordion')
+
+const expandAccordion = (e) => {
+	let id = 0
+	e.target.tagName === 'I' || e.target.tagName === 'DIV' ? id = e.target.parentElement.parentElement.id : e.target.tagName === 'SPAN' ? id = e.target.parentElement.parentElement.parentElement.id : null
+	for (let i = 0; i < accordion.children.length; i++) {
+		if (i !== +id) accordion.children[i].classList.add('collapsed')
+		else accordion.children[id].classList.toggle('collapsed')
+	}
+}
+
+for (let i = 0; i < accordion.children.length; i++) {
+	accordion.children[i].addEventListener('click', expandAccordion)
+}

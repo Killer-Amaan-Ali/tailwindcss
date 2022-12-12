@@ -1,6 +1,6 @@
 :root {
 	--primary: theme('colors.primarys.100') !important;
-	--primaryHover:theme('colors.primarys.200') !important;
+	--primaryHover: theme('colors.primarys.200') !important;
 	--primaryText: var(--primary) !important;
 	--secondaryText: var(--primaryHover) !important;
 
@@ -29,6 +29,12 @@
 	p {
 		@apply font-OpenSans;
 	}
+}
+
+::selection {
+	// color: red;
+	@apply bg-primarys-100 text-white;
+	// @apply bg-primarys-100 text-black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -103,6 +109,10 @@
 
 .p-content {
 	@apply font-OpenSans text-center text-[#aab3c7] text-[14px];
+}
+
+.title-styling {
+	@apply pb-[30px];
 }
 
 body {
@@ -293,8 +303,11 @@ header {
 }
 
 .testimonials-wrapper {
+	.testimonials-title {
+		@extend .title-styling;
+	}
 	.testimonials-content {
-		@apply w-full my-[30px];
+		@apply w-full mb-[30px];
 		// @apply overflow-x-auto;
 		@apply overflow-hidden;
 
@@ -428,7 +441,7 @@ header {
 				@extend .transition;
 				@extend .t-500;
 
-				&:hover{
+				&:hover {
 					@apply scale-[1.05];
 				}
 
@@ -479,8 +492,10 @@ header {
 }
 
 .services-wrapper {
-	.services-header {
-		h2 {}
+	.services-title {
+		@extend .title-styling;
+		h2 {
+		}
 	}
 
 	.services-content {
@@ -527,56 +542,62 @@ header {
 	}
 }
 
-.team-content {
-	@apply flex flex-wrap justify-center;
+.team-wrapper {
+	.team-title {
+		@extend .title-styling;
+	}
+	.team-content {
+		@apply flex flex-wrap justify-center;
 
-	.team-card-wrapper {
-		@apply flex px-[12px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/4;
+		.team-card-wrapper {
+			@apply flex px-[12px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/4;
 
-		.team-inner-wrapper {
-			@apply mb-[20px] rounded-[5px] overflow-hidden;
-			box-shadow: 0px 2px 15px rgb(65 76 100 / 6%);
+			.team-inner-wrapper {
+				@apply mb-[20px] rounded-[5px] overflow-hidden;
+				box-shadow: 0px 2px 15px rgb(65 76 100 / 6%);
 
-			.team-img {
-				@apply relative;
+				.team-img {
+					@apply relative;
 
-				img {}
+					img {
+					}
 
-				.team-social {
-					@apply items-center absolute flex bottom-0 w-full justify-center py-[5px];
-					@extend .transition;
-					@extend .t-500;
-					background-color: rgba(255, 255, 255, 0.85);
+					.team-social {
+						@apply items-center absolute flex bottom-0 w-full justify-center py-[5px];
+						@extend .transition;
+						@extend .t-500;
+						background-color: rgba(255, 255, 255, 0.85);
 
-					div {
-						@apply transition-[inherit] mx-[5px] w-[25px] h-[25px] flex justify-center items-center;
+						div {
+							@apply transition-[inherit] mx-[5px] w-[25px] h-[25px] flex justify-center items-center;
 
-						a {
-							@apply fill-[#414c64] transition-[inherit] hover:fill-primarys-100;
+							a {
+								@apply fill-[#414c64] transition-[inherit] hover:fill-primarys-100;
 
-							svg {
-								width: 22px !important;
-								max-width: 22px !important;
-								@apply fill-[inherit] hover:fill-[inherit] w-[25px] transition-[inherit];
+								svg {
+									width: 22px !important;
+									max-width: 22px !important;
+									@apply fill-[inherit] hover:fill-[inherit] w-[25px] transition-[inherit];
 
-								path {
-									@apply fill-[inherit] hover:fill-[inherit];
+									path {
+										@apply fill-[inherit] hover:fill-[inherit];
+									}
 								}
 							}
 						}
 					}
 				}
-			}
 
-			.team-card-content {
-				@apply flex flex-col items-center py-[25px] px-[15px] bg-white;
+				.team-card-content {
+					@apply flex flex-col items-center py-[25px] px-[15px] bg-white;
 
-				h4 {
-					@apply text-center text-[18px] text-[#414c64] font-[700] mb-[5px] font-Raleway;
-				}
+					h4 {
+						@apply text-center text-[18px] text-[#414c64] font-[700] mb-[5px] font-Raleway;
+					}
 
-				span {
-					@apply text-center text-[13px] font-[400] text-[#aaaaaa] font-OpenSans;
+					span {
+						@apply text-center text-[13px] font-[400] text-[#aaaaaa] font-OpenSans;
+					}
 				}
 			}
 		}
@@ -584,10 +605,12 @@ header {
 }
 
 .pricing-wrapper {
-	.pricing-title {}
+	.pricing-title {
+		@extend .title-styling;
+	}
 
 	.pricing-content {
-		@apply py-[30px];
+		@apply pb-[30px];
 
 		> ul {
 			.pricing-card {
@@ -598,7 +621,7 @@ header {
 					@apply bg-white text-center rounded-[5px] relative overflow-hidden flex flex-col items-center transition-[inherit];
 					box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
 					&:hover {
-							@apply scale-[1.05];
+						@apply scale-[1.05];
 					}
 
 					.pricing-type {
@@ -623,7 +646,7 @@ header {
 
 						> li {
 							@apply pb-[16px];
-							&.strike{
+							&.strike {
 								@apply text-[#ccc];
 								text-decoration: line-through;
 							}
@@ -632,7 +655,7 @@ header {
 
 					.btn-wrap {
 						@apply w-full bg-[#f8f8f8] py-[25px] px-[15px];
-						>a{
+						> a {
 							@apply text-[14px] font-[600] font-Raleway;
 						}
 					}
@@ -645,7 +668,7 @@ header {
 						}
 
 						.btn-wrap {
-							>a{
+							> a {
 								@apply bg-primarys-100 border-primarys-100 text-white hover:bg-primarys-200;
 							}
 						}
@@ -654,7 +677,7 @@ header {
 				&.advanced {
 					> div {
 						position: relative;
-						&::after{
+						&::after {
 							content: var(--cntnt);
 							position: absolute;
 							text-transform: capitalize;
@@ -668,6 +691,61 @@ header {
 							@apply bg-primarys-100;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+.faq-wrapper {
+	.faq-title {
+		@extend .title-styling;
+	}
+
+	.faq-content {
+		@apply items-center;
+		> ul {
+			@apply w-full px-[100px];
+			> li {
+				@apply bg-white p-[20px] rounded-[4px] relative max-h-[500px] overflow-hidden;
+				@extend .transition;
+				@extend .t-500;
+				&:not(:last-child) {
+					@apply mb-[15px];
+				}
+				&.collapsed {
+					@apply max-h-[64px];
+					.title {
+						> div {
+							@apply text-[#343a40];
+							.material-symbols-outlined {
+								@apply rotate-0;
+							}
+						}
+					}
+				}
+				.title {
+					@apply flex items-center cursor-pointer transition-[inherit];
+					&:hover {
+						> div {
+							@apply text-primarys-100;
+						}
+					}
+					> i {
+						@apply text-primarys-100 transition-[inherit];
+					}
+					> div {
+						@apply text-primarys-100 pl-[10px] flex items-center justify-between w-full relative capitalize transition-[inherit];
+						.material-symbols-outlined {
+							@apply transition-[inherit] rotate-180;
+						}
+						.accordion-title {
+							@apply pr-[10px] font-Poppins text-[16px] leading-[24px] font-[600];
+						}
+					}
+				}
+				.content {
+					@apply relative pt-[15px] text-[#444444] text-[16px] font-[400] leading-[24px];
 				}
 			}
 		}
