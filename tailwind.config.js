@@ -1,3 +1,4 @@
+console.log('Tailwind is running')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./public/**/*.{html,js}'],
@@ -25,7 +26,7 @@ module.exports = {
 				// 100: 'rgb(255, 193, 7)',
 				// 200: '#ffce3a',
 				100: 'red',
-				200: '#ff3a3a',
+				200: '#ff3a3a'
 			},
 
 			white: 'rgb(255, 255, 255)',
