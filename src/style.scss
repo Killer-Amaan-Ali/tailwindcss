@@ -120,6 +120,23 @@ body {
 	// @apply bg-[url('/bg-img.png')] bg-contain bg-no-repeat h-[5000px];
 }
 
+#mainLightBox {
+	@extend .transition;
+	@extend .t-500;
+	@apply w-[100vw] h-[100vh] fixed top-0 left-0 bg-[#000000eb] z-50 opacity-0;
+	visibility: hidden;
+	>:not(#lightBoxClickable) {
+		@apply scale-0 transition-[inherit] h-[100%] bg-[white] flex flex-col mx-auto w-[740px] relative;
+	}
+	&.visible {
+		@apply opacity-100;
+		visibility: visible;
+		>:not(#lightBoxClickable) {
+			@apply scale-100;
+		}
+	}
+}
+
 // header.scrollBg {
 // 	@apply bg-[#374055e6];
 // }
@@ -707,7 +724,7 @@ header {
 		> ul {
 			@apply w-full px-[100px];
 			> li {
-				@apply bg-white p-[20px] rounded-[4px] relative max-h-[500px] overflow-hidden;
+				@apply bg-white p-[20px] rounded-[4px] relative max-h-[250px] overflow-hidden;
 				@extend .transition;
 				@extend .t-500;
 				&:not(:last-child) {

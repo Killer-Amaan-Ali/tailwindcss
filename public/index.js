@@ -294,11 +294,11 @@ var refreshIntervalId
 refreshIntervalId = setInterval(autoScroll, seconds)
 const mouseOut = () => {
 	refreshIntervalId = setInterval(autoScroll, seconds)
-	console.log('carousel played')
+	// console.log('carousel played')
 }
 const mouseIn = () => {
 	clearInterval(refreshIntervalId)
-	console.log('carousel stopped')
+	// console.log('carousel stopped')
 }
 // clearInterval(refreshIntervalId)
 sliderWrapper &&
@@ -327,6 +327,7 @@ const categoryActive = e => {
 	}
 	for (let i = 0; i < portfolioContent.children.length; i++) {
 		// portfolioContent.children[i].setAttribute('style', `left: 0;`)
+
 		filteredMode[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
 		if (filteredMode[i] !== categoryMode) {
@@ -345,6 +346,42 @@ const categoryActive = e => {
 for (let i = 0; i < portfolioCategories.children.length; i++) {
 	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
+
+let mainLightBox = document.getElementById('mainLightBox')
+
+const imageViewer = (e) => {
+
+	// let cardName = e.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
+	// let imgSrc = e.parentElement.parentElement.parentElement.children[0].attributes.src.value
+	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
+	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
+	document.body.style.overflow = 'hidden'
+	mainLightBox.classList.add('visible')
+	mainLightBox.innerHTML = `
+		<div id="lightBoxClickable" class="h-[100%] w-[100%] absolute"></div>
+		<div>
+			<img src="${imgSrc}" />
+			<div class="p-[20px]">
+				<p class="capitalize">
+					${cardName}
+				</p>
+			</div>
+		</div>
+	`
+	let lightBoxClickable = document.getElementById('lightBoxClickable')
+	lightBoxClickable.addEventListener('click', closeImageViewer)
+}
+
+const closeImageViewer = () => {
+	document.body.removeAttribute('style')
+	mainLightBox.classList.remove('visible')
+}
+
+for (let i = 0; i < portfolioContent.children.length; i++) {
+	document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
+}
+
+
 sliderDots()
 
 
