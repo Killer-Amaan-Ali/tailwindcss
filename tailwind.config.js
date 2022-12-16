@@ -23,10 +23,10 @@ module.exports = {
 		},
 		colors: {
 			primarys: {
-				// 100: 'rgb(255, 193, 7)',
-				// 200: '#ffce3a',
-				100: 'red',
-				200: '#ff3a3a'
+				100: 'rgb(255, 193, 7)',
+				200: '#ffce3a',
+				// 100: 'red',
+				// 200: '#ff3a3a'
 			},
 
 			white: 'rgb(255, 255, 255)',

@@ -317,8 +317,11 @@ let portfolioCategories = document.getElementById('portfolioCategories')
 let portfolioContent = document.getElementById('portfolioContent')
 let categoryMode =
 	portfolioCategories.getElementsByClassName('active')[0].innerHTML
-let filteredMode = []
-
+let filteredModeArray = []
+let leftPos = 0
+let topPos = 0
+let editedLeftPos = 0
+let editedTopPos = 0
 const categoryActive = e => {
 	e.preventDefault()
 	categoryMode = e.target.innerHTML
@@ -326,19 +329,57 @@ const categoryActive = e => {
 		portfolioCategories.children[i].classList.remove('active')
 	}
 	for (let i = 0; i < portfolioContent.children.length; i++) {
-		// portfolioContent.children[i].setAttribute('style', `left: 0;`)
 
-		filteredMode[i] =
+		filteredModeArray[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
-		if (filteredMode[i] !== categoryMode) {
-			portfolioContent.children[i].classList.add('hide')
-		} else {
-			portfolioContent.children[i].classList.remove('hide')
-		}
-		if (categoryMode === 'all') {
-			portfolioContent.children[i].classList.remove('hide')
+
+		if (!portfolioContent.classList.contains('abs')) {
+			if (filteredModeArray[i] !== categoryMode) {
+				portfolioContent.children[i].classList.add('hide')
+			} else {
+				portfolioContent.children[i].classList.remove('hide')
+			}
+			if (categoryMode === 'all') {
+				portfolioContent.children[i].classList.remove('hide')
+			}
 		}
 	}
+
+	if (portfolioContent.classList.contains('abs')) {
+		editedLeftPos = 0
+		editedTopPos = 0
+
+		for (let i = 0; i < portfolioContent.children.length; i++) {
+
+			if (filteredModeArray[i] !== categoryMode) {
+				portfolioContent.children[i].classList.add('shrink')
+			} else {
+				portfolioContent.children[i].classList.remove('shrink')
+
+				// if (i !== 0 && i % 3 === 0) {
+				// 	editedTopPos += 290
+				// }
+				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+				editedLeftPos += 33
+				if (editedLeftPos > 66) {
+					editedLeftPos = 0
+				}
+			}
+			if (categoryMode === 'all') {
+				// console.log(i, i % 3)
+				portfolioContent.children[i].classList.remove('shrink')
+				if (i !== 0 && i % 3 === 0) {
+					editedTopPos += 290
+				}
+				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+				editedLeftPos += 33
+				if (editedLeftPos > 66) {
+					editedLeftPos = 0
+				}
+			}
+		}
+	}
+
 
 	e.target.classList.add('active')
 }
@@ -348,17 +389,16 @@ for (let i = 0; i < portfolioCategories.children.length; i++) {
 }
 
 let mainLightBox = document.getElementById('mainLightBox')
+let lightboxHTML = mainLightBox.innerHTML
 
 const imageViewer = (e) => {
-
 	// let cardName = e.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
 	// let imgSrc = e.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
 	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	document.body.style.overflow = 'hidden'
 	mainLightBox.classList.add('visible')
-	mainLightBox.innerHTML = `
-		<div id="lightBoxClickable" class="h-[100%] w-[100%] absolute"></div>
+	mainLightBox.innerHTML += `
 		<div>
 			<img src="${imgSrc}" />
 			<div class="p-[20px]">
@@ -369,16 +409,27 @@ const imageViewer = (e) => {
 		</div>
 	`
 	let lightBoxClickable = document.getElementById('lightBoxClickable')
-	lightBoxClickable.addEventListener('click', closeImageViewer)
+	lightBoxClickable.addEventListener('click', closeLightBox)
 }
 
-const closeImageViewer = () => {
+const closeLightBox = () => {
 	document.body.removeAttribute('style')
 	mainLightBox.classList.remove('visible')
+	setTimeout(() => {
+		mainLightBox.innerHTML = lightboxHTML
+	}, 600)
 }
 
 for (let i = 0; i < portfolioContent.children.length; i++) {
 	document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
+	if (portfolioContent.classList.contains('abs')) {
+		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
+		leftPos += 33
+		if (leftPos > 66) {
+			leftPos = 0
+			topPos += 290
+		}
+	}
 }
 
 

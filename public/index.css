@@ -1,6 +1,6 @@
 :root {
-  --primary: red !important;
-  --primaryHover: #ff3a3a !important;
+  --primary: rgb(255, 193, 7) !important;
+  --primaryHover: #ffce3a !important;
   --primaryText: var(--primary) !important;
   --secondaryText: var(--primaryHover) !important;
 }
@@ -737,6 +737,10 @@ p {
   width: 100%;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 .translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -974,6 +978,10 @@ p {
   opacity: 0;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -996,21 +1004,21 @@ p {
 
 ::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 ::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 ::-webkit-scrollbar-thumb {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .container {
@@ -1056,7 +1064,7 @@ header .headerUl > li.t-5000,  header.t-5000,  .t-5000#mainLightBox,  body.t-500
   border-radius: 30px;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+  border-color: rgb(255 193 7 / var(--tw-border-opacity));
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 35px;
@@ -1069,13 +1077,13 @@ header .headerUl > li.t-5000,  header.t-5000,  .t-5000#mainLightBox,  body.t-500
 
 .button-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .button-secondary {
   border-radius: 4px;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 35px;
@@ -1088,7 +1096,7 @@ header .headerUl > li.t-5000,  header.t-5000,  .t-5000#mainLightBox,  body.t-500
 
 .button-secondary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 58 58 / var(--tw-bg-opacity));
+  background-color: rgb(255 206 58 / var(--tw-bg-opacity));
 }
 
 .button-secondary.grayed {
@@ -1138,7 +1146,7 @@ header .headerUl > li.t-5000,  header.t-5000,  .t-5000#mainLightBox,  body.t-500
   height: 3px;
   bottom: 0;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .h2-heading:hover::after {
@@ -1211,13 +1219,13 @@ header .headerUl > li {
 header .lightboxLinks > li:hover, 
 header .headerUl > li:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 header .lightboxLinks > li.active, 
 header .headerUl > li.active {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 header .lightboxLinks > li:first-child, 
@@ -1268,7 +1276,7 @@ header .headerUl .dropdown-box ul li {
 header .lightboxLinks .dropdown-box ul li:hover, 
 header .headerUl .dropdown-box ul li:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 header .lightbox-wrapper {
@@ -1324,7 +1332,7 @@ header .lightbox-wrapper .lightboxLinks > li {
 
 header .lightbox-wrapper .lightboxLinks > li.active {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 header .lightbox-wrapper .lightboxLinks > li:first-child {
@@ -1576,7 +1584,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 .testimonials-wrapper .testimonials-content > ul li > div p span {
   border-radius: 10px;
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
   opacity: .5;
 }
 
@@ -1623,7 +1631,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   cursor: pointer;
   font-size: 22px;
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 .testimonials-wrapper .testimonials-content .sliderCounters .material-symbols-outlined.active {
@@ -1648,12 +1656,12 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 
 .portfolio-wrapper .container .portfolio-title .portfolio-categories > li:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .portfolio-wrapper .container .portfolio-title .portfolio-categories > li.active {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .portfolio-wrapper .container .portfolio-content {
@@ -1667,6 +1675,22 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   .portfolio-wrapper .container .portfolio-content {
     justify-content: flex-start;
   }
+}
+
+.portfolio-wrapper .container .portfolio-content.abs {
+  min-height: 900px;
+}
+
+.portfolio-wrapper .container .portfolio-content.abs .portfolio-card {
+  position: absolute !important;
+}
+
+.portfolio-wrapper .container .portfolio-content.abs .portfolio-card.shrink {
+  z-index: -10;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
 }
 
 .portfolio-wrapper .container .portfolio-content .portfolio-card {
@@ -1735,7 +1759,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   align-items: center;
   justify-content: space-between;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
@@ -1936,7 +1960,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 }
 
 .team-wrapper .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a:hover {
-  fill: red;
+  fill: rgb(255, 193, 7);
 }
 
 .team-wrapper .team-content .team-card-wrapper .team-inner-wrapper .team-img .team-social div a svg {
@@ -2043,7 +2067,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   font-size: 36px;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 .pricing-wrapper .pricing-content > ul .pricing-card > div .pricing-price > sup {
@@ -2098,23 +2122,23 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 
 .pricing-wrapper .pricing-content > ul .pricing-card.active > div .pricing-type {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .pricing-wrapper .pricing-content > ul .pricing-card.active > div .btn-wrap > a {
   --tw-border-opacity: 1;
-  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+  border-color: rgb(255 193 7 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .pricing-wrapper .pricing-content > ul .pricing-card.active > div .btn-wrap > a:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 58 58 / var(--tw-bg-opacity));
+  background-color: rgb(255 206 58 / var(--tw-bg-opacity));
 }
 
 .pricing-wrapper .pricing-content > ul .pricing-card.advanced > div {
@@ -2133,7 +2157,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   font-size: 14px;
   transform: rotate(45deg);
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
 .faq-wrapper .faq-content {
@@ -2185,12 +2209,12 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 
 .faq-wrapper .faq-content > ul > li .title:hover > div {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
 }
 
 .faq-wrapper .faq-content > ul > li .title > i {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
   transition-property: inherit;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -2205,7 +2229,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   padding-left: 10px;
   text-transform: capitalize;
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(255 193 7 / var(--tw-text-opacity));
   transition-property: inherit;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -2246,13 +2270,13 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   justify-content: center;
   border-radius: 50%;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 193 7 / var(--tw-bg-opacity));
   padding: 10px;
 }
 
 .scroll-up:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 58 58 / var(--tw-bg-opacity));
+  background-color: rgb(255 206 58 / var(--tw-bg-opacity));
 }
 
 .scroll-up.hidden-elem {

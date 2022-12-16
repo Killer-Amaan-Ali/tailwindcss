@@ -340,6 +340,15 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 .portfolio-wrapper .container .portfolio-content {
   @apply relative overflow-hidden items-center justify-center sm:justify-start;
 }
+.portfolio-wrapper .container .portfolio-content.abs {
+  min-height: 900px;
+}
+.portfolio-wrapper .container .portfolio-content.abs .portfolio-card {
+  position: absolute !important;
+}
+.portfolio-wrapper .container .portfolio-content.abs .portfolio-card.shrink {
+  @apply scale-0 opacity-0 -z-10;
+}
 .portfolio-wrapper .container .portfolio-content .portfolio-card {
   @apply overflow-hidden flex flex-col items-center mb-[30px] px-[15px] w-full max-w-[550px] sm:w-1/2 md:w-1/2 lg:w-1/3;
   @apply relative;
