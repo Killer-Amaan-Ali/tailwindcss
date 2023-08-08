@@ -324,11 +324,12 @@ let editedLeftPos = 0
 let editedTopPos = 0
 const categoryActive = e => {
 	e.preventDefault()
+	let portChilLen = portfolioContent.children.length
 	categoryMode = e.target.innerHTML
 	for (let i = 0; i < portfolioCategories.children.length; i++) {
 		portfolioCategories.children[i].classList.remove('active')
 	}
-	for (let i = 0; i < portfolioContent.children.length; i++) {
+	for (let i = 0; i < portChilLen; i++) {
 
 		filteredModeArray[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
@@ -348,12 +349,9 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
-		let portChilLen = portfolioContent.children.length
-		let holder = (portChilLen - document.querySelectorAll('.shrink').length)
-		let tempwe = holder % 3 === 0 
-			? holder / 3
-			: holder % 3
-		portfolioContent.style.height = portChilLen - tempwe * portfolioContent.children[0].clientHeight + 'px !important'
+		portfolioContent.style.height = portChilLen - (portChilLen - document.querySelectorAll('.shrink').length) % 3 === 0 
+		? ((portChilLen - document.querySelectorAll('.shrink').length) / 3)
+		: ((portChilLen - document.querySelectorAll('.shrink').length) % 3) * portfolioContent.children[0].clientHeight + 'px !important'
 
 		for (let i = 0; i < portChilLen; i++) {
 
