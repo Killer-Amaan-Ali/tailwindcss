@@ -336,8 +336,8 @@ const categoryActive = e => {
 	for (let i = 0; i < portfolioCategories.children.length; i++) {
 		portfolioCategories.children[i].classList.remove('active')
 	}
-	for (let i = 0; i < portChilLen; i++) {
 
+	for (let i = 0; i < portChilLen; i++) {
 		filteredModeArray[i] =
 			portfolioContent.children[i].getAttribute('portfolio-mode')
 
@@ -361,8 +361,10 @@ const categoryActive = e => {
 
 			if (filteredModeArray[i] !== categoryMode) {
 				portfolioContent.children[i].classList.add('shrink')
+				portfolioContent.children[i].classList.remove('show')
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
+				portfolioContent.children[i].classList.add('show')
 				console.log(i % noOfPortCards === 0)
 				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
