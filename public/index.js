@@ -349,7 +349,7 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
-		portfolioContent.setAttribute('style', `height: ${portChilLen - (portChilLen - document.querySelectorAll('.shrink').length) % 3 === 0 
+		portfolioContent.setAttribute('style', `height: ${portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % 3) === 0 
 		? ((portChilLen - document.querySelectorAll('.shrink').length) / 3)
 		: ((portChilLen - document.querySelectorAll('.shrink').length) % 3) * portfolioContent.children[0].clientHeight}px !important;`)
 
