@@ -397,12 +397,11 @@ const categoryActive = e => {
 				}
 			}
 		}
-		
-		editedTopPos = 0
+
 		for (let i = 0; i < show.length; i++) {
 			if (categoryMode !== 'all') {
 				portfolioContent.children[i].style.top = `${editedTopPos}px`
-				if (i !== 0 && (i % noOfPortCards === 0)) {
+				if (i !== 0 && ((i % show === 0) && (i % noOfPortCards === 0))) {
 					editedTopPos += cardHeight
 				}
 			}
