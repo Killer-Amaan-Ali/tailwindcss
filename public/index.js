@@ -178,18 +178,21 @@ let modified = sliderWrapper?.children.length
 let temp = ``
 
 let noOfTestimonialCards = 3
-let noOfPortCards = 2
+let noOfPortCards = 3
 
 const updateWidth = () => {
 	// responsive
 	// console.log(window.innerWidth)
-	window.innerWidth <= 768
-		? (noOfTestimonialCards = 1)
-		: window.innerWidth <= 1280
-			? (noOfTestimonialCards = 2)
-			: window.innerWidth <= 1336
-				? (noOfTestimonialCards = 3)
-				: null
+	if (window.innerWidth <= 768) {
+		noOfPortCards = 1
+		noOfTestimonialCards = 1
+	} else if (window.innerWidth <= 1280) {
+		noOfPortCards = 2
+		noOfTestimonialCards = 2
+	} else if (window.innerWidth <= 1336) {
+		noOfPortCards = 3
+		noOfTestimonialCards = 3
+	}
 	// window.innerWidth <= 768
 	// 	? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
 	// 	: window.innerWidth <= 1280
@@ -371,8 +374,8 @@ const categoryActive = e => {
 				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
 				}
-				editedLeftPos += (100/noOfPortCards)
-				if (editedLeftPos >= 100/(noOfPortCards/2)) {
+				editedLeftPos += (100 / noOfPortCards)
+				if (editedLeftPos >= 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
 			}
@@ -382,15 +385,15 @@ const categoryActive = e => {
 					editedTopPos += cardHeight
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
-				editedLeftPos += (100/noOfPortCards)
-				if (editedLeftPos >= 100/(noOfPortCards/2)) {
+				editedLeftPos += (100 / noOfPortCards)
+				if (editedLeftPos >= 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
 			}
 		}
 		portfolioContent.setAttribute('style', `height: ${Math.ceil(portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards === 0)
-		? ((portChilLen - document.querySelectorAll('.shrink').length) / noOfPortCards)
-		: ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards)) * (portfolioContent.children[0].clientHeight + 30)}px !important;`)
+			? ((portChilLen - document.querySelectorAll('.shrink').length) / noOfPortCards)
+			: ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards)) * (portfolioContent.children[0].clientHeight + 30)}px !important;`)
 	}
 
 
@@ -437,8 +440,8 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 	document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
 	if (portfolioContent.classList.contains('abs')) {
 		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
-		leftPos += (100/noOfPortCards)
-		if (leftPos > 100/(noOfPortCards/2)) {
+		leftPos += (100 / noOfPortCards)
+		if (leftPos > 100 / (noOfPortCards / 2)) {
 			leftPos = 0
 			topPos += cardHeight
 		}
