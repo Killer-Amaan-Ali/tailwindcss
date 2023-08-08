@@ -363,7 +363,7 @@ const categoryActive = e => {
 				portfolioContent.children[i].classList.add('shrink')
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
-
+				console.log(i % noOfPortCards === 0)
 				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
 				}
@@ -372,7 +372,7 @@ const categoryActive = e => {
 				if (editedLeftPos >= 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
-				console.log('card -----', i, editedLeftPos, editedTopPos)
+				// console.log('card -----', i, editedLeftPos, editedTopPos)
 			}
 			if (categoryMode === 'all') {
 				// console.log(i, i % noOfPortCards)
