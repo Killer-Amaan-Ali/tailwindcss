@@ -290,7 +290,7 @@ const autoScroll = () => {
 autoScroll()
 setInterval(updateWidth, 1000)
 
-var refreshIntervalId
+let refreshIntervalId
 refreshIntervalId = setInterval(autoScroll, seconds)
 const mouseOut = () => {
 	refreshIntervalId = setInterval(autoScroll, seconds)
@@ -305,6 +305,7 @@ sliderWrapper &&
 	(sliderWrapper.setAttribute('onmouseenter', 'mouseIn(this)'),
 		sliderWrapper.setAttribute('onmouseleave', 'mouseOut(this)'))
 const sliderDots = () => {
+	console.log('slider test')
 	for (let i = 0; i <= modified; i++) {
 		i === 0 ? (mode = 'active') : (mode = '')
 		temp += `<span id="${i}" onclick="sliderActive(this)" class="${mode} material-symbols-outlined">fiber_manual_record</span>`
