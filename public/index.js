@@ -375,7 +375,7 @@ const categoryActive = e => {
 					editedTopPos += cardHeight
 				}
 				editedLeftPos += (100 / noOfPortCards)
-				if (editedLeftPos >= 100 / (noOfPortCards / 2)) {
+				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
 			}
@@ -386,7 +386,7 @@ const categoryActive = e => {
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100 / noOfPortCards)
-				if (editedLeftPos >= 100 / (noOfPortCards / 2)) {
+				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
 			}
