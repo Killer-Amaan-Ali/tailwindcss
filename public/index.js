@@ -176,6 +176,7 @@ sliderWrapper.classList.remove('default')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper?.children.length
 let temp = ``
+
 let noOfTestimonialCards = 3
 let noOfPortCards = 2
 
@@ -368,19 +369,19 @@ const categoryActive = e => {
 				// }
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100/noOfPortCards)
-				if (editedLeftPos > 100/(noOfPortCards/2)) {
+				if (editedLeftPos >= 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
 			}
 			if (categoryMode === 'all') {
-				// console.log(i, i % 3)
+				// console.log(i, i % noOfPortCards)
 				portfolioContent.children[i].classList.remove('shrink')
 				if (i !== 0 && i % noOfPortCards === 0) {
 					editedTopPos += cardHeight
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100/noOfPortCards)
-				if (editedLeftPos > 100/(noOfPortCards/2)) {
+				if (editedLeftPos >= 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
 			}
