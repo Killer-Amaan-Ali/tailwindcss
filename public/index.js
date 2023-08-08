@@ -453,7 +453,8 @@ const closeLightBox = () => {
 }
 
 for (let i = 0; i < portfolioContent.children.length; i++) {
-	document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
+	portfolioContent.children[i].getElementsByTagName('a')[0].addEventListener('click', imageViewer)
+	// document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
 	if (portfolioContent.classList.contains('abs')) {
 		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
 		leftPos += (100 / noOfPortCards)
