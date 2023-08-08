@@ -340,6 +340,7 @@ const categoryActive = e => {
 			portfolioContent.children[i].getAttribute('portfolio-mode')
 
 		if (!portfolioContent.classList.contains('abs')) {
+			portfolioContent.setAttribute('style', `min-height: ${cardHeight}`)
 			if (filteredModeArray[i] !== categoryMode) {
 				portfolioContent.children[i].classList.add('hide')
 			} else {
