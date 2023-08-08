@@ -177,7 +177,7 @@ let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper?.children.length
 let temp = ``
 let noOfTestimonialCards = 3
-let noOfPortCards = 3
+let noOfPortCards = 2
 
 const updateWidth = () => {
 	// responsive
