@@ -317,6 +317,7 @@ const sliderDots = () => {
 
 setTimeout(() => {
 	sliderDots()
+	portfolioCategories.children[0].click()
 }, 1000);
 
 let portfolioCategories = document.getElementById('portfolioCategories')
@@ -399,7 +400,6 @@ const categoryActive = e => {
 for (let i = 0; i < portfolioCategories.children.length; i++) {
 	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
-portfolioCategories.children[0].click()
 
 let mainLightBox = document.getElementById('mainLightBox')
 let lightboxHTML = mainLightBox.innerHTML
