@@ -385,6 +385,7 @@ const categoryActive = e => {
 			}
 			if (categoryMode === 'all') {
 				portfolioContent.children[i].classList.remove('shrink')
+				portfolioContent.children[i].classList.add('show')
 				if (i !== 0 && i % noOfPortCards === 0) {
 					editedTopPos += cardHeight
 				}
