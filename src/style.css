@@ -341,7 +341,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
   @apply relative overflow-hidden items-center justify-center sm:justify-start;
 }
 .portfolio-wrapper .container .portfolio-content.abs {
-  min-height: 900px;
+  height: 900px;
 }
 .portfolio-wrapper .container .portfolio-content.abs .portfolio-card {
   position: absolute !important;

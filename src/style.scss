@@ -452,7 +452,7 @@ header {
 			@extend .transition;
 			@extend .t-750;
 			&.abs {
-				min-height: 900px;
+				height: 900px;
 				.portfolio-card {
 					position: absolute !important;
 					&.shrink {

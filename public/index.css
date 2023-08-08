@@ -1678,7 +1678,7 @@ header .lightbox-wrapper .lightboxLinks > li:first-child {
 }
 
 .portfolio-wrapper .container .portfolio-content.abs {
-  min-height: 900px;
+  height: 900px;
 }
 
 .portfolio-wrapper .container .portfolio-content.abs .portfolio-card {

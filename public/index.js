@@ -348,8 +348,14 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
+		let portChilLen = portfolioContent.children.length
+		let holder = (portChilLen - document.querySelectorAll('.shrink').length)
+		let tempwe = holder % 3 === 0 
+			? holder / 3
+			: holder % 3
+		portfolioContent.style.height = portChilLen - tempwe * portfolioContent.children[0].clientHeight + 'px !important'
 
-		for (let i = 0; i < portfolioContent.children.length; i++) {
+		for (let i = 0; i < portChilLen; i++) {
 
 			if (filteredModeArray[i] !== categoryMode) {
 				portfolioContent.children[i].classList.add('shrink')
