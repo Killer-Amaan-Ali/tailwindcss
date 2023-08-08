@@ -365,11 +365,10 @@ const categoryActive = e => {
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
 				portfolioContent.children[i].classList.add('show')
-				console.log(i % noOfPortCards === 0)
+				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
 				}
-				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100/noOfPortCards)
 				if (editedLeftPos >= 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
