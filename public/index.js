@@ -313,6 +313,10 @@ const sliderDots = () => {
 	temp = ''
 }
 
+setTimeout(() => {
+	sliderDots()
+}, 1000);
+
 let portfolioCategories = document.getElementById('portfolioCategories')
 let portfolioContent = document.getElementById('portfolioContent')
 let categoryMode =
@@ -435,9 +439,6 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 		}
 	}
 }
-
-
-sliderDots()
 
 
 let accordion = document.getElementById('accordion')
