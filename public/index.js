@@ -363,31 +363,31 @@ const categoryActive = e => {
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
 
-				// if (i !== 0 && i % 3 === 0) {
+				// if (i !== 0 && i % noOfPortCards === 0) {
 				// 	editedTopPos += cardHeight
 				// }
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
-				editedLeftPos += 33
-				if (editedLeftPos > 66) {
+				editedLeftPos += (100/noOfPortCards)
+				if (editedLeftPos > 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
 			}
 			if (categoryMode === 'all') {
 				// console.log(i, i % 3)
 				portfolioContent.children[i].classList.remove('shrink')
-				if (i !== 0 && i % 3 === 0) {
+				if (i !== 0 && i % noOfPortCards === 0) {
 					editedTopPos += cardHeight
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
-				editedLeftPos += 33
-				if (editedLeftPos > 66) {
+				editedLeftPos += (100/noOfPortCards)
+				if (editedLeftPos > 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
 			}
 		}
-		portfolioContent.setAttribute('style', `height: ${(portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % 3 === 0)
-		? ((portChilLen - document.querySelectorAll('.shrink').length) / 3)
-		: ((portChilLen - document.querySelectorAll('.shrink').length) % 3)) * (portfolioContent.children[0].clientHeight + 30)}px !important;`)
+		portfolioContent.setAttribute('style', `height: ${(portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards === 0)
+		? ((portChilLen - document.querySelectorAll('.shrink').length) / noOfPortCards)
+		: ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards)) * (portfolioContent.children[0].clientHeight + 30)}px !important;`)
 	}
 
 
