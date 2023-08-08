@@ -372,6 +372,7 @@ const categoryActive = e => {
 				if (editedLeftPos >= 100/(noOfPortCards/2)) {
 					editedLeftPos = 0
 				}
+				console.log('card -----', i, editedLeftPos)
 			}
 			if (categoryMode === 'all') {
 				// console.log(i, i % noOfPortCards)
