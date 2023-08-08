@@ -370,15 +370,15 @@ const categoryActive = e => {
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
 				portfolioContent.children[i].classList.add('show')
-				// portfolioContent.children[i].style.left = `${editedLeftPos}%`
+				portfolioContent.children[i].style.left = `${editedLeftPos}%`
 				
 				// ONLY WORKS WHEN 2 CARDS IN A ROW, DOESNT WORK FOR 3
-				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
-				if (i !== 0 && (i % noOfPortCards === 0)) {
-					editedTopPos += cardHeight
-				}
+				// portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+				// if (i !== 0 && (i % noOfPortCards === 0)) {
+				// 	editedTopPos += cardHeight
+				// }
+				
 				editedLeftPos += (100 / noOfPortCards)
-
 				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed()) {
 					editedLeftPos = 0
 				}
@@ -397,15 +397,16 @@ const categoryActive = e => {
 				}
 			}
 		}
-
-		// for (let i = 0; i < show.length; i++) {
-		// 	if (categoryMode !== 'all') {
-		// 		portfolioContent.children[i].style.top = `${editedTopPos}px`
-		// 		if (i !== 0 && (i % show === 0) && (i % noOfPortCards === 0)) {
-		// 			editedTopPos += cardHeight
-		// 		}
-		// 	}
-		// }
+		
+		editedTopPos = 0
+		for (let i = 0; i < show.length; i++) {
+			if (categoryMode !== 'all') {
+				portfolioContent.children[i].style.top = `${editedTopPos}px`
+				if (i !== 0 && (i % show === 0) && (i % noOfPortCards === 0)) {
+					editedTopPos += cardHeight
+				}
+			}
+		}
 
 		portfolioContent.setAttribute('style', `height: ${Math.ceil(portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards === 0)
 			? ((portChilLen - document.querySelectorAll('.shrink').length) / noOfPortCards)
