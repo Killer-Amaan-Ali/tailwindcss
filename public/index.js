@@ -349,7 +349,7 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
-
+		let cardHeight = portfolioContent.children[0].clientHeight + 30
 		for (let i = 0; i < portChilLen; i++) {
 
 			if (filteredModeArray[i] !== categoryMode) {
@@ -358,7 +358,7 @@ const categoryActive = e => {
 				portfolioContent.children[i].classList.remove('shrink')
 
 				// if (i !== 0 && i % 3 === 0) {
-				// 	editedTopPos += 290
+				// 	editedTopPos += cardHeight
 				// }
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += 33
@@ -370,7 +370,7 @@ const categoryActive = e => {
 				// console.log(i, i % 3)
 				portfolioContent.children[i].classList.remove('shrink')
 				if (i !== 0 && i % 3 === 0) {
-					editedTopPos += 290
+					editedTopPos += cardHeight
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += 33
@@ -431,7 +431,7 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 		leftPos += 33
 		if (leftPos > 66) {
 			leftPos = 0
-			topPos += 290
+			topPos += cardHeight
 		}
 	}
 }
