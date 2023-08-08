@@ -176,17 +176,18 @@ sliderWrapper.classList.remove('default')
 let sliderCounters = document.getElementById('sliderCounters')
 let modified = sliderWrapper?.children.length
 let temp = ``
-let noOfCards = 3
+let noOfTestimonialCards = 3
+let noOfPortCards = 3
 
 const updateWidth = () => {
 	// responsive
 	// console.log(window.innerWidth)
 	window.innerWidth <= 768
-		? (noOfCards = 1)
+		? (noOfTestimonialCards = 1)
 		: window.innerWidth <= 1280
-			? (noOfCards = 2)
+			? (noOfTestimonialCards = 2)
 			: window.innerWidth <= 1336
-				? (noOfCards = 3)
+				? (noOfTestimonialCards = 3)
 				: null
 	// window.innerWidth <= 768
 	// 	? (sliderWrapper.setAttribute('style', '--width:100%;'), (noOfCards = 1))
@@ -201,7 +202,7 @@ if (infiniteSlider) {
 	// for infinite carousel
 	modified = sliderWrapper?.children.length - 1
 } else {
-	modified = sliderWrapper?.children.length - noOfCards
+	modified = sliderWrapper?.children.length - noOfTestimonialCards
 }
 // console.log('sliderWrapper.children.length', sliderWrapper.children.length)
 // console.log('noOfCards', noOfCards)
@@ -239,7 +240,7 @@ const sliderActive = e => {
 	} else {
 		coun = e.id
 		if (+coun == 0 && infiCarousFlag) {
-			coun = sliderWrapper.children.length - noOfCards
+			coun = sliderWrapper.children.length - noOfTestimonialCards
 			setTimeout(() => {
 				sliderWrapper.classList.add('noTransition')
 				transformMode
@@ -250,11 +251,11 @@ const sliderActive = e => {
 				sliderWrapper.classList.remove('noTransition')
 			}, 1100)
 		}
-		if (+coun == sliderWrapper.children.length - noOfCards - 1) {
+		if (+coun == sliderWrapper.children.length - noOfTestimonialCards - 1) {
 			infiCarousFlag = true
 		} else if (
 			+coun >= 0 &&
-			+coun <= sliderWrapper.children.length - noOfCards - 1
+			+coun <= sliderWrapper.children.length - noOfTestimonialCards - 1
 		) {
 			infiCarousFlag = false
 		}
@@ -271,7 +272,7 @@ const sliderActive = e => {
 }
 
 if (infiniteSlider) {
-	for (let i = 0; i < noOfCards; i++) {
+	for (let i = 0; i < noOfTestimonialCards; i++) {
 		sliderWrapper &&
 			(sliderWrapper.innerHTML += `<li>${sliderWrapper.children[i].innerHTML}</li>`)
 	}
@@ -433,8 +434,8 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 	document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
 	if (portfolioContent.classList.contains('abs')) {
 		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
-		leftPos += 33
-		if (leftPos > 66) {
+		leftPos += (100/noOfPortCards)
+		if (leftPos > 100/(noOfPortCards/2)) {
 			leftPos = 0
 			topPos += cardHeight
 		}
