@@ -371,10 +371,12 @@ const categoryActive = e => {
 				portfolioContent.children[i].classList.add('show')
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 
-				if (i !== 0 && (i % noOfPortCards === 0)) {
-					editedTopPos += cardHeight
-				}
+				// ONLY WORKS WHEN 2 CARDS IN A ROW, DOESNT WORK FOR 3
+				// if (i !== 0 && (i % noOfPortCards === 0)) {
+				// 	editedTopPos += cardHeight
+				// }
 				editedLeftPos += (100 / noOfPortCards)
+				// IF 3 THEN '> 100' FOR 2 '>= 100'
 				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
@@ -386,6 +388,7 @@ const categoryActive = e => {
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100 / noOfPortCards)
+				// IF 3 THEN '> 100' FOR 2 '>= 100'
 				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
 					editedLeftPos = 0
 				}
