@@ -386,10 +386,11 @@ const categoryActive = e => {
 			if (categoryMode === 'all') {
 				portfolioContent.children[i].classList.remove('shrink')
 				portfolioContent.children[i].classList.add('show')
-				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
-				if (i !== 0 && i % noOfPortCards === 0) {
-					editedTopPos += cardHeight
-				}
+				// if (i !== 0 && i % noOfPortCards === 0) {
+				// 	editedTopPos += cardHeight
+				// }
+				portfolioContent.children[i].style.left = `${editedLeftPos}%`
+				// portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100 / noOfPortCards)
 
 				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed() ) {
