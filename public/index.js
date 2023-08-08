@@ -366,6 +366,7 @@ const categoryActive = e => {
 				portfolioContent.children[i].classList.remove('shrink')
 				portfolioContent.children[i].classList.add('show')
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+
 				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
 				}
@@ -398,6 +399,7 @@ const categoryActive = e => {
 for (let i = 0; i < portfolioCategories.children.length; i++) {
 	portfolioCategories.children[i].addEventListener('click', categoryActive)
 }
+portfolioCategories.children[0].click()
 
 let mainLightBox = document.getElementById('mainLightBox')
 let lightboxHTML = mainLightBox.innerHTML
