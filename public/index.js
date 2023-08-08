@@ -361,6 +361,7 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
+		let show = document.querySelectorAll('.show')
 		for (let i = 0; i < portChilLen; i++) {
 
 			if (filteredModeArray[i] !== categoryMode) {
@@ -369,13 +370,14 @@ const categoryActive = e => {
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
 				portfolioContent.children[i].classList.add('show')
-				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+				// portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
+				portfolioContent.children[i].style.left = `${editedLeftPos}%`
 
 				// ONLY WORKS WHEN 2 CARDS IN A ROW, DOESNT WORK FOR 3
-				if (i !== 0 && (i % noOfPortCards === 0)) {
-					editedTopPos += cardHeight
-				}
-				editedLeftPos += (100 / noOfPortCards)
+				// if (i !== 0 && (i % noOfPortCards === 0)) {
+				// 	editedTopPos += cardHeight
+				// }
+				editedLeftPos += (100 / noOfPortCards).toFixed()
 
 				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed() ) {
 					editedLeftPos = 0
@@ -394,6 +396,14 @@ const categoryActive = e => {
 				}
 			}
 		}
+
+		for (let i = 0; i < show.length; i++) {
+			portfolioContent.children[i].style.top = `${editedTopPos}px`
+			if (i !== 0 && (i % show === 0)) {
+				editedTopPos += cardHeight
+			}
+		}
+
 		portfolioContent.setAttribute('style', `height: ${Math.ceil(portChilLen - ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards === 0)
 			? ((portChilLen - document.querySelectorAll('.shrink').length) / noOfPortCards)
 			: ((portChilLen - document.querySelectorAll('.shrink').length) % noOfPortCards)) * (portfolioContent.children[0].clientHeight + 30)}px !important;`)
