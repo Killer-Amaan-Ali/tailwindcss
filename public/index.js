@@ -327,6 +327,7 @@ let leftPos = 0
 let topPos = 0
 let editedLeftPos = 0
 let editedTopPos = 0
+let cardHeight = portfolioContent.children[0].clientHeight + 30
 const categoryActive = e => {
 	e.preventDefault()
 	let portChilLen = portfolioContent.children.length
@@ -354,7 +355,6 @@ const categoryActive = e => {
 	if (portfolioContent.classList.contains('abs')) {
 		editedLeftPos = 0
 		editedTopPos = 0
-		let cardHeight = portfolioContent.children[0].clientHeight + 30
 		for (let i = 0; i < portChilLen; i++) {
 
 			if (filteredModeArray[i] !== categoryMode) {
