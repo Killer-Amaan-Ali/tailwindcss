@@ -377,7 +377,7 @@ const categoryActive = e => {
 				// }
 				editedLeftPos += (100 / noOfPortCards)
 				// IF 3 THEN '> 100' FOR 2 '>= 100'
-				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
+				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed() ) {
 					editedLeftPos = 0
 				}
 			}
@@ -389,7 +389,7 @@ const categoryActive = e => {
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
 				editedLeftPos += (100 / noOfPortCards)
 				// IF 3 THEN '> 100' FOR 2 '>= 100'
-				if (editedLeftPos > 100 / (noOfPortCards / 2)) {
+				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed() ) {
 					editedLeftPos = 0
 				}
 			}
