@@ -377,7 +377,7 @@ const categoryActive = e => {
 				// if (i !== 0 && (i % noOfPortCards === 0)) {
 				// 	editedTopPos += cardHeight
 				// }
-				editedLeftPos += (100 / noOfPortCards).toFixed()
+				editedLeftPos += (100 / noOfPortCards)
 
 				if (editedLeftPos >= (100 / (noOfPortCards / 2)).toFixed() ) {
 					editedLeftPos = 0
