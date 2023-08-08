@@ -364,7 +364,7 @@ const categoryActive = e => {
 			} else {
 				portfolioContent.children[i].classList.remove('shrink')
 
-				if (i !== 0 && i % noOfPortCards === 0) {
+				if (i !== 0 && (i % noOfPortCards === 0)) {
 					editedTopPos += cardHeight
 				}
 				portfolioContent.children[i].setAttribute('style', `left: ${editedLeftPos}%; top: ${editedTopPos}px;`)
