@@ -435,6 +435,7 @@ const imageViewer = e => {
 	// let imgSrc = e.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
 	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
+	lightBoxHandler()
 	mainLightBox.innerHTML += `
 		<div>
 			<img src="${imgSrc}" />
@@ -445,7 +446,6 @@ const imageViewer = e => {
 			</div>
 		</div>
 	`
-	lightBoxHandler()
 }
 
 const descriptionViewer = () => {
