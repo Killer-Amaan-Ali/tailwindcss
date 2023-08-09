@@ -423,13 +423,19 @@ for (let i = 0; i < portfolioCategories.children.length; i++) {
 let mainLightBox = document.getElementById('mainLightBox')
 let lightboxHTML = mainLightBox.innerHTML
 
-const imageViewer = (e) => {
+const lightBoxHandler = e => {
+	document.body.style.overflow = 'hidden'
+	mainLightBox.classList.add('visible')
+	let lightBoxClickable = document.getElementById('lightBoxClickable')
+	lightBoxClickable.addEventListener('click', closeLightBox)
+}
+
+const imageViewer = e => {
 	// let cardName = e.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
 	// let imgSrc = e.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
 	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
-	document.body.style.overflow = 'hidden'
-	mainLightBox.classList.add('visible')
+	lightBoxHandler()
 	mainLightBox.innerHTML += `
 		<div>
 			<img src="${imgSrc}" />
@@ -440,8 +446,6 @@ const imageViewer = (e) => {
 			</div>
 		</div>
 	`
-	let lightBoxClickable = document.getElementById('lightBoxClickable')
-	lightBoxClickable.addEventListener('click', closeLightBox)
 }
 
 const closeLightBox = () => {
@@ -468,7 +472,7 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 
 let accordion = document.getElementById('accordion')
 
-const expandAccordion = (e) => {
+const expandAccordion = e => {
 	let id = 0
 	e.target.tagName === 'I' || e.target.tagName === 'DIV' ? id = e.target.parentElement.parentElement.id : e.target.tagName === 'SPAN' ? id = e.target.parentElement.parentElement.parentElement.id : null
 	for (let i = 0; i < accordion.children.length; i++) {
