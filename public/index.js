@@ -448,6 +448,19 @@ const imageViewer = e => {
 	`
 }
 
+const descriptionViewer = () => {
+	mainLightBox.innerHTML += `
+		<div>
+			<img src="${imgSrc}" />
+			<div class="p-[20px]">
+				<p class="capitalize">
+					${cardName}
+				</p>
+			</div>
+		</div>
+	`
+}
+
 const closeLightBox = () => {
 	document.body.removeAttribute('style')
 	mainLightBox.classList.remove('visible')
@@ -458,6 +471,7 @@ const closeLightBox = () => {
 
 for (let i = 0; i < portfolioContent.children.length; i++) {
 	portfolioContent.children[i].getElementsByTagName('a')[0].addEventListener('click', imageViewer)
+	portfolioContent.children[i].getElementsByTagName('a')[1].addEventListener('click', descriptionViewer)
 	// document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
 	if (portfolioContent.classList.contains('abs')) {
 		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
