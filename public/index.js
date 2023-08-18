@@ -333,6 +333,7 @@ let topPos = 0
 let editedLeftPos = 0
 let editedTopPos = 0
 let cardHeight = portfolioContent.children[0].clientHeight + 30
+
 const categoryActive = e => {
 	e.preventDefault()
 	let portChilLen = portfolioContent.children.length
@@ -462,6 +463,7 @@ const descriptionViewer = () => {
 }
 
 const closeLightBox = () => {
+	console.log('test')
 	document.body.removeAttribute('style')
 	mainLightBox.classList.remove('visible')
 	setTimeout(() => {
