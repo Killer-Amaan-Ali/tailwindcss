@@ -422,13 +422,22 @@ for (let i = 0; i < portfolioCategories.children.length; i++) {
 }
 
 let mainLightBox = document.getElementById('mainLightBox')
+let lightBoxClickable = document.getElementById('lightBoxClickable')
 let lightboxHTML = mainLightBox.innerHTML
 
 const lightBoxHandler = e => {
+	lightBoxClickable.addEventListener('click', closeLightBox)
 	document.body.style.overflow = 'hidden'
 	mainLightBox.classList.add('visible')
-	let lightBoxClickable = document.getElementById('lightBoxClickable')
-	lightBoxClickable.addEventListener('click', closeLightBox)
+}
+
+const closeLightBox = () => {
+	console.log('test')
+	document.body.removeAttribute('style')
+	mainLightBox.classList.remove('visible')
+	setTimeout(() => {
+		mainLightBox.innerHTML = lightboxHTML
+	}, 600)
 }
 
 const imageViewer = e => {
@@ -450,6 +459,7 @@ const imageViewer = e => {
 }
 
 const descriptionViewer = () => {
+	console.log('test')
 	mainLightBox.innerHTML += `
 		<div>
 			<img src="${imgSrc}" />
@@ -460,15 +470,6 @@ const descriptionViewer = () => {
 			</div>
 		</div>
 	`
-}
-
-const closeLightBox = () => {
-	console.log('test')
-	document.body.removeAttribute('style')
-	mainLightBox.classList.remove('visible')
-	setTimeout(() => {
-		mainLightBox.innerHTML = lightboxHTML
-	}, 600)
 }
 
 for (let i = 0; i < portfolioContent.children.length; i++) {
