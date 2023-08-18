@@ -448,29 +448,30 @@ const imageViewer = e => {
 	lightBoxHandler()
 	mainLightBox.innerHTML += `
 	<div>
-	<img src="${imgSrc}" />
-	<div class="p-[20px]">
-	<p class="capitalize">
-	${cardName}
-	</p>
-	</div>
+		<img src="${imgSrc}" />
+			<div class="p-[20px]">
+				<p class="capitalize">
+					${cardName}
+				</p>
+		</div>
 	</div>
 	`
 }
 
 const descriptionViewer = e => {
-	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
-	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
-	mainLightBox.innerHTML += `
-		<div>
-			<img src="${imgSrc}" />
-			<div class="p-[20px]">
-				<p class="capitalize">
-					${cardName}
-				</p>
-			</div>
-		</div>
-	`
+	console.log('WIP')
+	// let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
+	// let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
+	// mainLightBox.innerHTML += `
+	// 	<div>
+	// 		<img src="${imgSrc}" />
+	// 		<div class="p-[20px]">
+	// 			<p class="capitalize">
+	// 				${cardName}
+	// 			</p>
+	// 		</div>
+	// 	</div>
+	// `
 }
 
 for (let i = 0; i < portfolioContent.children.length; i++) {
