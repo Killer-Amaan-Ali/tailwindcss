@@ -450,7 +450,7 @@ header {
 		.portfolio-content {
 			@apply relative overflow-hidden items-center justify-center sm:justify-start;
 			@extend .transition;
-			@extend .t-750;
+			@extend .t-500;
 			&.abs {
 				// height: 900px;
 				.portfolio-card {

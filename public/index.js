@@ -447,19 +447,20 @@ const imageViewer = e => {
 	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	lightBoxHandler()
 	mainLightBox.innerHTML += `
-		<div>
-			<img src="${imgSrc}" />
-			<div class="p-[20px]">
-				<p class="capitalize">
-					${cardName}
-				</p>
-			</div>
-		</div>
+	<div>
+	<img src="${imgSrc}" />
+	<div class="p-[20px]">
+	<p class="capitalize">
+	${cardName}
+	</p>
+	</div>
+	</div>
 	`
 }
 
 const descriptionViewer = () => {
-	console.log('test')
+	let cardName = e.target.parentElement.parentElement.parentElement.children[0].getElementsByTagName('h4')[0].innerHTML
+	let imgSrc = e.target.parentElement.parentElement.parentElement.parentElement.children[0].attributes.src.value
 	mainLightBox.innerHTML += `
 		<div>
 			<img src="${imgSrc}" />
@@ -476,6 +477,7 @@ for (let i = 0; i < portfolioContent.children.length; i++) {
 	portfolioContent.children[i].getElementsByTagName('a')[0].addEventListener('click', imageViewer)
 	portfolioContent.children[i].getElementsByTagName('a')[1].addEventListener('click', descriptionViewer)
 	// document.getElementById(`portfolioCardImage${i}`).addEventListener('click', imageViewer)
+
 	if (portfolioContent.classList.contains('abs')) {
 		portfolioContent.children[i].setAttribute('style', `left: ${leftPos}%; top: ${topPos}px;`)
 		leftPos += (100 / noOfPortCards)
